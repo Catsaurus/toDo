@@ -2,8 +2,5 @@
 
 Veebirakendajad: 
 * Hiie-Helen Raju
-* Riana Randoja
+* Riana Randoja (rianarandoja@gmail.com)
 * Andra Rajasalu
-
-
-          
