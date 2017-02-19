@@ -1,0 +1,16 @@
+#googleMap {
+    height: 50%;
+    width: 45%;
+    margin: auto;
+}
+#elephantData{
+    height: 200px;
+}
+h1{
+    padding-top: 50px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
