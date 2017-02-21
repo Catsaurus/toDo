@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="<?php echo base_url("Asset/css/start_button.css"); ?>" />
+    <link rel="stylesheet" href="<?php echo base_url("asset/css/start_button.css"); ?>" />
     <meta charset="utf-8">
     <title>TERE</title>
 
