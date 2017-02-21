@@ -1,8 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bd8034e-14ed-4f1c-bc64-2afae1477f57" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="9bd8034e-14ed-4f1c-bc64-2afae1477f57" name="Default" comment="#5">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/fonts/texb.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Asset/css/footer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Asset/css/start_button.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/cache/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/cache/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/constants.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/doctypes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/foreign_chars.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/hooks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/memcached.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/migration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/mimes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/profiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/smileys.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/user_agents.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Pages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/core/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/hooks/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/language/english/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/language/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/logs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/News_model.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/third_party/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/cli/error_404.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/cli/error_db.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/cli/error_exception.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/cli/error_general.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/cli/error_php.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/cli/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/html/error_404.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/html/error_db.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/html/error_exception.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/html/error_general.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/html/error_php.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/html/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/errors/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/pages/about.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/pages/home.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/welcome_message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Benchmark.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/CodeIgniter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Exceptions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Hooks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Input.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Loader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Log.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Model.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Output.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Router.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Security.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/URI.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/Utf8.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/compat/hash.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/compat/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/compat/mbstring.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/compat/password.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/compat/standard.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/core/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/DB.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/DB_cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/DB_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/DB_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/DB_query_builder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/DB_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/DB_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/ibase/ibase_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/ibase/ibase_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/ibase/ibase_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/ibase/ibase_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/ibase/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_4d_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_4d_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_cubrid_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_cubrid_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_dblib_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_dblib_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_firebird_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_firebird_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_ibm_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_ibm_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_informix_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_informix_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_mysql_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_mysql_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_oci_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_oci_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_odbc_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_odbc_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_pgsql_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_pgsql_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlite_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlite_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlsrv_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlsrv_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite3/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite3/sqlite3_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_forge.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_result.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/database/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/fonts/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/array_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/captcha_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/cookie_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/date_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/directory_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/download_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/email_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/file_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/form_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/html_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/inflector_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/language_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/number_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/path_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/security_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/smiley_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/string_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/text_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/typography_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/url_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/helpers/xml_helper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/calendar_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/date_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/db_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/email_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/form_validation_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/ftp_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/imglib_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/migration_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/number_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/pagination_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/profiler_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/unit_test_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/english/upload_lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/language/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/Cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_dummy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_memcached.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_redis.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_wincache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cache/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Calendar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Cart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Email.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Encrypt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Encryption.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Form_validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Ftp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Image_lib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Javascript.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Javascript/Jquery.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Javascript/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Migration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Pagination.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Profiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/Session.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/SessionHandlerInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/Session_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_database_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_files_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_memcached_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_redis_driver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/drivers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Session/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Trackback.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Typography.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Unit_test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Upload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/User_agent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Xmlrpc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Xmlrpcs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Zip.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Model/Map.js" afterPath="$PROJECT_DIR$/Asset/javascript/Map.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/View/map.html" afterPath="$PROJECT_DIR$/application/views/pages/map.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,41 +285,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Stylesheet.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset/css/Stylesheet.css">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="2346">
+              <caret line="189" column="29" lean-forward="false" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Map.js">
+      <file leaf-file-name="Pages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Pages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="474">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/map.html">
+      <file leaf-file-name="welcome_message.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/pages/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="456" column="0" lean-forward="true" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="135" column="35" lean-forward="false" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset/css/footer.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,9 +407,16 @@
         <option value="$PROJECT_DIR$/map.html" />
         <option value="$PROJECT_DIR$/View/al.js" />
         <option value="$PROJECT_DIR$/View/h.html" />
-        <option value="$PROJECT_DIR$/View/map.html" />
-        <option value="$PROJECT_DIR$/Model/Map.js" />
         <option value="$PROJECT_DIR$/Asset/Stylesheet.css" />
+        <option value="$PROJECT_DIR$/Model/Map.js" />
+        <option value="$PROJECT_DIR$/View/map.html" />
+        <option value="$PROJECT_DIR$/application/controllers/Welcome.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Pages.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/config/autoload.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/views/pages/home.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/footer.php" />
       </list>
     </option>
   </component>
@@ -101,7 +426,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP_5.6.30" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -202,6 +527,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -224,7 +550,69 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,9 +630,26 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toDo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -257,13 +662,15 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xampp/htdocs/toDo/Model/Map.js" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\toDo\application\views\pages" />
+      <recent name="C:\xampp\htdocs\toDo\Asset\javascript" />
       <recent name="C:\xampp\htdocs\toDo\Asset\img" />
       <recent name="C:\xampp\htdocs\toDo\Asset\css" />
       <recent name="C:\xampp\htdocs\View" />
-      <recent name="C:\xampp\htdocs" />
     </key>
   </component>
   <component name="RunManager">
@@ -336,7 +743,8 @@
       <updated>1487350556015</updated>
       <workItem from="1487350557280" duration="11000" />
       <workItem from="1487409555444" duration="6691000" />
-      <workItem from="1487669697263" duration="1105000" />
+      <workItem from="1487669697263" duration="3130000" />
+      <workItem from="1487672985065" duration="3758000" />
     </task>
     <task id="LOCAL-00001" summary="see #6">
       <created>1487535339778</created>
@@ -359,11 +767,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487670188851</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="gitignore">
+      <created>1487670816755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1487670816755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7807000" />
+    <option name="totallyTimeSpent" value="13590000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,8 +793,10 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -406,7 +823,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="see #6" />
     <MESSAGE value="see #5" />
-    <option name="LAST_COMMIT_MESSAGE" value="see #5" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="#5" />
+    <option name="LAST_COMMIT_MESSAGE" value="#5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -415,13 +834,53 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Asset/css/Stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="18" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/home.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Map.js">
+    <entry file="file://$PROJECT_DIR$/Asset/css/start_button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset/css/Stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset/javascript/Map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
@@ -429,7 +888,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/map.html">
+    <entry file="file://$PROJECT_DIR$/application/views/pages/map.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
@@ -449,23 +908,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Map.js">
+    <entry file="file://$PROJECT_DIR$/Asset/javascript/Map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset/css/Stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/application/views/pages/about.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/map.html">
+    <entry file="file://$PROJECT_DIR$/Asset/css/start_button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/map.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
@@ -475,8 +942,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="18" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset/css/Stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="189" column="29" lean-forward="false" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Pages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="135" column="35" lean-forward="false" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="456" column="0" lean-forward="true" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
