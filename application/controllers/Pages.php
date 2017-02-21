@@ -1,12 +1,6 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: Andra
- * Date: 21.02.2017
- * Time: 1:19
- */
-/**
  * Index Page for this controller.
  *
  * Maps to the following URL
