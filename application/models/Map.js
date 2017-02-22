@@ -10,7 +10,7 @@ function myMap() {
     var marker = new google.maps.Marker({
             position: elephantLoc,
             animation: google.maps.Animation.BOUNCE,
-            icon: "../../asset/img/elephant.png"
+            icon: "../../../asset/img/elephant.png"
         });
     marker.setMap(map);
 
