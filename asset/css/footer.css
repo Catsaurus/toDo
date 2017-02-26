@@ -4,6 +4,10 @@
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #efefef;
+    background: #2e2633;
     text-align: center;
+    /*padding-top: 20px;*/
+}
+em {
+    color: #dce9be;
 }

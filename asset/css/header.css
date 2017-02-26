@@ -1,0 +1,25 @@
+body {
+    margin: auto;  /*space around elements*/
+    background: #dce9be; /*terve lehekülje taustavärv*/
+
+}
+h1 {
+    background-color: #dce9be;
+    font-size: 20px;
+    text-align: left;
+
+}
+
+#header {
+    height: 50px;
+    background: #2e2633;
+    position: fixed;
+    width: 100%;
+
+    text-align: center;
+
+}
+.content {
+    width: auto;
+
+}

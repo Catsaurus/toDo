@@ -16,7 +16,7 @@
  * @see https://codeigniter.com/user_guide/general/urls.html
  */
 class Pages extends CI_Controller {
-    public function view($page = 'home')
+    public function view($page = 'home', $data = null)
     {
         if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
         {
@@ -29,6 +29,16 @@ class Pages extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
+    }
+    /*default, ehk selle meetodi avab esimesena*/
+    public function index() {
+        $data['pealkiri'] = "home";
+        $this->view('home', $data);
+
+    }
+    public function about() {
+        $this->view('about');
+
     }
 
 }
