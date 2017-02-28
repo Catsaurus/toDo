@@ -1,16 +1,40 @@
-
-
-</div>
-    <div id = "footer">
+    <footer class="page-footer" id="upper-footer">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+
+                <!--column 1-->
+                <div class="col s4">
+                    <h5>Facebook</h5>
+                    <h5>Instagram</h5>
+                    <h5>Twitter</h5>
                 </div>
-         <em>&copy; 2017</em>
-    </div>
+
+                <!--column 2-->
+                <div class="col s4">
+                    <h5><a href="#">Subscribe</a></h5>
+                    <ul>
+                        <li><a href="<?php echo site_url('Pages/about') ?>">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!--column 3-->
+                <div class="col s4">
+                    <h5><a href="#">Sitemap</a></h5>
+                    <ul>
+                        <li><a href="#">Donate now (siia tuleks mingi pilt ka)</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Veebirakendajad
+            </div>
+        </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
     </body>
 </html>

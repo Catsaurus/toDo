@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$config['base_url'] = 'http://localhost/test-veeb/';
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -23,7 +23,7 @@ $config['base_url'] = 'http://localhost/test-veeb/';
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/toDo/';
 
 /*
 |--------------------------------------------------------------------------

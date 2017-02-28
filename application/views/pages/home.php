@@ -1,9 +1,16 @@
 
-    <div id="body">
-        <div class="button">
-            <!---<a href="<?php echo site_url('about()'); ?>">--->
-            <a href="#">START</a>
-            <p class="top">See on kõigest näide</p>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 pealkiri">
+                    <h2>ToDo</h2>
+                    <h5>Welcome to toDo to do your todods...easier...and more fun</h5>
+                    <a href="<?php echo site_url('Pages/login') ?>" class="waves-effect waves-light btn">START</a>
+                </div>
 
+                <div class="col s12">
+                    <p>ja siia võiks ka midagi panna</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>

@@ -1,20 +1,44 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="<?php echo base_url("asset/css/header.css"); ?>" />
-    <link rel="stylesheet" href="<?php echo base_url("asset/css/footer.css"); ?>" />
-    <link rel="stylesheet" href="<?php echo base_url("asset/css/start_button.css"); ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url("asset/css/Stylesheet.css"); ?>">
-    <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
-    <meta charset="utf-8">
-    <title>TERE</title>
+?><!DOCTYPE html> <!--HTML5 doctype declaration-->
+    <!--<html lang="en">-->
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/materialize.css"); ?>"  media="screen,projection"/>
 
-</head>
-<body>
-<div id="header">
+        <!-- custom.css on eraldi css fail, kus on meie lehe värvid and stuff, cause vist nagu ei sobi muuta materialize faile, liiga suur ka selle muutmiseks-->
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/custom.css"); ?>" />
 
-<h1>toDo</h1>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+        <!-- javascriptid peaks lõppu tõstma nagu ma aru saan, sest siis on lehe laadimine kiirem-->
+        <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
+
+
+    </head>
+
+<header>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="<?php echo site_url('Pages/index') ?>" class="brand-logo">ToDo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="<?php echo site_url('Pages/login') ?>">Log in</a></li>
+                    <li id="signup"><a href="<?php echo site_url('Pages/login') ?>">SIGN UP</a></li>
+                </ul>
+            </div>
+        </nav>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="<?php echo site_url('Pages/login') ?>" >Log in</a></li>
+                    <li><a href="<?php echo site_url('Pages/login') ?>">SIGN UP</a></li>
+                </ul>
+    </div>
+
+</header>
+
+    <body>
 

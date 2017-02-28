@@ -1,0 +1,74 @@
+body {
+    background-color: #EFFFCD;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+nav {
+    background-color: #2E2633;
+}
+a.brand-logo {
+    margin-left: 2em;
+    color: #EFFFCD;
+}
+
+nav ul li a {
+    transition: 1s;
+    color: #EFFFCD;
+}
+nav ul li:hover a{
+    background-color: #EFFFCD;
+    padding-bottom: 0.0em;
+}
+nav ul a:hover {
+    color: #2E2633;
+}
+nav ul li.active a {
+    background-color: #EFFFCD;
+    padding-bottom: 0.0em;
+    color: #2E2633;
+}
+#signup {
+    background-color: #99173C;
+}
+
+#upper-footer {
+   background-color: #555152; 
+}
+footer.page-footer .footer-copyright {
+    background-color: #2E2633;
+
+}
+footer h5{
+    color: #DCE9BE;
+}
+footer a {
+    color: #EFFFCD;
+}
+footer p {
+    color: #EFFFCD;
+}
+.pealkiri {
+    text-align: center;
+}
+.pealkiri .btn {
+    margin-top: 1em;
+    background-color: #99173C;
+    font-size: 2em;
+}
+.pealkiri .btn:hover {
+    background-color: #555152;
+}
+.pealkiri h2 {
+    margin-top: 2em;
+    text-shadow:2px 2px 1px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+.pealkiri h5 {
+    text-align: center;
+}

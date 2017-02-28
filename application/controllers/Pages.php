@@ -40,5 +40,9 @@ class Pages extends CI_Controller {
         $this->view('about');
 
     }
+    public function login() {
+        $data['pealkiri'] = "login";
+        $this->view('login', $data);
+    }
 
 }
