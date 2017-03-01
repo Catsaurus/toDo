@@ -32,11 +32,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </ul>
             </div>
         </nav>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="<?php echo site_url('Pages/login') ?>" >Log in</a></li>
-                    <li><a href="<?php echo site_url('Pages/login') ?>">SIGN UP</a></li>
-                </ul>
+
     </div>
+    <ul class="side-nav" id="mobile-demo">
+        <li><a href="<?php echo site_url('Pages/login') ?>" >Log in</a></li>
+        <li><a href="<?php echo site_url('Pages/login') ?>">SIGN UP</a></li>
+    </ul>
 
 </header>
 
