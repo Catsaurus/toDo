@@ -17,6 +17,7 @@ class MapControl extends CI_Controller {
         $page = 'map';
         $data['title'] = ucfirst($page);
 
+        $this->load->view('templates/header', $data);
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
     }
