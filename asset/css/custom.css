@@ -72,3 +72,21 @@ footer p {
 .pealkiri h5 {
     text-align: center;
 }
+.loginForm {
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+.loginForm input {
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}
+.button {
+    color:hsl(79, 100%, 100%);
+    background-color: #2E2633;
+    border-radius: 4px;
+}
+.button:hover {
+    color:hsl(79, 100%, 100%);
+    background-color: #99173C;
+}

@@ -16,6 +16,10 @@
  * @see https://codeigniter.com/user_guide/general/urls.html
  */
 class Pages extends CI_Controller {
+    private function forming(){
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+    }
     public function view($page = 'home', $data = null)
     {
         if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
@@ -42,7 +46,12 @@ class Pages extends CI_Controller {
     }
     public function login() {
         $data['pealkiri'] = "login";
+        $this->forming();
         $this->view('login', $data);
     }
-
+    public function signup() {
+        $data['pealkiri'] = "signup";
+        $this->forming();
+        $this->view('signup', $data);
+    }
 }
