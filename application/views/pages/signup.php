@@ -6,7 +6,7 @@
                 <h5>Welcome to toDo to do your todos easier and more fun</h5>
             </div>
         </div>
-        <div class = "loginForm">
+        <div class = "signupForm">
             <?php echo form_open('pages/signup'); ?>
 
             <input type="input" name="username"  placeholder="Username" /><br />
