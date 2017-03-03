@@ -23,7 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/toDo/';
+//$config['base_url'] = 'http://localhost/';
+$config['base_url'] = 'http://todo.cs.ut.ee/';
+$config['javascript_location'] = 'http://todo.cs.ut.ee/asset/javascript/jquery/';
 
 /*
 |--------------------------------------------------------------------------

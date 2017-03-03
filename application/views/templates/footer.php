@@ -38,7 +38,7 @@
     <!--Import jQuery before materialize.js-->
 
     <!-- Compiled and minified JavaScript -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url("asset/javascript/materialize.js"); ?>"></script>
     <!-- custom skriptis on need js asjad, mis on seotud meie lehekülgedega-->
     <script type="text/javascript" src="<?php echo base_url("asset/javascript/custom.js"); ?>"></script>
