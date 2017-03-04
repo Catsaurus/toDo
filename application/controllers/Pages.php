@@ -16,9 +16,13 @@
  * @see https://codeigniter.com/user_guide/general/urls.html
  */
 class Pages extends CI_Controller {
+
+    #Method to load necessary codeigniter things for login and signup
     private function forming(){
         $this->load->helper('form');
         $this->load->library('form_validation');
+        $this->load->model('user_model');
+
     }
     public function view($page = 'home', $data = null)
     {
@@ -46,8 +50,34 @@ class Pages extends CI_Controller {
     }
     public function login() {
         $data['pealkiri'] = "login";
+
+        #Load data from codeigniter
         $this->forming();
+
+        #set rules to check that both login fields have something written in them
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('pswd', 'Password', 'required');
+
+        #If both fields have something written
+        if ($this->form_validation->run() === TRUE){
+
+            $userName = $this->input->post('username');
+            $password = $this->input->post('pswd');
+
+            #Get the equivalent data from database
+            $user = $this->user_model->get_user($userName);
+
+            #Check if the password is correct
+            $pswd_valid = password_verify ($password, $user['password_hash']);
+            if ($pswd_valid) {
+                return $pswd_valid;
+            }
+        }
+
+        #If the validation is not met, go back to login page
         $this->view('login', $data);
+
+
     }
     public function signup() {
         $data['pealkiri'] = "signup";

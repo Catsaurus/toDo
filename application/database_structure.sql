@@ -8,3 +8,7 @@ PRIMARY KEY (`id`)
 COLLATE='utf8_general_ci'
 ENGINE=InnoDB
 ;
+
+ALTER TABLE `users`
+  ADD UNIQUE INDEX `username unique` (`username`);
+

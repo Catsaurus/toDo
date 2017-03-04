@@ -8,7 +8,10 @@
                 <h5>Welcome to toDo to do your todos easier and more fun</h5>
             </div>
         </div>
+
         <div class="loginForm" >
+            <?php echo validation_errors(); ?>
+
             <?php echo form_open('pages/login'); ?>
 
             <input type="input" name="username"  placeholder="Username" /><br />
