@@ -24,19 +24,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="<?php echo site_url('Pages/index') ?>" class="brand-logo">ToDo</a>
+                <a href="<?php echo site_url('pages/index') ?>" class="brand-logo">ToDo</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li class="headerLink"><a href="<?php echo site_url('Pages/login') ?>" >Log in</a></li>
-                    <li class="headerLink"><a href="<?php echo site_url('Pages/signup') ?>" >SIGN UP</a></li>
+                    <li class="headerLink"><a href="<?php echo site_url('pages/login') ?>" >Log in</a></li>
+                    <li class="headerLink"><a href="<?php echo site_url('pages/signup') ?>" >SIGN UP</a></li>
                 </ul>
             </div>
         </nav>
 
     </div>
     <ul class="side-nav" id="mobile-demo">
-        <li><a href="<?php echo site_url('Pages/login') ?>" class="btn" >Log in</a></li>
-        <li><a href="<?php echo site_url('Pages/signup') ?>"  class="btn">SIGN UP</a></li>
+        <li><a href="<?php echo site_url('pages/login') ?>" class="btn" >Log in</a></li>
+        <li><a href="<?php echo site_url('pages/signup') ?>"  class="btn">SIGN UP</a></li>
     </ul>
 
 </header>

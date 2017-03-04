@@ -40,8 +40,7 @@ class Pages extends CI_Controller {
     }
     /*default, ehk selle meetodi avab esimesena*/
     public function index() {
-        $data['pealkiri'] = "home";
-        $this->view('home', $data);
+        $this->view('home');
 
     }
     public function about() {
@@ -49,7 +48,6 @@ class Pages extends CI_Controller {
 
     }
     public function login() {
-        $data['pealkiri'] = "login";
 
         #Load data from codeigniter
         $this->forming();
@@ -75,13 +73,12 @@ class Pages extends CI_Controller {
         }
 
         #If the validation is not met, go back to login page
-        $this->view('login', $data);
+        $this->view('login');
 
 
     }
     public function signup() {
-        $data['pealkiri'] = "signup";
         $this->forming();
-        $this->view('signup', $data);
+        $this->view('signup');
     }
 }
