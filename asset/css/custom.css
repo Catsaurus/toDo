@@ -33,7 +33,7 @@ nav ul li.active a {
     padding-bottom: 0.0em;
     color: #2E2633;
 }
-#signup {
+.headerLink {
     background-color: #99173C;
 }
 
@@ -56,13 +56,17 @@ footer p {
 .pealkiri {
     text-align: center;
 }
-.pealkiri .btn {
+
+.btn {
     margin-top: 1em;
+    color:hsl(79, 100%, 100%);
     background-color: #99173C;
+    border-radius: 4px;
     font-size: 2em;
 }
-.pealkiri .btn:hover {
-    background-color: #555152;
+.btn:hover {
+    background-color: #2E2633;
+
 }
 .pealkiri h2 {
     margin-top: 2em;
@@ -71,4 +75,21 @@ footer p {
 }
 .pealkiri h5 {
     text-align: center;
+}
+.loginForm, .signupForm {
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+.loginForm input, .signupForm input {
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}
+.button {
+    background-color: #99173C;
+    border-radius: 4px;
+}
+.button:hover {
+    background-color: #2E2633;
+
 }

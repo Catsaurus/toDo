@@ -79,3 +79,7 @@ modules.xml
 # End of https://www.gitignore.io/api/phpstorm,codeigniter
 
 .idea
+
+ # Environment specific config should not be included in the repository
+application/config/config.php
+application/config/database.php
