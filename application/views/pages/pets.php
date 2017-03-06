@@ -9,6 +9,6 @@
                 <a href="<?php echo site_url('Settings/index'); ?>">Settings</a>
             </div>
         </div>
-        <h1>About</h1>
+        <h1>Pets</h1>
     </div>
 </main>
