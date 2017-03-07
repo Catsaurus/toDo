@@ -13,7 +13,7 @@ class Tasks extends CI_Controller {
         $page = 'tasks';
         $data['title'] = ucfirst($page);
 
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/headerInside', $data);
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
     }

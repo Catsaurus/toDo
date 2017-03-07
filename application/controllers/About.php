@@ -13,7 +13,7 @@ class About extends CI_Controller {
         $page = 'about';
         $data['title'] = ucfirst($page);
 
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/headerInside', $data);
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
     }

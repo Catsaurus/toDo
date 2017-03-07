@@ -1,14 +1,8 @@
 
 <main>
+
     <div class="container">
-        <div class="row">
-            <div>
-                <a href="<?php echo site_url('Tasks/index'); ?>">Tasks</a>
-                <a href="<?php echo site_url('Pets/index'); ?>">Pets</a>
-                <a href="<?php echo site_url('About/index'); ?>">About</a>
-                <a href="<?php echo site_url('Settings/index'); ?>">Settings</a>
-            </div>
-        </div>
+
         <h1>Tasks</h1>
 
         <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')">Add new task</a>
@@ -33,11 +27,25 @@
                     <input width="50%" type="date" id="date" class="datepicker">
                 </label>
 
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
-
+                <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')">Cancel</a>
+                <a class="waves-effect waves-teal btn-flat" onclick="">Add<i class="material-icons right">send</i></a>
             </form>
         </div>
+
+        <p></p>
+
+        <div class="row" id="taskid">
+            <div class="col s4">
+                <p>Due date on täna</p>
+            </div>
+            <div class="col s4">
+                <p>Due date on sellel nädalal</p>
+            </div>
+            <div class="col s4">
+                <p>Due date on kunagi tulevikus</p>
+            </div>
+        </div>
+
     </div>
+
 </main>
