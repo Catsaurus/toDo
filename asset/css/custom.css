@@ -7,6 +7,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    align-items: center;
 }
 
 nav {
@@ -66,7 +67,6 @@ footer p {
 }
 .btn:hover {
     background-color: #2E2633;
-
 }
 .pealkiri h2 {
     margin-top: 2em;
@@ -91,5 +91,17 @@ footer p {
 }
 .button:hover {
     background-color: #2E2633;
-
 }
+
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus{
+    border-bottom: 1px solid #2E2633;
+    box-shadow: 0 1px 0 0 #2E2633;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=password]:focus + label{
+    color: #000;
+}
+
