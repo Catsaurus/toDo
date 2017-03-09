@@ -39,7 +39,7 @@
                                     <div class="col s2"></div>
                                     <div class="col s8">
                                         <div class="input-field">
-                                            <input class="validate" type="password" name="password" id="password"/>
+                                            <input class="validate" type="password" name="pswd" id="password"/>
                                             <label for="password">Enter password</label>
                                         </div>
                                     </div>
