@@ -1,17 +1,6 @@
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div>
-                <a href="<?php echo site_url('Tasks/index'); ?>">Tasks</a>
-                <a href="<?php echo site_url('Pets/index'); ?>">Pets</a>
-                <a href="<?php echo site_url('About/index'); ?>">About</a>
-                <a href="<?php echo site_url('Settings/index'); ?>">Settings</a>
-            </div>
-        </div>
-    </div>
-
-
+<!--    <div class="container">-->
 
         <div id="parent">
             <div id="petInfo">
@@ -21,8 +10,22 @@
             </div>
         </div>
 
-    <p id="googleMap">
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnbcCUfwLZEDJOeqGm9VRfJSKeqETl40I&callback=myMap"></script>
-    </p>
+        <p id="googleMap">
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnbcCUfwLZEDJOeqGm9VRfJSKeqETl40I&callback=myMap"></script>
+        </p>
 
+    <p></p><p></p>
+    <div id="parent">
+        <div id="petInfo">
+            <h4>Teine Pet</h4>
+            <p>...</p>
+        </div>
+
+    </div>
+
+    <p class="petData"></p>
+
+
+
+<!--    </div>-->
 </body>
