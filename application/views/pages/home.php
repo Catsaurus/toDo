@@ -7,6 +7,7 @@
                     <h5>Welcome to toDo to do your todods...easier...and more fun</h5>
                     <a href="<?php echo site_url('Login/index') ?>" class="waves-effect waves-light btn">LOG IN</a>
                     <a href="<?php echo site_url('Register/index') ?>" class="waves-effect waves-light btn">SIGN UP</a>
+                    <a onclick="fblogin()" class="waves-effect waves-light btn">Facebook</a>
                 </div>
 
                 <div class="col s12">

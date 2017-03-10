@@ -1,8 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Riana
- */
 
 class Register extends CI_Controller {
 
