@@ -26,17 +26,18 @@ class Login extends CI_Controller {
             #Check if the password is correct
             $pswd_valid = password_verify ($password, $user['password_hash']);
             if ($pswd_valid) {
-                $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $username;
                 view_loader('tasks');
-                return $pswd_valid;
+                return;
             }
             else{
                 $errorMessage = "Invalid Login";
-                // TODO
-                $_SESSION['login'] = '';
             }
         }
         view_loader('login');
+    }
+    public function fb(){
+        $accessToken = $this->input->post('accessToken');
+        echo $accessToken;
     }
 }
