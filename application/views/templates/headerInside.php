@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- javascriptid peaks lõppu tõstma nagu ma aru saan, sest siis on lehe laadimine kiirem, MAP ei tööta, kui sees siit ära kustutada-->
     <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -27,19 +28,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li><a href="<?php echo site_url('Pets/index') ?>" >Pets</a></li>
         <li><a href="<?php echo site_url('About/index') ?>" >About</a></li>
         <li><a href="<?php echo site_url('Settings/index') ?>" >Settings</a></li>
-        <li><a href="<?php /*echo site_url('pages/signup') */?>"  class="btn">LOG OUT</a></li>
+        <li><a href="<?php echo site_url('Logout/index')?>"  class="btn">LOG OUT</a></li>
     </ul>
 
     <nav>
         <div class="nav-wrapper">
-            <a href="<?php echo site_url('pages/index') ?>" class="brand-logo">ToDo</a>
+            <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li class="headerLink"><a href="<?php echo site_url('Tasks/index') ?>" >Tasks</a></li>
                 <li class="headerLink"><a href="<?php echo site_url('Pets/index') ?>" >Pets</a></li>
                 <li class="headerLink"><a href="<?php echo site_url('About/index') ?>" >About</a></li>
                 <li class="headerLink"><a href="<?php echo site_url('Settings/index') ?>" >Settings</a></li>
-                <li class="headerLink"><a href="<?php /*echo site_url('pages/signup') */?>" >Log out</a></li>
+                <li class="headerLink"><a href="<?php echo site_url('Logout/index')?>" >Log out</a></li>
             </ul>
         </div>
     </nav>

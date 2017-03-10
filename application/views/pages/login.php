@@ -24,7 +24,7 @@
                                     <div class="col s2"></div>
                                     <div class="col s8" >
                                         <?php echo validation_errors(); ?>
-                                        <?php echo form_open('pages/login'); ?>
+                                        <?php echo form_open('Login/index'); ?>
 
                                         <div class="input-field">
                                             <input class="validate" type="text" name="username" id="username"/>
