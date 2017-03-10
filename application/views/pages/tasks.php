@@ -7,7 +7,7 @@
 
         <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')">Add new task</a>
         <div class="row" id="newTask">
-            <form id="newTaskForm" class="col s12">
+            <form id="newTaskForm" class="col s12" method="post" action="<?php echo site_url('Tasks/insert') ?>">
                 <div class="row">
                     <div class="input-field col s12">
                         <input name="description" id="description" type="text">
@@ -27,7 +27,7 @@
                 </label>
 
                 <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')">Cancel</a>
-                <a class="waves-effect waves-teal btn-flat" onclick="addTask()">Add<i class="material-icons right">send</i></a>
+                <input type="submit" name="submit" value="Add" onclick="hideNewTask('newTask')" class="waves-effect waves-teal btn-flat"/>
             </form>
         </div>
 
@@ -36,7 +36,15 @@
         <div class="row" id="taskid">
             <div class="col s4">
                 <p>Due date on täna</p>
-                <p id="tasksOfToday"></p>
+                <p id="tasksOfToday">
+                <table><tr><th>Description</th></tr>
+                    <script  type="text/javascript">
+                        $.post( "<?php echo site_url('Tasks/show_tasks') ?>", function( data ) {
+                            $("#tasksOfToday").html(data);
+                        });
+                    </script>
+                    </table>
+                </p>
             </div>
             <div class="col s4">
                 <p>Due date on sellel nädalal</p>
