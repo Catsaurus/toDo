@@ -7,15 +7,16 @@
             </div>
         </div>
         <div class = "signupForm">
-            <?php echo form_open('pages/signup'); ?>
 
-            <input type="input" name="username"  placeholder="Username" /><br />
+            <form method="post" action="<?php echo site_url('Register/index') ?>">
 
-            <input type="input" name="pswd" placeholder="Password" /><br />
+            <input type="text" name="username"  placeholder="Username" /><br />
 
-            <input type="input" name="pswd2" placeholder="Password again" /><br />
+            <input type="password" name="pswd" placeholder="Password" /><br />
 
-            <input type="input" name="email" placeholder="Email" /><br />
+            <input type="password" name="pswd2" placeholder="Password again" /><br />
+
+            <input type="email" name="email" placeholder="Email" /><br />
 
             <input type="submit" name="submit" value="Register" class="button"/>
 
