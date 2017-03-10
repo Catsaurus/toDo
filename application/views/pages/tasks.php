@@ -36,15 +36,16 @@
         <div class="row" id="taskid">
             <div class="col s4">
                 <p>Due date on täna</p>
-                <p id="tasksOfToday">
-                <table><tr><th>Description</th></tr>
-                    <script  type="text/javascript">
-                        $.post( "<?php echo site_url('Tasks/show_tasks') ?>", function( data ) {
-                            $("#tasksOfToday").html(data);
-                        });
-                    </script>
+                <table><tr><th>Description</th></tr></table>
+                <div id="tasksOfToday">
+                    <table>
+                        <script  type="text/javascript">
+                            $.post( "<?php echo site_url('Tasks/show_tasks') ?>", function( data ) {
+                                $("#tasksOfToday").html(data);
+                            });
+                        </script>
                     </table>
-                </p>
+                </div>
             </div>
             <div class="col s4">
                 <p>Due date on sellel nädalal</p>
