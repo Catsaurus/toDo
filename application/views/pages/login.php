@@ -7,7 +7,6 @@
                 <h5>Welcome to toDo to do your todos easier and more fun</h5>
             </div>
         </div>
-
         <div class="container">
             <div class="row">
                 <div class="col s3"></div>

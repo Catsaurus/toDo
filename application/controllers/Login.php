@@ -32,6 +32,7 @@ class Login extends CI_Controller {
         view_loader('login');
     }
     public function fb(){
+        session_start();
         $jsonString = file_get_contents('php://input');
         $obj = json_decode($jsonString);
         $accessToken = $obj->token;
@@ -46,7 +47,6 @@ class Login extends CI_Controller {
 
         $response = curl_exec($ch);
         $errorno = curl_errno($ch);
-//        echo $response    // Katseprint, et näha, mis info facebookist tuleb meile.
 
         if ($errorno) { // shortcut for "is not 0" or null or undefined etc
             echo curl_strerror($errorno);
@@ -55,18 +55,15 @@ class Login extends CI_Controller {
             $json = json_decode($response);
 
             if (isset($json->id)){ // kui jsonis on ID field /key
-                echo 'true'; //TODO format json object as a better response
-                $user = $this->User_model->get_user_fb($json->id);
+                echo 'true';
+                $user = $this->user_model->get_user_fb($json->id);
                 if ($user === null){
-                    $this->User_model->insert_fbuser(@$json->id, $json->email);
-                    $user = $this->User_model->get_user_fb($json->id);
+                    $this->user_model->insert_fbuser(@$json->id, $json->email);
+                    $user = $this->user_model->get_user_fb($json->id);
                 }
-
-                // TODO check if user exists, if not, create
-                // TODO keep user ID instead of username
-                $_SESSION['username'] = '...';
+                $_SESSION['id'] = $user['id'];
             }
-            else echo 'false'; //TODO format json object as a better response, maybe $json->error->message
+            else echo 'false';
 
         }
     }

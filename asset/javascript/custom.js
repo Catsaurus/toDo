@@ -11,7 +11,15 @@ function fblogin() {
 
             request.addEventListener('load', function () {
                 console.log('Response from server: ', this.responseText);
+
+                if (this.responseText === 'true'){
+                    window.location.href = '/index.php/tasks';
+                }
+                else {
+                    document.querySelector("#fb_login_error").textContent="Facebook authentication failed";
+                }
             });
+
 
             request.open('POST', '/index.php/login/fb');
             request.setRequestHeader('Content-type', 'application/json');
