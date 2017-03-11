@@ -13,8 +13,11 @@
                 <div class="col s4">
                     <h5><a href="#">Subscribe</a></h5>
                     <ul>
-                        <li><a href="<?php echo site_url('Pages/about') ?>">About us</a></li>
+                        <li><a href="<?php echo site_url('About/index') ?>">About us</a></li>
                         <li><a href="#">Contact us</a></li>
+                        <li><a href="<?php echo site_url('Tasks/index') ?>">Tasks</a></li>
+                        <li><a href="<?php echo site_url('Settings/index') ?>">Settings</a></li>
+                        <li><a href="<?php echo site_url('Pets/index') ?>">Pets</a></li>
                     </ul>
                 </div>
 

@@ -28,7 +28,14 @@ class Login extends CI_Controller {
             if ($pswd_valid) {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $username;
-                view_loader('tasks');
+                if(isset($_SESSION['afterLogIn'])){
+                    $page = $_SESSION['afterLogIn'];
+                    $data['title'] = ucfirst($page);
+                    view_loader($page);
+                }
+                else{
+                    view_loader('tasks');
+                }
                 return $pswd_valid;
             }
             else{

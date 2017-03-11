@@ -12,9 +12,15 @@ class Tasks extends CI_Controller {
 
     public function index()
     {
-        $page = 'tasks';
-        $data['title'] = ucfirst($page);
-        view_loader($page);
+        session_start();
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+            $page = 'tasks';
+            $data['title'] = ucfirst($page);
+            view_loader($page);
+        }
+        else{
+            view_loader('login');
+        }
     }
     public function insert()
     {
