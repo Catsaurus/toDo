@@ -25,7 +25,8 @@ class task_model extends CI_Model {
     {
         $sql = 'CALL getUserTasksOfToday("'.$username.'")';
         $result = array();
-        $connection = mysqli_connect('localhost', 'root', '', 'todo');
+
+        $connection = mysqli_connect($this->db->hostname, $this->db->username, $this->db->password, $this->db->database);
         $query = mysqli_prepare($connection, $sql);
         mysqli_stmt_execute($query);
         if(mysqli_stmt_store_result($query))
