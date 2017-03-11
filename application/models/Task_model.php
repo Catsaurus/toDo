@@ -14,9 +14,8 @@ class task_model extends CI_Model {
         $this->load->database();
     }
 
-    public function inser_task($description, $date, $username)
+    public function inser_task($description, $date, $id)
     {
-        $id = $this->user_model->get_user($username)['id'];
         $sql = 'CALL insertTask(?,?,?)';
         $this->db->query($sql, array($description, $date, $id));
     }
@@ -32,6 +31,9 @@ class task_model extends CI_Model {
         if(mysqli_stmt_store_result($query))
         {
             mysqli_stmt_bind_result($query, $id, $due, $completed, $user, $content);
+            /*
+             * goes through users tasks of today and returns them in an array
+            */
             while (mysqli_stmt_fetch($query)) {
                 $data = array(
                     'content'  => $content

@@ -1,6 +1,10 @@
 
 function myMap() {
 
+/*
+    adds google map in to the pets tab with a marker and info button
+*/
+
     var myCenter = new google.maps.LatLng(58.378991, 26.714598);
     var elephantLoc = new google.maps.LatLng(58.378189, 26.714668);
 

@@ -1,7 +1,6 @@
-/**
- * Created by Riana on 06.03.17.
+/*
+    shows and hides the form for inserting new task
  */
-
 function showNewTask(newTask) {
     document.getElementById(newTask).style.display = "block";
 }

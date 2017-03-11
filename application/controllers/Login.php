@@ -24,6 +24,10 @@ class Login extends CI_Controller {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['username'] = $username;
+
+                /*
+                 * checks if page needs redirecting to the wished one
+                */
                 if(isset($_SESSION['afterLogIn'])){
                     $page = $_SESSION['afterLogIn'];
                     $data['title'] = ucfirst($page);
@@ -35,9 +39,9 @@ class Login extends CI_Controller {
             }
             else{
                 $errorMessage = "Invalid Login";
+                view_loader('login');
             }
         }
-        view_loader('login');
     }
     public function fb(){
         session_start();
