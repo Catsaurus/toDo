@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Riana
- * Date: 09.03.17
- * Time: 16:56
- */
+
 class Login extends CI_Controller {
 
     public function index() {
@@ -27,6 +22,7 @@ class Login extends CI_Controller {
             $pswd_valid = password_verify ($password, $user['password_hash']);
             if ($pswd_valid) {
                 $_SESSION['logged_in'] = true;
+                $_SESSION['id'] = $user['id'];
                 $_SESSION['username'] = $username;
                 if(isset($_SESSION['afterLogIn'])){
                     $page = $_SESSION['afterLogIn'];
@@ -36,14 +32,47 @@ class Login extends CI_Controller {
                 else{
                     view_loader('tasks');
                 }
-                return $pswd_valid;
             }
             else{
                 $errorMessage = "Invalid Login";
-                // TODO
-                $_SESSION['login'] = '';
             }
         }
         view_loader('login');
+    }
+    public function fb(){
+        session_start();
+        $jsonString = file_get_contents('php://input');
+        $obj = json_decode($jsonString);
+        $accessToken = $obj->token;
+        // read the json that was created in the browser
+
+        $url = 'https://graph.facebook.com/v2.8/me?fields=id,email&access_token=' . $accessToken;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // set settings for curl, set url, turn off verification if the request is actually going to fb, turn on return.
+
+        $response = curl_exec($ch);
+        $errorno = curl_errno($ch);
+
+        if ($errorno) { // shortcut for "is not 0" or null or undefined etc
+            echo curl_strerror($errorno);
+        }
+        else {
+            $json = json_decode($response);
+
+            if (isset($json->id)){ // kui jsonis on ID field /key
+                echo 'true';
+                $user = $this->user_model->get_user_fb($json->id);
+                if ($user === null){
+                    $this->user_model->insert_fbuser(@$json->id, $json->email);
+                    $user = $this->user_model->get_user_fb($json->id);
+                }
+                $_SESSION['id'] = $user['id'];
+            }
+            else echo 'false';
+
+        }
     }
 }

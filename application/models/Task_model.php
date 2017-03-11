@@ -17,8 +17,8 @@ class task_model extends CI_Model {
     public function inser_task($description, $date, $username)
     {
         $id = $this->user_model->get_user($username)['id'];
-        $sql = 'CALL insertTask("'.$description.'", "'.$date.'", '.$id.')';
-        $query = $this->db->query($sql);
+        $sql = 'CALL insertTask(?,?,?)';
+        $this->db->query($sql, array($description, $date, $id));
     }
 
     public function get_user_tasks_of_today($username)

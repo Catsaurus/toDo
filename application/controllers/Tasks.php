@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Riana
- * Date: 06.03.17
- * Time: 18:45
- * @property  task_model
- */
-
 class Tasks extends CI_Controller {
 
     public function index()
@@ -25,11 +17,11 @@ class Tasks extends CI_Controller {
     public function insert()
     {
         session_start();
-        $user = $_SESSION['username'];
+        $userId = $_SESSION['id'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $description = $_POST['description'];
             $date = $_POST['date'];
-            $task = $this->task_model->inser_task($description, $date, $user);
+            $task = $this->task_model->inser_task($description, $date, $userId);
             header("location:index");
         }
     }
@@ -37,8 +29,8 @@ class Tasks extends CI_Controller {
     public function show_tasks()
     {
         session_start();
-        $user = $_SESSION['username'];
-        $tasks = $this->task_model->get_user_tasks_of_today($user);
+        $userId = $_SESSION['id'];
+        $tasks = $this->task_model->get_user_tasks_of_today($userId);
         foreach ($tasks as $task) {
             echo $task['content']."<br>";
         }

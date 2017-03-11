@@ -1,8 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Riana
- */
 
 class Register extends CI_Controller {
 
@@ -30,14 +26,12 @@ class Register extends CI_Controller {
                 $this->load->database();
                 $reg = $this->db->insert('users', $data); // TODO Model'isse
                 if ($reg == 0) {
-                    // "that username already excists" TODO
+                    // "that username already exists" TODO
                     $errorMessage = "Invalid";
                     // TODO
-                    $_SESSION['login'] = '';
                 }
                 else{
-                    $_SESSION['logged_in'] = true;
-                    $_SESSION['username'] = $username;
+                    $_SESSION['id'] = $this->db->insert_id();
                     view_loader('tasks');
                 }
             }
