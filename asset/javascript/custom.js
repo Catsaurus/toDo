@@ -19,5 +19,5 @@ function fblogin() {
             var json = JSON.stringify({token : accessToken}); // token on key, mis peab matchima .php's kasutatavaga ja accessToken on siis value, mis peab matchima fb saadud access tokeniga
             request.send(json);
         }
-    })
+    }, {scope: 'email'});
 }
