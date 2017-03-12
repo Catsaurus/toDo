@@ -59,6 +59,8 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 $autoload['libraries'] = array('javascript', 'form_validation');
+
+
 //$autoload['libraries'] = array('javascript', 'javascript/jquery');
 /*
 | -------------------------------------------------------------------

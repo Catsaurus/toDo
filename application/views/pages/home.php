@@ -8,7 +8,7 @@
                     <div id = "fb_login_error"></div>
                     <a href="<?php echo site_url('Login/index') ?>" class="waves-effect waves-light btn">LOG IN</a>
                     <a href="<?php echo site_url('Register/index') ?>" class="waves-effect waves-light btn">SIGN UP</a>
-                    <a onclick="fblogin()" class="waves-effect waves-light btn">Facebook</a>
+                    <a onclick="fblogin()" class="waves-effect waves-light btn" id = "facebook_button">Facebook</a>
                 </div>
 
                 <div class="col s12">
