@@ -49,7 +49,7 @@ ALTER TABLE `users`
 
 ALTER TABLE `users`
   CHANGE COLUMN `username` `username` VARCHAR(50) NULL AFTER `id`,
-  CHANGE COLUMN `email` `email` VARCHAR(100) NULL AFTER `username`,
+  CHANGE COLUMN `email` `email` VARCHAR(100) NULL AFTER `username`;
 
 
 DELIMITER //
@@ -83,3 +83,16 @@ CONTAINS SQL
     WHERE user_id = userId and completed=0 and
           YEAR(due_time) >= YEAR(CURDATE()) and WEEK(due_time) > WEEK(CURDATE());
   END //
+
+
+DROP PROCEDURE  `getUserTasksOfToday` ;
+
+DELIMITER //
+CREATE PROCEDURE  `getUserTasksOfToday` ( IN  `id` INT( 255 ) UNSIGNED ) NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER BEGIN SELECT tasks.id, due_time, completed, user_id, content
+FROM tasks
+ INNER JOIN users ON tasks.user_id = users.id
+WHERE users.username = id
+AND due_time = CURDATE( )
+AND completed =0;
+
+END //

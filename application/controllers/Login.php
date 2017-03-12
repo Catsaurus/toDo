@@ -74,21 +74,22 @@ class Login extends CI_Controller {
         $errorno = curl_errno($ch);
 
         if ($errorno) { // shortcut for "is not 0" or null or undefined etc
-            echo curl_strerror($errorno);
+            $this->output->set_output(json_encode(array('success' => false)));
         }
         else {
             $json = json_decode($response);
 
             if (isset($json->id)){ // kui jsonis on ID field /key
-                echo 'true';
+                $this->output->set_output(json_encode(array('success' => true)));
                 $user = $this->user_model->get_user_fb($json->id);
                 if ($user === null){
                     $this->user_model->insert_fbuser(@$json->id, $json->email);
                     $user = $this->user_model->get_user_fb($json->id);
                 }
+                $_SESSION['logged_in'] = true;
                 $_SESSION['id'] = $user['id'];
             }
-            else echo 'false';
+	    else $this->output->set_output(json_encode(array('success' => false)));
 
         }
     }
