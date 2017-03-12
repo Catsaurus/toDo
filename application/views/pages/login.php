@@ -12,10 +12,10 @@
             <div class="row">
                 <div class="col s3"></div>
 
-                    <div class="col s6">
+                    <div class="col s12 m6">
                     <!--Z-DEPTH on z telje sügavus, ehk mida suurem on see number, seda kaugemal on see nö taustast-->
                         <div class="z-depth-5 row">
-                            <form class="col s12" method="post" action="<?php echo site_url('Login/index'); ?>">
+                            <form class="col s12 m6" method="post" action="<?php echo site_url('Login/index'); ?>">
                                 <div class="row">
                                     <div class="col s12"></div>
                                 </div>
