@@ -15,13 +15,6 @@
         </p>
 
     <p></p><p></p>
-    <div id="parent">
-        <div id="petInfo">
-            <h4>Teine Pet</h4>
-            <p>...</p>
-        </div>
-
-    </div>
 
     <p class="petData"></p>
 
