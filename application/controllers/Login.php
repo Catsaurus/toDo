@@ -42,6 +42,9 @@ class Login extends CI_Controller {
                 view_loader('login');
             }
         }
+        else{
+            view_loader('login');
+        }
     }
     public function fb(){
         session_start();
