@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html> <!--HTML5 doctype declaration-->
 <!--<html lang="en">-->
 <head>
+    <title>toDo</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -34,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <nav>
         <div class="nav-wrapper">
             <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><em class="material-icons">menu</em></a>
             <ul class="right hide-on-med-and-down">
                 <li class="headerLink"><a href="<?php echo site_url('Tasks/index') ?>" >Tasks</a></li>
                 <li class="headerLink"><a href="<?php echo site_url('Pets/index') ?>" >Pets</a></li>
