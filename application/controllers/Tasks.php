@@ -26,7 +26,7 @@ class Tasks extends CI_Controller {
         }
     }
 
-    public function show_tasks()
+    public function show_tasks_today()
     {
         session_start();
         $user = $_SESSION['username'];
@@ -36,4 +36,23 @@ class Tasks extends CI_Controller {
         }
     }
 
+    public function show_tasks_week()
+    {
+        session_start();
+        $userId = $_SESSION['id'];
+        echo"<script>console.log('DebugObjects:".$userId."');</script>";
+        $tasks = $this->task_model->get_user_tasks_week($userId);
+        foreach ($tasks as $task) {
+            echo $task['content']."<br>";
+        }
+    }
+    public function show_tasks_future()
+    {
+        session_start();
+        $userId = $_SESSION['id'];
+        $tasks = $this->task_model->get_user_tasks_future($userId);
+        foreach ($tasks as $task) {
+            echo $task['content']."<br>";
+        }
+    }
 }

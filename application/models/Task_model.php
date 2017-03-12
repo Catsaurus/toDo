@@ -46,4 +46,36 @@ class task_model extends CI_Model {
         mysqli_close($connection);
         return $result;
     }
+
+    public function get_user_tasks_week($id)
+    {
+        $sql = 'CALL getUsersTasksThisWeek("'.$id.'")';
+        $result = array();
+        $query = $this->db->query($sql);
+
+        foreach ($query->result() as $row)
+        {
+            $data = array(
+                'content'  => $row->content
+            );
+            array_push($result, $data);
+        }
+        return $result;
+    }
+
+    public function get_user_tasks_future($id)
+    {
+        $sql = 'CALL getUsersTasksFuture("'.$id.'")';
+        $result = array();
+        $query = $this->db->query($sql);
+
+        foreach ($query->result() as $row)
+        {
+            $data = array(
+                'content'  => $row->content
+            );
+            array_push($result, $data);
+        }
+        return $result;
+    }
 }
