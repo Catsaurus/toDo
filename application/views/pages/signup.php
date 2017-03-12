@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col s12 pealkiri">
                 <h3>ToDo</h3>
-                <h4><?php echo lang('intro')</h4>
+                <h4><?php echo lang('intro')?></h4>
             </div>
         </div>
         <div class = "signupForm">
