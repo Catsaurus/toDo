@@ -10,9 +10,9 @@ function fblogin() {
             var request = new XMLHttpRequest();
 
             request.addEventListener('load', function () {
-                console.log('Response from server: ', this.responseText);
+                var responseFromServer = JSON.parse(this.responseText);
 
-                if (this.responseText === 'true'){
+                if (responseFromServer.success){
                     window.location.href = '/index.php/tasks';
                 }
                 else {
