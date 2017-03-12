@@ -2604,7 +2604,6 @@ a {
 
 .hoverable {
   transition: box-shadow .25s;
-  box-shadow: 0;
 }
 
 .hoverable:hover {
@@ -3170,8 +3169,7 @@ td, th {
   -webkit-animation-delay: 1.15s;
           animation-delay: 1.15s;
 }
-
-@-webkit-keyframes indeterminate {
+/*@-webkit-keyframes indeterminate {
   0% {
     left: -35%;
     right: 100%;
@@ -3185,7 +3183,7 @@ td, th {
     right: -90%;
   }
 }
-
+*/
 @keyframes indeterminate {
   0% {
     left: -35%;
@@ -3201,7 +3199,7 @@ td, th {
   }
 }
 
-@-webkit-keyframes indeterminate-short {
+/*@-webkit-keyframes indeterminate-short {
   0% {
     left: -200%;
     right: 100%;
@@ -3214,7 +3212,7 @@ td, th {
     left: 107%;
     right: -8%;
   }
-}
+}*/
 
 @keyframes indeterminate-short {
   0% {
@@ -3264,7 +3262,7 @@ input[type=range] + .thumb {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  /*user-select: none;*/
 }
 
 .circle {
@@ -3339,7 +3337,7 @@ nav ul a span.badge {
 
 /* This is needed for some mobile phones to display the Google Icon font properly */
 .material-icons {
-  text-rendering: optimizeLegibility;
+  /*text-rendering: optimizeLegibility;*/
   -webkit-font-feature-settings: 'liga';
      -moz-font-feature-settings: 'liga';
           font-feature-settings: 'liga';
@@ -4172,7 +4170,7 @@ nav .input-field input {
   padding-left: 2rem;
 }
 
-nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=password]:valid, nav .input-field input[type=email]:valid, nav .input-field input[type=url]:valid, nav .input-field input[type=date]:valid {
+nav .input-field input:focus, nav .input-field input[type=text], nav .input-field input[type=password], nav .input-field input[type=email], nav .input-field input[type=url], nav .input-field input[type=date] {
   border: none;
   box-shadow: none;
 }
@@ -4216,21 +4214,21 @@ nav .input-field label.active i {
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.eot");
+  src: url("../fonts/roboto/Roboto-Thin.eot");
   src: url("../fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Light), url("../fonts/roboto/Roboto-Light.eot");
+  src: url("../fonts/roboto/Roboto-Light.eot");
   src: url("../fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Regular), url("../fonts/roboto/Roboto-Regular.eot");
+  src: url("../fonts/roboto/Roboto-Regular.eot");
   src: url("../fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
 }
@@ -4894,7 +4892,7 @@ small {
   overflow: hidden;
   left: 0;
   top: 0;
-  pointer-events: none;
+  /*pointer-events: none;*/
   visibility: hidden;
 }
 
@@ -4938,7 +4936,7 @@ small {
 .btn-floating[disabled],
 .btn-large[disabled],
 .btn-flat[disabled] {
-  pointer-events: none;
+  /*pointer-events: none;*/
   background-color: #DFDFDF !important;
   box-shadow: none;
   color: #9F9F9F !important;
@@ -5284,7 +5282,7 @@ button.btn-floating {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none;
+          /*user-select: none;*/
   -webkit-tap-highlight-color: transparent;
   vertical-align: middle;
   z-index: 1;
@@ -5306,7 +5304,7 @@ button.btn-floating {
   transition-property: transform, opacity, -webkit-transform;
   -webkit-transform: scale(0);
           transform: scale(0);
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 .waves-effect.waves-light .waves-ripple {
@@ -5988,7 +5986,7 @@ input[type=number].validate + label,
 input[type=search].validate + label,
 textarea.materialize-textarea.validate + label {
   width: 100%;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 input:not([type]) + label:after,
@@ -6195,7 +6193,7 @@ textarea.materialize-textarea {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none;
+          /*user-select: none;*/
 }
 
 [type="radio"] + label:before,
@@ -6915,7 +6913,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding-left: 20px;
   height: 1.5rem;
   line-height: 1.5rem;
-  letter-spacing: .4;
+  letter-spacing: .4em;
   display: inline-block;
 }
 
@@ -7026,7 +7024,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav .subheader {
   cursor: initial;
-  pointer-events: none;
+  /*pointer-events: none;*/
   color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
   font-weight: 500;
@@ -7193,11 +7191,11 @@ input[type=range]:focus::-ms-fill-upper {
   animation: container-rotate 1568ms linear infinite;
 }
 
-@-webkit-keyframes container-rotate {
+/*@-webkit-keyframes container-rotate {
   to {
     -webkit-transform: rotate(360deg);
   }
-}
+}*/
 
 @keyframes container-rotate {
   to {
@@ -7282,40 +7280,40 @@ input[type=range]:focus::-ms-fill-upper {
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 
-@-webkit-keyframes fill-unfill-rotate {
+/*@-webkit-keyframes fill-unfill-rotate {
   12.5% {
     -webkit-transform: rotate(135deg);
   }
   /* 0.5 * ARCSIZE */
-  25% {
+  /*25% {
     -webkit-transform: rotate(270deg);
   }
   /* 1   * ARCSIZE */
-  37.5% {
+  /*37.5% {
     -webkit-transform: rotate(405deg);
   }
   /* 1.5 * ARCSIZE */
-  50% {
+  /*50% {
     -webkit-transform: rotate(540deg);
   }
   /* 2   * ARCSIZE */
-  62.5% {
+  /*62.5% {
     -webkit-transform: rotate(675deg);
   }
   /* 2.5 * ARCSIZE */
-  75% {
+  /*75% {
     -webkit-transform: rotate(810deg);
   }
   /* 3   * ARCSIZE */
-  87.5% {
+  /*87.5% {
     -webkit-transform: rotate(945deg);
   }
   /* 3.5 * ARCSIZE */
-  to {
+  /*to {
     -webkit-transform: rotate(1080deg);
   }
-  /* 4   * ARCSIZE */
-}
+  /* 4   * ARCSIZE *//*
+}*/
 
 @keyframes fill-unfill-rotate {
   12.5% {
@@ -7360,7 +7358,7 @@ input[type=range]:focus::-ms-fill-upper {
   /* 4   * ARCSIZE */
 }
 
-@-webkit-keyframes blue-fade-in-out {
+/*@-webkit-keyframes blue-fade-in-out {
   from {
     opacity: 1;
   }
@@ -7380,7 +7378,7 @@ input[type=range]:focus::-ms-fill-upper {
     opacity: 1;
   }
 }
-
+*/
 @keyframes blue-fade-in-out {
   from {
     opacity: 1;
@@ -7402,7 +7400,7 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 
-@-webkit-keyframes red-fade-in-out {
+/*@-webkit-keyframes red-fade-in-out {
   from {
     opacity: 0;
   }
@@ -7418,7 +7416,7 @@ input[type=range]:focus::-ms-fill-upper {
   51% {
     opacity: 0;
   }
-}
+}*/
 
 @keyframes red-fade-in-out {
   from {
@@ -7438,7 +7436,7 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 
-@-webkit-keyframes yellow-fade-in-out {
+/*@-webkit-keyframes yellow-fade-in-out {
   from {
     opacity: 0;
   }
@@ -7454,7 +7452,7 @@ input[type=range]:focus::-ms-fill-upper {
   76% {
     opacity: 0;
   }
-}
+}*/
 
 @keyframes yellow-fade-in-out {
   from {
@@ -7474,7 +7472,7 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 
-@-webkit-keyframes green-fade-in-out {
+/*@-webkit-keyframes green-fade-in-out {
   from {
     opacity: 0;
   }
@@ -7490,7 +7488,7 @@ input[type=range]:focus::-ms-fill-upper {
   100% {
     opacity: 0;
   }
-}
+}*/
 
 @keyframes green-fade-in-out {
   from {
@@ -7581,7 +7579,7 @@ input[type=range]:focus::-ms-fill-upper {
   animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 
-@-webkit-keyframes left-spin {
+/*@-webkit-keyframes left-spin {
   from {
     -webkit-transform: rotate(130deg);
   }
@@ -7592,7 +7590,7 @@ input[type=range]:focus::-ms-fill-upper {
     -webkit-transform: rotate(130deg);
   }
 }
-
+*/
 @keyframes left-spin {
   from {
     -webkit-transform: rotate(130deg);
@@ -7608,7 +7606,7 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 
-@-webkit-keyframes right-spin {
+/*@-webkit-keyframes right-spin {
   from {
     -webkit-transform: rotate(-130deg);
   }
@@ -7618,7 +7616,7 @@ input[type=range]:focus::-ms-fill-upper {
   to {
     -webkit-transform: rotate(-130deg);
   }
-}
+}*/
 
 @keyframes right-spin {
   from {
@@ -7641,14 +7639,14 @@ input[type=range]:focus::-ms-fill-upper {
   animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@-webkit-keyframes fade-out {
+/*@-webkit-keyframes fade-out {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
   }
-}
+}*/
 
 @keyframes fade-out {
   from {
@@ -7854,7 +7852,7 @@ input[type=range]:focus::-ms-fill-upper {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  /*user-select: none;ˇ*/
 }
 
 /**
@@ -7977,13 +7975,13 @@ input[type=range]:focus::-ms-fill-upper {
  * When the picker opens...
  */
 .picker--opened .picker__holder {
-  top: 0;
-  background: transparent;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#1E000000,endColorstr=#1E000000)";
-  zoom: 1;
-  background: rgba(0, 0, 0, 0.32);
-  transition: background 0.15s ease-out;
-}
+   top: 0;
+   background: transparent;
+   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#1E000000,endColorstr=#1E000000)";
+   /*zoom: 1;*/
+   background: rgba(0, 0, 0, 0.32);
+   transition: background 0.15s ease-out;
+ }
 
 .picker--opened .picker__frame {
   top: 0;
@@ -8159,7 +8157,7 @@ input[type=range]:focus::-ms-fill-upper {
 .picker__day--today {
   position: relative;
   color: #595959;
-  letter-spacing: -.3;
+  letter-spacing: -.3em;
   padding: .75rem 0;
   font-weight: 400;
   border: 1px solid transparent;
@@ -8337,7 +8335,7 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: #1f897f;
   padding: 10px;
   font-weight: 200;
-  letter-spacing: .5;
+  letter-spacing: .5em;
   font-size: 1rem;
   margin-bottom: 15px;
 }
@@ -8376,7 +8374,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .picker__day--infocus {
   color: #595959;
-  letter-spacing: -.3;
+  letter-spacing: -.3em;
   padding: .75rem 0;
   font-weight: 400;
   border: 1px solid transparent;
