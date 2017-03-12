@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/materialize.css"); ?>"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/materialize.css"); ?>"  media="screen"/>
 
         <!-- custom.css on eraldi css fail, kus on meie lehe värvid and stuff, cause vist nagu ei sobi muuta materialize faile, liiga suur ka selle muutmiseks-->
         <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/custom.css"); ?>" />
@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     </head>
-
+<body>
 <header>
     <div class="navbar-fixed z-depth-4">
         <nav>
@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </ul>
 
 </header>
-    <body>
+
 <!--    TODO create method so this code is not repeated-->
     <script>
         window.fbAsyncInit = function() {
