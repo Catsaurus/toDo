@@ -18,7 +18,7 @@
 
                 <input type="email" title="Email" name="email" placeholder="Email" /><br />
 
-                <input type="submit" title="submit" name="submit" value="Register" class="button"/>
+                <button type="submit" title="submit" name="submit" value="Register" class="col s12 btn btn-large waves-effect">Sign up</button>
 
             </form>
     </div>
