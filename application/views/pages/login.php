@@ -3,16 +3,18 @@
     <div class="container">
         <div class=" row">
             <div class="col s12 pealkiri">
-                <h2>ToDo</h2>
-                <h5>Welcome to toDo to do your todos easier and more fun</h5>
+                <h3>ToDo</h3>
+                <h4>Welcome to toDo to do your todods...easier...and more fun</h4>
             </div>
         </div>
+    </div>
         <div class="container">
             <div class="row">
                 <div class="col s3"></div>
+
                     <div class="col s6">
                     <!--Z-DEPTH on z telje sügavus, ehk mida suurem on see number, seda kaugemal on see nö taustast-->
-                        <div class="z-depth-5 row light-green lighten-5">
+                        <div class="z-depth-5 row">
                             <form class="col s12" method="post" action="<?php echo site_url('Login/index'); ?>">
                                 <div class="row">
                                     <div class="col s12"></div>
@@ -49,8 +51,8 @@
                                     <div class="row">
                                         <div class="col s2"></div>
                                         <div class="row col s10">
-                                            <label style='float: right'>
-                                                <a class='pink-text' href='#'><b>Forgot Password?</b></a>
+                                            <label id="forgot_password">
+                                                <a href='#'><h5>Forgot Password?</h5></a>
                                             </label>
                                         </div>
                                     </div>

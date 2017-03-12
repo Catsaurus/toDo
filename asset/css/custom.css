@@ -1,36 +1,41 @@
+/*homepage taustavärv: class = "blue-grey lighten-5" kood: #eceff1 (muudetav home.php failis)
+header: #2E2633
+ */
+
 body {
-    background-color: #EFFFCD;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #eceff1;
 }
 
 main {
     flex: 1 0 auto;
     align-items: center;
-}
+    background-color: #eceff1;
 
+}
 nav {
     background-color: #2E2633;
 }
 a.brand-logo {
     margin-left: 2em;
-    color: #EFFFCD;
+    color: #ffffff;
 }
 
 nav ul li a {
     transition: 1s;
-    color: #EFFFCD;
+    color: #FFFFFF;
 }
 nav ul li:hover a{
-    background-color: #EFFFCD;
+    background-color: #eceff1;
     padding-bottom: 0.0em;
 }
 nav ul a:hover {
     color: #2E2633;
 }
 nav ul li.active a {
-    background-color: #EFFFCD;
+    background-color: #FFFFFF;
     padding-bottom: 0.0em;
     color: #2E2633;
 }
@@ -39,20 +44,26 @@ nav ul li.active a {
 }
 
 #upper-footer {
-   background-color: #555152; 
+    background-color: #1f1623;
 }
+footer.page-footer {
+    padding-top: 10px;
+    background-color: #1f1623;
+}
+
 footer.page-footer .footer-copyright {
-    background-color: #2E2633;
+    min-height: 40px;
+    background-color: #0F0A12;
 
 }
 footer h5{
-    color: #DCE9BE;
+    color: #eceff1;
 }
 footer a {
-    color: #EFFFCD;
+    color: #eceff1;
 }
 footer p {
-    color: #EFFFCD;
+    color: #eceff1;
 }
 .pealkiri {
     text-align: center;
@@ -63,19 +74,20 @@ footer p {
     color:hsl(79, 100%, 100%);
     background-color: #99173C;
     border-radius: 4px;
-    font-size: 2em;
+    font-size: 1.5rem;
 }
 .btn:hover {
-    background-color: #2E2633;
+    background-color:#2E2633;
 }
-.pealkiri h2 {
-    margin-top: 2em;
+.pealkiri h3 {
+    margin-top: 3em;
     text-shadow:2px 2px 1px rgba(0, 0, 0, 0.3);
     font-weight: 400;
 }
-.pealkiri h5 {
+.pealkiri h4 {
     text-align: center;
 }
+
 .loginForm, .signupForm {
     text-align: center;
     margin: auto;
@@ -101,7 +113,12 @@ footer p {
 }
 /* label focus color */
 .input-field input[type=text]:focus + label,
-.input-field input[type=password]:focus + label{
+.input-field input[type=pa]:focus + label{
     color: #000;
 }
 
+#forgot_password h5{
+    float: right;
+    color: #99173C;
+    font-size: medium;
+}

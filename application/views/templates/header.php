@@ -23,13 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
 
 <header>
-    <div class="navbar-fixed">
+    <div class="navbar-fixed z-depth-4">
         <nav>
             <div class="nav-wrapper">
                 <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><strong class="material-icons">menu</strong></a>
                 <ul class="right hide-on-med-and-down">
-                    <li class="headerLink"><a href="<?php echo site_url('Login/index') ?>" >Log in</a></li>
+                    <li><a href="<?php echo site_url('Login/index') ?>" >Log in</a></li>
                     <li class="headerLink"><a href="<?php echo site_url('Register/index') ?>" >SIGN UP</a></li>
                 </ul>
             </div>

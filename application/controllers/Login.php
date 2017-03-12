@@ -5,43 +5,56 @@ class Login extends CI_Controller {
     public function index() {
         session_start();
 
-        #set rules to check that both login fields have something written in them
-        $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('pswd', 'Password', 'required');
+        // Don't show this page when already logged in
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+            $page = 'tasks';
+            $data['title'] = ucfirst($page);
+            view_loader($page);
+        }
 
-        #If both fields have something written
-        if ($this->form_validation->run() === TRUE){
+        else{
+            #set rules to check that both login fields have something written in them
+            $this->form_validation->set_rules('username', 'Username', 'required');
+            $this->form_validation->set_rules('pswd', 'Password', 'required');
 
-            $username = $this->input->post('username');
-            $password = $this->input->post('pswd');
+            #If both fields have something written
+            if ($this->form_validation->run() === TRUE){
 
-            #Get the equivalent data from database
-            $user = $this->user_model->get_user($username);
+                $username = $this->input->post('username');
+                $password = $this->input->post('pswd');
 
-            #Check if the password is correct
-            $pswd_valid = password_verify ($password, $user['password_hash']);
-            if ($pswd_valid) {
-                $_SESSION['logged_in'] = true;
-                $_SESSION['id'] = $user['id'];
-                $_SESSION['username'] = $username;
+                #Get the equivalent data from database
+                $user = $this->user_model->get_user($username);
 
-                /*
-                 * checks if page needs redirecting to the wished one
-                */
-                if(isset($_SESSION['afterLogIn'])){
-                    $page = $_SESSION['afterLogIn'];
-                    $data['title'] = ucfirst($page);
-                    view_loader($page);
+                #Check if the password is correct
+                $pswd_valid = password_verify ($password, $user['password_hash']);
+                if ($pswd_valid) {
+                    $_SESSION['logged_in'] = true;
+                    $_SESSION['id'] = $user['id'];
+                    $_SESSION['username'] = $username;
+
+                    /*
+                     * checks if page needs redirecting to the wished one
+                    */
+                    if(isset($_SESSION['afterLogIn'])){
+                        $page = $_SESSION['afterLogIn'];
+                        $data['title'] = ucfirst($page);
+                        view_loader($page);
+                    }
+                    else{
+                        view_loader('tasks');
+                    }
                 }
                 else{
-                    view_loader('tasks');
+                    $errorMessage = "Invalid Login";
+                    view_loader('login');
                 }
             }
             else{
-                $errorMessage = "Invalid Login";
                 view_loader('login');
             }
         }
+
     }
     public function fb(){
         session_start();

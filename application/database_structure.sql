@@ -58,3 +58,28 @@ NO SQL
   BEGIN
     INSERT INTO users (fb_id, email) VALUES (fb_id, email);
   END //
+
+DELIMITER //
+CREATE PROCEDURE `getUsersTasksThisWeek`(IN `userId` INT)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE user_id = userId and completed=0 and due_time!=CURDATE() and WEEK(due_time) = WEEK(CURDATE());
+  END //
+
+DELIMITER //
+CREATE PROCEDURE `getUsersTasksFuture`(IN `userId` INT)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE user_id = userId and completed=0 and
+          YEAR(due_time) >= YEAR(CURDATE()) and WEEK(due_time) > WEEK(CURDATE());
+  END //

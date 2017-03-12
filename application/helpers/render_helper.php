@@ -10,7 +10,7 @@ if (!function_exists('view_loader'))
     function view_loader($view)
     {
         $CI = &get_instance();
-        if($view == 'tasks' || $view == 'pets' || $view == 'about' || $view == 'settings'){
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $CI->load->view('../views/templates/headerInside', array(), false);
         }
         else{
