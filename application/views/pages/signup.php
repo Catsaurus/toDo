@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col s12 pealkiri">
-                <h2>ToDo</h2>
-                <h5>Welcome to toDo to do your todos easier and more fun</h5>
+                <h3>ToDo</h3>
+                <h4>Welcome to toDo to do your todos easier and more fun</h4>
             </div>
         </div>
         <div class = "signupForm">
