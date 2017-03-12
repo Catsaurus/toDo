@@ -15,16 +15,18 @@
                     </div>
                 </div>
 
-                <p><input name="groupRepeat" type="radio" id="daily" value="daily"/>
-                    <label for="daily">Daily</label></p>
-                <p><input name="groupRepeat" type="radio" id="weekly" value="weekly"/>
-                    <label for="weekly">Weekly</label></p>
-                <p><input name="groupRepeat" type="radio" id="norepeat" value="norepeat" checked="checked"/>
-                    <label for="norepeat">No Repeat</label></p>
+                <fieldset class="radiogroup">
+                    <legend>Select repeat</legend>
+                    <ul class="radio">
+                        <li><input name="groupRepeat" type="radio" id="daily" value="daily"/><label for="daily">Daily</label></li>
+                        <li><input name="groupRepeat" type="radio" id="weekly" value="weekly"/><label for="weekly">Weekly</label></li>
+                        <li><input name="groupRepeat" type="radio" id="norepeat" value="norepeat" checked="checked"/><label for="norepeat">No Repeat</label></li>
+                    </ul>
+                </fieldset>
 
-                <label> Due date
+                <label for="datepicker"> Due date </label>
                     <input name="date" width="50%" type="date" value="<?php echo date('Y-m-d');?>" id="datepicker" class="datepicker">
-                </label>
+
 
                 <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')">Cancel</a>
                 <input type="submit" name="submit" value="Add" onclick="hideNewTask('newTask')" class="waves-effect waves-teal btn-flat"/>
