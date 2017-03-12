@@ -4,32 +4,32 @@
 
                 <!--column 1-->
                 <div class="col s4">
-                    <h5>Facebook</h5>
-                    <h5>Instagram</h5>
-                    <h5>Twitter</h5>
-                </div>
 
-                <!--column 2-->
-                <div class="col s4">
-                    <h5><a href="#">Subscribe</a></h5>
                     <ul>
-                        <li><a href="<?php echo site_url('About/index') ?>">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
                         <li><a href="<?php echo site_url('Tasks/index') ?>">Tasks</a></li>
                         <li><a href="<?php echo site_url('Settings/index') ?>">Settings</a></li>
                         <li><a href="<?php echo site_url('Pets/index') ?>">Pets</a></li>
                     </ul>
                 </div>
 
+                <!--column 2-->
+                <div class="col s4">
+
+                    <ul>
+                        <li><a href="<?php echo site_url('About/index') ?>">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
                 <!--column 3-->
                 <div class="col s4">
-                    <h5><a href="#">Sitemap</a></h5>
                     <ul>
-                        <li><a href="#">Donate now (siia tuleks mingi pilt ka)</a></li>
+                        <li><a href="#">Support us (siia tuleks mingi pilt ka)</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
+
         </div>
 
         <div class="footer-copyright">
