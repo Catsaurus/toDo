@@ -28,12 +28,14 @@ nav ul li a {
     color: #FFFFFF;
 }
 nav ul li:hover a{
-    background-color: #eceff1;
+    background-color: #514656;
     padding-bottom: 0.0em;
 }
+
 nav ul a:hover {
-    color: #2E2633;
+    color: #ffffff;
 }
+
 nav ul li.active a {
     background-color: #FFFFFF;
     padding-bottom: 0.0em;
@@ -48,7 +50,6 @@ nav ul li.active a {
 }
 footer.page-footer {
     padding-top: 10px;
-    background-color: #1f1623;
 }
 
 footer.page-footer .footer-copyright {
@@ -124,4 +125,8 @@ footer p {
 }
 #facebook_button {
     background-color: #0D47A1;
+}
+strong {
+    font-weight: 500;
+    color: #FFFFFF;
 }
