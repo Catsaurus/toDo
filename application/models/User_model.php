@@ -18,7 +18,11 @@ class user_model extends CI_Model {
     }
     public function insert_fbuser($fbid, $email)
     {
-        $sql = 'CALL insertUser(?,?)';
+        $sql = 'CALL insertFbUser(?,?)';
         $this->db->query($sql, array($fbid, $email));
+    }
+    public function insert_user($username, $email, $pswd_hash){
+        $sql = 'CALL insertUser(?,?,?)';
+        $this->db->query($sql, array($username, $email, $pswd_hash));
     }
 }

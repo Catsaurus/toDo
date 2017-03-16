@@ -27,23 +27,11 @@ class Register extends CI_Controller {
                     view_loader('signup');
                 }
                 else {
-                    $data = array(
-                        'username' => $username,
-                        'email'  => $email,
-                        'password_hash'  => $password_hash
-                    );
-                    $this->load->database();
-                    $reg = $this->db->insert('users', $data); // TODO Model'isse
-                    if ($reg == 0) {
-                        // "that username already exists" TODO
-                        $errorMessage = "Invalid";
-                        // TODO
-                    }
-                    else{
-                        $_SESSION['id'] = $this->db->insert_id();
-                        $_SESSION['logged_in'] = true;
-                        view_loader('tasks');
-                    }
+                    // TODO Kontroll, et kui kasutaja on juba olemas, siis mis teha
+                    $reg = $this->user_model->insert_user($username, $email, $password_hash);
+                    $_SESSION['id'] = $this->db->insert_id();
+                    $_SESSION['logged_in'] = true;
+                    view_loader('tasks');
                 }
             }
         }
