@@ -2,7 +2,7 @@
 window.onload = function callDatabase (){
 
     $.ajax({
-        url:'show_tasks_today',
+        url:'../Tasks/show_tasks_today',
         complete: function (response) {
             $('#tasksOfToday').html(response.responseText);
         },
@@ -12,7 +12,7 @@ window.onload = function callDatabase (){
     });
 
     $.ajax({
-        url:'show_tasks_week',
+        url:'../Tasks/show_tasks_week',
         complete: function (response) {
             $('#tasksOfThisWeek').html(response.responseText);
         },
@@ -22,7 +22,7 @@ window.onload = function callDatabase (){
     });
 
     $.ajax({
-        url:'show_tasks_future',
+        url:'../Tasks/show_tasks_future',
         complete: function (response) {
             $('#futureTasks').html(response.responseText);
         },
