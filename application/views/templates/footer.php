@@ -24,7 +24,7 @@
                 <!--column 3-->
                 <div class="col s4">
                     <ul>
-                        <li><a href="#">Support us (siia tuleks mingi pilt ka)</a></li>
+                        <li><a href="#">Support us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
