@@ -41,6 +41,7 @@ class Register extends CI_Controller {
                     }
                     else{
                         $_SESSION['id'] = $this->db->insert_id();
+                        $_SESSION['logged_in'] = true;
                         view_loader('tasks');
                     }
                 }
