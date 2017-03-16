@@ -88,11 +88,12 @@ CONTAINS SQL
 DROP PROCEDURE  `getUserTasksOfToday` ;
 
 DELIMITER //
-CREATE PROCEDURE  `getUserTasksOfToday` ( IN  `id` INT( 255 ) UNSIGNED ) NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER BEGIN SELECT tasks.id, due_time, completed, user_id, content
-FROM tasks
- INNER JOIN users ON tasks.user_id = users.id
-WHERE users.username = id
-AND due_time = CURDATE( )
-AND completed =0;
+CREATE PROCEDURE  `getUserTasksOfToday` ( IN  `iD` INT( 255 ) UNSIGNED ) NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+  BEGIN
+    SELECT tasks.id, due_time, completed, user_id, content FROM tasks
+      INNER JOIN users
+        ON tasks.user_id = users.id
+    WHERE users.id=iD and due_time=CURDATE() and completed = 0;
+  END
 
 END //

@@ -29,7 +29,7 @@ class Tasks extends CI_Controller {
     public function show_tasks_today()
     {
         session_start();
-        $user = $_SESSION['username'];
+        $user = $_SESSION['id'];
         $tasks = $this->task_model->get_user_tasks_of_today($user);
         foreach ($tasks as $task) {
             echo $task['content']."<br>";
