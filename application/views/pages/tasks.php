@@ -38,14 +38,8 @@
         <div class="row" id="taskid">
             <div class="col s4">
                 <p>Due date on täna</p>
-<!--                <table><tr><th>Description</th></tr></table>-->
                 <div id="tasksOfToday">
                     <table>
-                        <script  type="text/javascript">
-                            $.post( "<?php echo site_url('Tasks/show_tasks_today') ?>", function( data ) {
-                                $("#tasksOfToday").html(data);
-                            });
-                        </script>
                     </table>
                 </div>
             </div>
@@ -53,11 +47,6 @@
                 <p>Due date on sellel nädalal</p>
                 <div id="tasksOfThisWeek">
                     <table>
-                        <script  type="text/javascript">
-                            $.post( "<?php echo site_url('Tasks/show_tasks_week') ?>", function( data ) {
-                                $("#tasksOfThisWeek").html(data);
-                            });
-                        </script>
                     </table>
                 </div>
             </div>
@@ -65,11 +54,6 @@
                 <p>Due date on kunagi tulevikus</p>
                 <div id="futureTasks">
                     <table>
-                        <script  type="text/javascript">
-                            $.post( "<?php echo site_url('Tasks/show_tasks_future') ?>", function( data ) {
-                                $("#futureTasks").html(data);
-                            });
-                        </script>
                     </table>
                 </div>
             </div>
