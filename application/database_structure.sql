@@ -97,3 +97,27 @@ CREATE PROCEDURE  `getUserTasksOfToday` ( IN  `iD` INT( 255 ) UNSIGNED ) NOT DET
   END
 
 END //
+
+
+DROP PROCEDURE IF EXISTS `insertUser`;
+
+
+CREATE PROCEDURE `insertFbUser`(
+  IN `fb_id` VARCHAR(255),
+  IN `email` VARCHAR(100)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+NO SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    INSERT INTO users (fb_id, email) VALUES (fb_id, email);
+  END;
+
+DELIMITER //
+CREATE PROCEDURE `insertUser`(IN `username` VARCHAR(50), IN `email` VARCHAR(100), IN `password_hash` VARCHAR(255))
+NO SQL
+  BEGIN
+    INSERT INTO users (username, email, password_hash) VALUES (username, email, password_hash);
+  END //
