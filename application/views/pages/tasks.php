@@ -37,21 +37,21 @@
 
         <div class="row" id="taskid">
             <div class="col s4">
-                <p>Due date on täna</p>
+                <p>Due date is today</p>
                 <div id="tasksOfToday">
                     <table>
                     </table>
                 </div>
             </div>
             <div class="col s4">
-                <p>Due date on sellel nädalal</p>
+                <p>Due date is this week</p>
                 <div id="tasksOfThisWeek">
                     <table>
                     </table>
                 </div>
             </div>
             <div class="col s4">
-                <p>Due date on kunagi tulevikus</p>
+                <p>Due date is later</p>
                 <div id="futureTasks">
                     <table>
                     </table>

@@ -4,9 +4,8 @@
 
         <div id="parent">
             <div id="petInfo">
-                <h4>Elevant Johnny</h4>
-                <p>Johnny on rõõmus loomake, kes sööb hea meelega mangosid ja banaane. Talle meeldib sõita üherattalise jalgrattaga ja mängida oma sõbra Donkey'ga</p>
-                <p>...</p>
+                <h4>Johnny The Elephant</h4>
+                <p>Johnny is a jolly chap. He likes mangos and bananas and enjoys riding unicycles or playing with his friend Donkey The Donkey</p>
             </div>
         </div>
 
