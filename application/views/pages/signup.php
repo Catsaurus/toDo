@@ -6,6 +6,7 @@
                 <h4><?php echo lang('intro')?></h4>
             </div>
         </div>
+        <?php echo validation_errors(); ?>
         <div class = "signupForm">
 
             <form method="post" action="<?php echo site_url('Register/index') ?>">
