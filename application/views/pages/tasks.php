@@ -46,8 +46,7 @@
             <div class="col s4">
                 <p>Due date is this week</p>
                 <div id="tasksOfThisWeek">
-                    <table>
-                    </table>
+
                 </div>
             </div>
             <div class="col s4">

@@ -32,7 +32,10 @@ class Tasks extends CI_Controller {
         $user = $_SESSION['id'];
         $tasks = $this->task_model->get_user_tasks_of_today($user);
         foreach ($tasks as $task) {
-            echo $task['content']."<br>";
+            echo "<p>";
+            echo "<input type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            echo "<label for='".$task['id']."'>".$task['content']."</label>";
+            echo "</p>";
         }
     }
 
@@ -43,7 +46,12 @@ class Tasks extends CI_Controller {
         echo"<script>console.log('DebugObjects:".$userId."');</script>";
         $tasks = $this->task_model->get_user_tasks_week($userId);
         foreach ($tasks as $task) {
-            echo $task['content']."<br>";
+            //lisab igale andmebaasist võetud taskile ette checkboxi andmebaasist võetud id järgi
+            echo "<p>";
+            echo "<input type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            echo "<label for='".$task['id']."'>".$task['content']."</label>";
+            echo "</p>";
+
         }
     }
     public function show_tasks_future()
@@ -52,7 +60,11 @@ class Tasks extends CI_Controller {
         $userId = $_SESSION['id'];
         $tasks = $this->task_model->get_user_tasks_future($userId);
         foreach ($tasks as $task) {
-            echo $task['content']."<br>";
+            //lisab igale andmebaasist võetud taskile ette checkboxi andmebaasist võetud id järgi
+            echo "<p>";
+            echo "<input type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            echo "<label for='".$task['id']."'>".$task['content']."</label>";
+            echo "</p>";
         }
     }
 }

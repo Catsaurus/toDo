@@ -36,7 +36,8 @@ class task_model extends CI_Model {
             */
             while (mysqli_stmt_fetch($query)) {
                 $data = array(
-                    'content'  => $content
+                    'content'  => $content,
+                    'id' => $id
                 );
                 array_push($result, $data);
             }
@@ -56,7 +57,8 @@ class task_model extends CI_Model {
         foreach ($query->result() as $row)
         {
             $data = array(
-                'content'  => $row->content
+                'content'  => $row->content,
+                 'id' => $row-> id
             );
             array_push($result, $data);
         }
@@ -72,7 +74,8 @@ class task_model extends CI_Model {
         foreach ($query->result() as $row)
         {
             $data = array(
-                'content'  => $row->content
+                'content'  => $row->content,
+                'id' => $row-> id
             );
             array_push($result, $data);
         }

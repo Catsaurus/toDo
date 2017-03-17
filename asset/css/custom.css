@@ -130,3 +130,17 @@ strong {
     font-weight: 500;
     color: #FFFFFF;
 }
+
+/*checkboxi värvid*/
+
+[type="checkbox"].filled-in:checked + label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #99173C;
+    background-color: #99173C;
+    z-index: 0;
+}
+label {
+    color: black;
+}
