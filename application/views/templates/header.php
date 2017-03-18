@@ -16,8 +16,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/Stylesheet.css"); ?>"/>
+        <!--ikoonid-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- javascriptid peaks lõppu tõstma nagu ma aru saan, sest siis on lehe laadimine kiirem, MAP ei tööta, kui sees siit ära kustutada-->
         <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
+
 
 
     </head>

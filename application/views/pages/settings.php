@@ -2,6 +2,6 @@
 <main>
     <div class="container">
 
-        <h1>Settings</h1>
+        <h3>Settings</h3>
     </div>
 </main>

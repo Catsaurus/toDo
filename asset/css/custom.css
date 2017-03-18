@@ -139,8 +139,12 @@ strong {
     height: 20px;
     border: 2px solid #99173C;
     background-color: #99173C;
-    z-index: 0;
 }
 label {
     color: black;
+}
+/*task done color*/
+.done {
+    color: #99173C;
+
 }

@@ -40,7 +40,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <ul class="right hide-on-med-and-down">
                 <li class="headerLink"><a href="<?php echo site_url('Tasks/index') ?>" >Tasks</a></li>
                 <li class="headerLink"><a href="<?php echo site_url('Pets/index') ?>" >Pets</a></li>
-                <!--<li class="headerLink"><a href="<?php echo site_url('About/index') ?>" >About</a></li>-->
                 <li class="headerLink"><a href="<?php echo site_url('Settings/index') ?>" >Settings</a></li>
                 <li class="headerLink"><a href="<?php echo site_url('Logout/index')?>" >Log out</a></li>
             </ul>
