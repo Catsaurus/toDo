@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col s3"></div>
             <div class="col s12 m6">
-                <div class="z-depth-3 row">
+                <div class="z-depth-2 row">
                     <form method="post" action="<?php echo site_url('Register/index') ?>">
 
                         <div class="row">
@@ -25,25 +25,25 @@
 
                                 <!--KASUTAJANIMI-->
                                 <div class="input-field">
-                                    <input class="validate" type="text" name="username" id="username">
+                                    <input type="text" name="username" id="username">
                                     <label for="username">Username</label>
                                 </div>
 
                                 <!--PAROOL-->
                                 <div class="input-field">
-                                    <input class="validate" type="password" name="pswd" id="password"/>
+                                    <input type="password" name="pswd" id="password"/>
                                     <label for="password">Password</label>
                                 </div>
 
                                 <!--PAROOL UUESTI-->
                                 <div class="input-field">
-                                <input class="validate" type="password" name="pswd2" id="password2"/>
+                                <input type="password" name="pswd2" id="password2"/>
                                 <label for="password2">Password again</label>
                                 </div>
 
                                 <!--EMAIL-->
                                 <div class="input-field">
-                                    <input class="validate" type="email" title="Email" name="email" id="email">
+                                    <input type="email" title="Email" name="email" id="email">
                                     <label for="email">Email</label>
                                 </div>
 
