@@ -1,7 +1,8 @@
 $( document ).ready(function(){
+    console.log("doc ready");
     $(".button-collapse").sideNav();
 
-})
+});
 
 function fblogin() {
     FB.login(function (response) {
@@ -28,4 +29,21 @@ function fblogin() {
             request.send(json);
         }
     }, {scope: 'email'});
+}
+
+//eemaldab taskile klikkimisel selle taski
+function checkTask(task_id) {
+    console.log(task_id);
+    console.log('p');
+
+    var p = $('#'+task_id).closest('p');
+    p[0].innerHTML = "<span class = done>Task done</span>";
+    p.fadeOut(400, function () {
+        $(this).fadeOut();
+    });
+
+    //('input[type = checkbox]').click(function(){
+            //$("#"+task_id).closest('p').fadeOut();
+    //});
+
 }
