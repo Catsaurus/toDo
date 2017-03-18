@@ -114,7 +114,7 @@ footer p {
 }
 /* label focus color */
 .input-field input[type=text]:focus + label,
-.input-field input[type=pa]:focus + label{
+.input-field input[type=password]:focus + label{
     color: #000;
 }
 
