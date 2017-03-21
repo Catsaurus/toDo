@@ -41,9 +41,18 @@ function checkTask(task_id) {
     p.fadeOut(400, function () {
         $(this).fadeOut();
     });
-
-    //('input[type = checkbox]').click(function(){
-            //$("#"+task_id).closest('p').fadeOut();
-    //});
-
 }
+
+const checkPassword = function() {
+    var pass1 = document.getElementById('password');
+    var pass2 = document.getElementById('password2');
+
+    if (pass1.value == pass2.value) {
+        $(pass2).css("color", "#66cc66");
+    } else {
+        $(pass2).css("color", "#ff6666");
+    }
+}
+
+
+

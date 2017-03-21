@@ -119,6 +119,12 @@ footer p {
 .input-field input[type=email]:focus+label{
     color: #000;
 }
+#correct_pswd {
+    color: #66cc66;
+}
+#wrong_pswd {
+    color: #ff6666;
+}
 
 
 #forgot_password h5{
