@@ -41,6 +41,17 @@ function checkTask(task_id) {
     p.fadeOut(400, function () {
         $(this).fadeOut();
     });
+
+    $.ajax({
+        url:'../Tasks/markTaskDone/'+task_id,
+        complete: function (response) {
+            console.log(response.responseText);
+        },
+        error: function () {
+            console.log(response.responseText);
+        }
+    });
+
 }
 
 const checkPassword = function() {

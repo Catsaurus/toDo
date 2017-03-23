@@ -121,3 +121,16 @@ NO SQL
   BEGIN
     INSERT INTO users (username, email, password_hash) VALUES (username, email, password_hash);
   END //
+
+CREATE PROCEDURE `markTaskDone`(
+  IN `idIN` INT)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    UPDATE tasks
+    SET completed = 1
+    where id = idIN;
+  END

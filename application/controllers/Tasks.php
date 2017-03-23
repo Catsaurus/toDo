@@ -69,4 +69,10 @@ class Tasks extends CI_Controller {
             echo "</p>";
         }
     }
+    public function markTaskDone($id)
+    {
+        echo"<script>console.log('DebugMarkAsDoneId:".$id."');</script>";
+        $answer = $this->task_model->markDone($id);
+        return $answer;
+    }
 }
