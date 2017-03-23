@@ -4,7 +4,8 @@ class Tasks extends CI_Controller {
 
     public function index()
     {
-        $this->lang->load('general', 'english');
+        $this->lang->load('general', 'estonian');
+        //$this->lang->load('general', 'english');
         session_start();
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'tasks';

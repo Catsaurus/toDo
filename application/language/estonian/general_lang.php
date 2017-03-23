@@ -23,6 +23,8 @@ $lang['tasks'] = 'Kohustused';
 
 // Settings
 $lang['change_data'] = 'Vaheta kasutajanime või parooli';
+$lang['change_password'] = 'Muuda salasõna';
+$lang['change_email'] = 'Muuda meiliaadressi';
 
 // Tasks
 $lang['add_new'] = 'Lisa uus kohustus';

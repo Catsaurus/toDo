@@ -7,8 +7,8 @@ class Logout extends CI_Controller {
         session_start();
         unset($_SESSION);
         session_destroy();
-        //$this->lang->load('general', 'estonian');
-        $this->lang->load('general', 'english');
+        $this->lang->load('general', 'estonian');
+        //$this->lang->load('general', 'english');
         view_loader('home');
     }
 }

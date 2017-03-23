@@ -3,7 +3,8 @@
 class Login extends CI_Controller {
 
     public function index() {
-        $this->lang->load('general', 'english');
+        $this->lang->load('general', 'estonian');
+        //$this->lang->load('general', 'english');
         session_start();
         // Don't show this page when already logged in
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
@@ -57,8 +58,9 @@ class Login extends CI_Controller {
 
     }
     public function fb(){
+        $this->lang->load('general', 'estonian');
+        //$this->lang->load('general', 'english');
         session_start();
-        $this->lang->load('general', 'english');
         $jsonString = file_get_contents('php://input');
         $obj = json_decode($jsonString);
         $accessToken = $obj->token;

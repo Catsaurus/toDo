@@ -13,7 +13,8 @@ class Register extends CI_Controller {
     }
     public function index()
     {
-        $this->lang->load('general', 'english');
+        $this->lang->load('general', 'estonian');
+        //$this->lang->load('general', 'english');
         session_start();
         $this->form_validation->set_rules('username', lang('username'), 'required|callback_username_check');
         $this->form_validation->set_rules('pswd', lang('password'), 'required');
