@@ -6,18 +6,19 @@ class Register extends CI_Controller {
         $user = $this->user_model->get_user($user_name);
         //print_r($user);
         if ($user['username'] != null) {
-            $this->form_validation->set_message('username_check', 'An account with this username already exists. Log in or pick a new username.');
+            $this->form_validation->set_message('username_check', lang('account_exists'));
             return false;
         }
         else return true;
     }
     public function index()
     {
+        $this->lang->load('general', 'english');
         session_start();
-        $this->form_validation->set_rules('username', 'Username', 'required|callback_username_check');
-        $this->form_validation->set_rules('pswd', 'Password', 'required');
-        $this->form_validation->set_rules('pswd2', 'Password again', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('username', lang('username'), 'required|callback_username_check');
+        $this->form_validation->set_rules('pswd', lang('password'), 'required');
+        $this->form_validation->set_rules('pswd2', lang('password_again'), 'required');
+        $this->form_validation->set_rules('email', lang('email'), 'required');
 
         // Don't show this page when already logged in
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){

@@ -4,8 +4,8 @@
 
         <div id="parent">
             <div id="petInfo">
-                <h4>Johnny The Elephant</h4>
-                <p>Johnny is a jolly chap. He likes mangos and bananas and enjoys riding unicycles or playing with his friend Donkey The Donkey</p>
+                <h4><?php echo lang('johnny') ?></h4>
+                <p><?php echo lang('johnny_intro') ?></p>
             </div>
         </div>
 

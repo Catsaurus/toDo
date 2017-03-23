@@ -1,11 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// HTML things
+// Things
 $lang['signup'] = 'Sign up';
 $lang['login'] = 'Log in';
 $lang['intro'] = 'Welcome to toDo to do your todods...easier...and more fun';
-$lang['username'] = 'username';
+$lang['username'] = 'Username';
+$lang['password'] = 'Password';
+$lang['password_again'] = 'Password again';
+$lang['email'] = 'Email';
+$lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';
+$lang['change_data'] = 'Change your email or password';
+
+
+// Titles
+$lang['about'] = 'About';
+$lang['settings'] = 'Settings';
+$lang['tasks'] = 'Tasks';
+
+//Pets
+$lang['johnny'] = 'Johnny The Elephant';
+$lang['johnny_intro'] = 'Johnny is a jolly chap. He likes mangos and bananas and enjoys riding unicycles or playing with his friend Donkey The Donkey';
 
 // Menu
 $lang['menu_mainpage'] = 'Main page';
