@@ -9,7 +9,7 @@
 
         <div class="tooltip" id="src3div">
             <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src">
-            <span class="tooltiptext" id="s3"><?php lang('add_info') ?></span>
+            <span class="tooltiptext" id="s3"><?php echo lang('add_info') ?></span>
         </div>
 
                     <div class="row" id="newTask">
@@ -18,22 +18,22 @@
                         <div class="row">
                             <div class="input-field col s6">
                                 <input name="description" id="description" type="text">
-                                <label for="description"><?php lang('description') ?></label>
+                                <label for="description"><?php echo lang('description') ?></label>
                             </div>
                     </div>
 
                 <fieldset class="radiogroup">
                     <legend><?php lang('repeat') ?></legend>
                     <ul class="radio">
-                        <li><input name="groupRepeat" type="radio" id="daily" value="daily"/><label for="daily"></label><?php lang('daily') ?></li>
-                        <li><input name="groupRepeat" type="radio" id="weekly" value="weekly"/><label for="weekly"></label><?php lang('weekly') ?></li>
-                        <li><input name="groupRepeat" type="radio" id="norepeat" value="norepeat" checked="checked"/><label for="norepeat"></label><?php lang('no_repeat') ?></li>
+                        <li><input name="groupRepeat" type="radio" id="daily" value="daily"/><label for="daily"></label><?php echo lang('daily') ?></li>
+                        <li><input name="groupRepeat" type="radio" id="weekly" value="weekly"/><label for="weekly"></label><?php echo lang('weekly') ?></li>
+                        <li><input name="groupRepeat" type="radio" id="norepeat" value="norepeat" checked="checked"/><label for="norepeat"></label><?php echo lang('no_repeat') ?></li>
                     </ul>
                 </fieldset>
 
                 <label for="datepicker"><?php lang('due') ?></label>
                     <input name="date" width="50%" type="date" value="<?php echo date('Y-m-d');?>" id="datepicker" class="datepicker">
-                <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')"><?php lang('cancel') ?></a>
+                <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')"><?php echo lang('cancel') ?></a>
                 <input type="submit" name="submit" value="Add" onclick="hideNewTask('newTask')" class="waves-effect waves-teal btn-flat"/>
             </form>
         </div>
@@ -42,20 +42,20 @@
 
         <div class="row" id="taskid" >
             <div class="col s4">
-                <p><?php lang('due_today') ?></p>
+                <p><?php echo lang('due_today') ?></p>
                 <div id="tasksOfToday" >
 
 
                 </div>
             </div>
             <div class="col s4">
-                <p><?php lang('due_week') ?></p>
+                <p><?php echo lang('due_week') ?></p>
                 <div id="tasksOfThisWeek">
 
                 </div>
             </div>
             <div class="col s4">
-                <p><?php lang('due_later') ?></p>
+                <p><?php echo lang('due_later') ?></p>
                 <div id="futureTasks">
 
                 </div>
