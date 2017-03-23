@@ -3,8 +3,8 @@
 class Login extends CI_Controller {
 
     public function index() {
+        $this->lang->load('general', 'english');
         session_start();
-
         // Don't show this page when already logged in
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'tasks';
@@ -14,8 +14,8 @@ class Login extends CI_Controller {
 
         else{
             #set rules to check that both login fields have something written in them
-            $this->form_validation->set_rules('username', 'Username', 'required');
-            $this->form_validation->set_rules('pswd', 'Password', 'required');
+            $this->form_validation->set_rules('username', lang('username'), 'required');
+            $this->form_validation->set_rules('pswd', lang('password'), 'required');
 
             #If both fields have something written
             if ($this->form_validation->run() === TRUE){
@@ -58,6 +58,7 @@ class Login extends CI_Controller {
     }
     public function fb(){
         session_start();
+        $this->lang->load('general', 'english');
         $jsonString = file_get_contents('php://input');
         $obj = json_decode($jsonString);
         $accessToken = $obj->token;

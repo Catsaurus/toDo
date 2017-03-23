@@ -1,11 +1,24 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-// HTML things
+
+// Things
 $lang['signup'] = 'Registreeri';
 $lang['login'] = 'Logi sisse';
 $lang['intro'] = 'Tere tulemast toDo lehele, et teha oma ülesandeid lihtsamalt ja lõbusamalt!';
-$lang['username'] = 'kasutaja';
+$lang['username'] = 'Kasutajanimi';
+$lang['password'] = 'Parool';
+$lang['password_again'] = 'Parool uuesti';
+$lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';
+$lang['change_data'] = 'Vaheta kasutajanime või parooli';
 
+// Titles
+$lang['about'] = 'Meist';
+$lang['settings'] = 'Seaded';
+$lang['tasks'] = 'Ülesanded';
+
+//Pets
+$lang['johnny'] = 'Elevant Johnny';
+$lang['johnny_intro'] = 'Johnny on lõbus vennas. Talle meeldivad mangod ja banaanid ning ta naudib üherattalisega sõitmist ja oma sõbra eesel Donkey\'ga mängimist';
 
 // Menu
 $lang['menu_mainpage'] = 'Avalehekülg';

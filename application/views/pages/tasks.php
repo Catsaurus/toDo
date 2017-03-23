@@ -3,7 +3,7 @@
 
     <div class="container">
 
-                <h3>Tasks</h3>
+                <h3><?php echo lang('tasks') ?></h3>
 
                 <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')">Add new task</a>
 

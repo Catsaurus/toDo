@@ -4,7 +4,7 @@
         <div class=" row">
             <div class="col s12 pealkiri">
                 <h3>ToDo</h3>
-                <h4>Welcome to toDo to do your todods...easier...and more fun</h4>
+                <h4><?php echo lang('intro') ?></h4>
             </div>
         </div>
     </div>
@@ -30,13 +30,13 @@
 
                                         <div class="input-field">
                                             <input type="text" name="username" id="username"/>
-                                            <label for="username">Your username</label>
+                                            <label for="username"><?php echo lang('username')?></label>
                                         </div>
                                         <div class="input-field">
                                             <input type="password" name="pswd" id="password"/>
-                                            <label for="password">Enter password</label>
+                                            <label for="password"><?php echo lang('password')?></label>
                                         </div>
-                                            <button type="submit" name="submit" class="col s12 btn btn-large waves-effect">Login</button>
+                                            <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('login')?></button>
 
                                         </div>
                                     </div>
@@ -44,15 +44,15 @@
                                 </div>
                         </form>
                                     <!--FORGOT PASSWORD link-->
-                                    <div class="row">
-                                        <div class="col s2"></div>
-                                        <div class="row col s10">
-                                            <label id="forgot_password">
-                                                <a href='#'><h5>Forgot Password?</h5></a>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+<!--                                    <div class="row">-->
+<!--                                        <div class="col s2"></div>-->
+<!--                                        <div class="row col s10">-->
+<!--                                            <label id="forgot_password">-->
+<!--                                                <a href='#'><h5>Forgot Password?</h5></a>-->
+<!--                                            </label>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
 
 
                         </div>

@@ -26,28 +26,28 @@
                                 <!--KASUTAJANIMI-->
                                 <div class="input-field">
                                     <input type="text" name="username" id="username">
-                                    <label for="username">Username</label>
+                                    <label for="username"><?php echo lang('username')?></label>
                                 </div>
 
                                 <!--PAROOL-->
                                 <div class="input-field">
                                     <input type="password" name="pswd" id="password">
-                                    <label for="password">Password</label>
+                                    <label for="password"><?php echo lang('password')?></label>
                                 </div>
 
                                 <!--PAROOL UUESTI-->
                                 <div class="input-field">
                                 <input type="password" name="pswd2" id="password2" onkeyup="checkPassword()">
-                                <label for="password2">Password again</label>
+                                <label for="password2"><?php echo lang('password_again')?></label>
                                 </div>
 
                                 <!--EMAIL-->
                                 <div class="input-field">
                                     <input type="email" title="Email" name="email" id="email">
-                                    <label for="email">Email</label>
+                                    <label for="email"><?php echo lang('email')?></label>
                                 </div>
 
-                                <button type="submit" name="submit" class="col s12 btn btn-large waves-effect">Sign up</button>
+                                <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('signup')?></button>
                             </div>
                         </div>
                         <div class="col s2"></div>
