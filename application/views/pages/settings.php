@@ -11,17 +11,16 @@
         <form id = "changePass" method="post" action="<?php echo site_url('Settings/changePassword') ?>">
         <div class="input-field">
             <input type="password" name="pswd" id="password">
-            <label for="password">Password</label>
+            <label for="password"><?php echo lang('password')?></label>
         </div>
-            <button type="submit" name="submit" class="col s12 btn btn-large waves-effect">Change password</button>
+            <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('change_password')?></button>
         </form>
         <form id = "changeEmail" method="post" action="<?php echo site_url('Settings/changeEmail') ?>">
             <div class="input-field">
                 <input type="email" title="Email" name="email" id="email">
-                <label for="email">Email</label>
+                <label for="email"><?php echo lang('email')?></label>
             </div>
-
-            <button type="submit" name="submit" class="col s12 btn btn-large waves-effect">Change email</button>
+            <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('change_email')?></button>
         </form>
     </div>
 </main>
