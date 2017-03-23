@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// Things
+// Common things
 $lang['signup'] = 'Sign up';
 $lang['login'] = 'Log in';
 $lang['intro'] = 'Welcome to toDo to do your todods...easier...and more fun';
@@ -9,9 +9,26 @@ $lang['username'] = 'Username';
 $lang['password'] = 'Password';
 $lang['password_again'] = 'Password again';
 $lang['email'] = 'Email';
-$lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';
+$lang['description'] = 'Description';
+$lang['cancel'] = 'Cancel';
+
+// Settings
 $lang['change_data'] = 'Change your email or password';
 
+// Tasks
+$lang['add_new'] = 'Add new task';
+$lang['add_info'] = 'Click on "ADD NEW TASK" button to add new tasks :)';
+$lang['repeat'] = 'Select repeat';
+$lang['daily'] = 'Daily';
+$lang['weekly'] = 'Weekly';
+$lang['no_repeat'] = 'No Repeat';
+$lang['due'] = 'Due date';
+$lang['due_today'] = 'Due date is today';
+$lang['due_week'] = 'Due date is this week';
+$lang['due_later'] = 'Due date is later';
+
+// Errors?
+$lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';
 
 // Titles
 $lang['about'] = 'About';

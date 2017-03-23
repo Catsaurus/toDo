@@ -1,20 +1,39 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// Things
+// Common things
 $lang['signup'] = 'Registreeri';
 $lang['login'] = 'Logi sisse';
 $lang['intro'] = 'Tere tulemast toDo lehele, et teha oma ülesandeid lihtsamalt ja lõbusamalt!';
 $lang['username'] = 'Kasutajanimi';
 $lang['password'] = 'Parool';
 $lang['password_again'] = 'Parool uuesti';
-$lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';
+$lang['email'] = 'Meiliaadress';
+$lang['description'] = 'Kirjeldus';
+$lang['cancel'] = 'Tühista';
+
+// Settings
 $lang['change_data'] = 'Vaheta kasutajanime või parooli';
+
+// Tasks
+$lang['add_new'] = 'Lisa uus kohustus';
+$lang['add_info'] = 'Vajuta \'Lisa uus kohustus\' nupule, et lisada uusi ülesandeid :)';
+$lang['repeat'] = 'Vali kordus';
+$lang['daily'] = 'Igapäevane';
+$lang['weekly'] = 'Iganädalane';
+$lang['no_repeat'] = 'Ühekordne';
+$lang['due'] = 'Tähtaeg';
+$lang['due_today'] = 'Tähtaeg on täna';
+$lang['due_week'] = 'Tähtaeg on sel nädalal';
+$lang['due_later'] = 'Tähtaeg on hiljem';
+
+// Errors
+$lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';
 
 // Titles
 $lang['about'] = 'Meist';
 $lang['settings'] = 'Seaded';
-$lang['tasks'] = 'Ülesanded';
+$lang['tasks'] = 'Kohustused';
 
 //Pets
 $lang['johnny'] = 'Elevant Johnny';
