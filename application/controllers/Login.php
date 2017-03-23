@@ -77,7 +77,7 @@ class Login extends CI_Controller {
         $errorno = curl_errno($ch);
 
         if ($errorno) { // shortcut for "is not 0" or null or undefined etc
-            $this->output->set_output(json_encode(array('success' => false)));
+            $this->output->set_output(json_encode(array('success' => false, 'message' => lang('fb_login_fail'))));
         }
         else {
             $json = json_decode($response);
@@ -92,7 +92,7 @@ class Login extends CI_Controller {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['id'] = $user['id'];
             }
-	    else $this->output->set_output(json_encode(array('success' => false)));
+	    else $this->output->set_output(json_encode(array('success' => false, 'message' => lang('fb_login_fail'))));
 
         }
     }

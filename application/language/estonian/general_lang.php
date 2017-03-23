@@ -15,6 +15,9 @@ $lang['cancel'] = 'Tühista';
 $lang['contact'] = 'Kontakt';
 $lang['menu'] = 'Menüü';
 $lang['pets'] = 'Loomad';
+$lang['fb_login_fail'] = 'Facebooki autoriseerimine ebaõnnestus';
+$lang['error'] = 'Viga';
+$lang['hello'] = 'Tere"';
 
 // Titles
 $lang['about'] = 'Meist';
@@ -37,6 +40,7 @@ $lang['due'] = 'Tähtaeg';
 $lang['due_today'] = 'Tähtaeg on täna';
 $lang['due_week'] = 'Tähtaeg on sel nädalal';
 $lang['due_later'] = 'Tähtaeg on hiljem';
+$lang['done'] = 'Ülesanne täidetud';
 
 // Errors
 $lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';

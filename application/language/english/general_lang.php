@@ -15,6 +15,9 @@ $lang['cancel'] = 'Cancel';
 $lang['contact'] = 'Contact';
 $lang['menu'] = 'Menu';
 $lang['pets'] = 'Pets';
+$lang['fb_login_fail'] = 'Facebook authentication failed';
+$lang['error'] = 'Error';
+$lang['hello'] = 'Hello';
 
 // Titles
 $lang['about'] = 'About';
@@ -37,7 +40,7 @@ $lang['due'] = 'Due date';
 $lang['due_today'] = 'Due date is today';
 $lang['due_week'] = 'Due date is this week';
 $lang['due_later'] = 'Due date is later';
-
+$lang['done'] = 'Task done';
 // Errors?
 $lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';
 
