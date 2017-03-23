@@ -77,3 +77,6 @@ $lang['faq_heading'] = 'Frequently asked questions';
 $lang['contact_title'] = 'Contact';
 $lang['contact_heading'] = 'If you have questions then ask';
 
+// Settings
+$lang['change_password'] = 'Change password';
+$lang['change_email'] = 'Change email';

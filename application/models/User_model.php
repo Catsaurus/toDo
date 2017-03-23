@@ -25,4 +25,12 @@ class user_model extends CI_Model {
         $sql = 'CALL insertUser(?,?,?)';
         $this->db->query($sql, array($username, $email, $pswd_hash));
     }
+    public function change_password($id, $pswd_hash){
+        $sql = 'CALL changePassword(?,?)';
+        $this->db->query($sql, array($id, $pswd_hash));
+    }
+    public function change_email($id, $email){
+        $sql = 'CALL changeEmail(?,?)';
+        $this->db->query($sql, array($id, $email));
+    }
 }
