@@ -133,4 +133,21 @@ CONTAINS SQL
     UPDATE tasks
     SET completed = 1
     where id = idIN;
-  END
+  END;
+
+CREATE PROCEDURE  `changePassword`
+    ( IN  `idIn` INT, IN  `pass` INT( 255 ) )
+    NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+BEGIN
+  UPDATE users
+  SET password_hash = pass
+  WHERE id = idIn;
+END;
+
+  CREATE PROCEDURE `changeEmail`(IN `idIn` INT, IN `emailIn` VARCHAR(255))
+  NO SQL
+BEGIN
+update users
+set email = emailIn
+where id = idIn;
+END
