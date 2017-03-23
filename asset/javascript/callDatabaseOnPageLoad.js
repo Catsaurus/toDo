@@ -2,32 +2,32 @@
 window.onload = function callDatabase (){
 
     $.ajax({
-        url:'../Tasks/show_tasks_today',
+        url:'/index.php/Tasks/show_tasks_today',
         complete: function (response) {
             $('#tasksOfToday').html(response.responseText);
         },
         error: function () {
-            $('#tasksOfToday').html('error!');
+            $('#tasksOfToday').html(window.lang.error);
         }
     });
 
     $.ajax({
-        url:'../Tasks/show_tasks_week',
+        url:'/index.php/Tasks/show_tasks_week',
         complete: function (response) {
             $('#tasksOfThisWeek').html(response.responseText);
         },
         error: function () {
-            $('#tasksOfThisWeek').html('error!');
+            $('#tasksOfThisWeek').html(window.lang.error);
         }
     });
 
     $.ajax({
-        url:'../Tasks/show_tasks_future',
+        url:'/index.php/Tasks/show_tasks_future',
         complete: function (response) {
             $('#futureTasks').html(response.responseText);
         },
         error: function () {
-            $('#futureTasks').html('error!');
+            $('#futureTasks').html(window.lang.error);
         }
     });
 };

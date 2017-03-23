@@ -5,7 +5,7 @@
 
                 <h3><?php echo lang('tasks') ?></h3>
 
-                <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')"><?php lang('add_new') ?></a>
+                <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')"><?php echo lang('add_new') ?></a>
 
         <div class="tooltip" id="src3div">
             <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src">
