@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <nav>
             <div class="nav-wrapper">
                 <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><strong class="material-icons"><?php echo lang('menu') ?></strong></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><strong class="material-icons">menu</strong></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="<?php echo site_url('Login/index') ?>" ><?php echo lang('login') ?></a></li>
                     <li class="headerLink"><a href="<?php echo site_url('Register/index') ?>" ><?php echo lang('signup') ?></a></li>
