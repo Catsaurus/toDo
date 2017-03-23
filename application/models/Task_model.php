@@ -81,4 +81,12 @@ class task_model extends CI_Model {
         }
         return $result;
     }
+
+    public function markDone($id)
+    {
+        $sql = 'CALL markTaskDone("'.$id.'")';
+        $answer = $this->db->query($sql);
+        return $answer;
+    }
+
 }
