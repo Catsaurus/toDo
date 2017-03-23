@@ -39,3 +39,59 @@ html, body {
     height: 40%;
     margin-top: 40%;
 }
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black; !* If you want dots under the hoverable text *!*/
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #2E2633;
+    color: #eceff1;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 4px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#s2{
+    width: 200px;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -415%;
+    font-size: smaller;
+}
+#s3{
+    width: 200px;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -415%;
+    font-size: smaller;
+    padding: 30% 30%;
+}
+#s3src, #s2src{
+    width: 24px;
+}
+#src3div, #src2div{
+    float: right;
+}

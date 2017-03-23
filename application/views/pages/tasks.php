@@ -6,6 +6,12 @@
                 <h3>Tasks</h3>
 
                 <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')">Add new task</a>
+
+        <div class="tooltip" id="src3div">
+            <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src">
+            <span class="tooltiptext" id="s3">Click on "ADD NEW TASK" button to add new tasks :)</span>
+        </div>
+
                     <div class="row" id="newTask">
                     <form id="newTaskForm" class="col s12" method="post" action="<?php echo site_url('Tasks/insert') ?>">
 
