@@ -6,9 +6,9 @@
                 <div class="col s4">
 
                     <ul>
-                        <li><a href="<?php echo site_url('Tasks/index') ?>">Tasks</a></li>
-                        <li><a href="<?php echo site_url('Settings/index') ?>">Settings</a></li>
-                        <li><a href="<?php echo site_url('Pets/index') ?>">Pets</a></li>
+                        <li><a href="<?php echo site_url('Tasks/index') ?>"><?php echo lang('tasks') ?></a></li>
+                        <li><a href="<?php echo site_url('Settings/index') ?>"><?php echo lang('settings') ?></a></li>
+                        <li><a href="<?php echo site_url('Pets/index') ?>"><?php echo lang('pets') ?></a></li>
                     </ul>
                 </div>
 
@@ -16,25 +16,25 @@
                 <div class="col s4">
 
                     <ul>
-                        <li><a href="<?php echo site_url('About/index') ?>">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="<?php echo site_url('About/index') ?>"><?php echo lang('about') ?></a></li>
+                        <li><a href="#"><?php echo lang('contact') ?></a></li>
                     </ul>
                 </div>
 
-                <!--column 3-->
-                <div class="col s4">
-                    <ul>
-                        <li><a href="#">Support us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+<!--                <!--column 3-->-->
+<!--                <div class="col s4">-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">Support us</a></li>-->
+<!--                        <li><a href="#">Privacy Policy</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
             </div>
 
         </div>
 
         <div class="footer-copyright">
             <div class="container">
-                © 2017 Veebirakendajad
+                © 2017 Rajasalu, Raju, Randoja
             </div>
         </div>
     </footer>
