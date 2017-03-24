@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html> <!--HTML5 doctype declaration-->
 <!--<html lang="en">-->
 <head>
+    <meta charset="UTF-8">
     <title>toDo</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

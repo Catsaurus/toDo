@@ -24,28 +24,17 @@ class task_model extends CI_Model {
     {
         $sql = 'CALL getUserTasksOfToday("'.$username.'")';
         $result = array();
+        $query = $this->db->query($sql);
 
-        $connection = mysqli_connect($this->db->hostname, $this->db->username, $this->db->password, $this->db->database);
-        $query = mysqli_prepare($connection, $sql);
-        mysqli_stmt_execute($query);
-        if(mysqli_stmt_store_result($query))
-        {
-            mysqli_stmt_bind_result($query, $id, $due, $completed, $user, $content);
-            /*
-             * goes through users tasks of today and returns them in an array
-            */
-            while (mysqli_stmt_fetch($query)) {
-                $data = array(
-                    'content'  => $content,
-                    'id' => $id
-                );
-                array_push($result, $data);
-            }
-            mysqli_stmt_free_result($query);
-            mysqli_stmt_close($query);
+        foreach ($query->result() as $row) {
+            $data = array(
+                'content' => $row->content,
+                'id' => $row-> id
+            );
+            array_push($result, $data);
         }
-        mysqli_close($connection);
         return $result;
+
     }
 
     public function get_user_tasks_week($id)
