@@ -38,16 +38,16 @@ function checkTask(task_id) {
 
 
     $.ajax({
-        url:'../Tasks/markTaskDone/'+task_id,
+        url:'/index.php/Tasks/markTaskDone/'+task_id,
         complete: function (response) {
             console.log(response.responseText);
             var p = $('#'+task_id).closest('p');
-            p[0].innerHTML = "<span class = done>Task done</span>";
+            p[0].innerHTML = "<span class = done>"+window.lang.done+"</span>";
             p.fadeOut(400, function () {
                 $(this).fadeOut();
             });
         },
-        error: function () {
+        error: function (response) {
             console.log(response.responseText);
         }
     });
