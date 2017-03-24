@@ -1,6 +1,7 @@
 $( document ).ready(function(){
     console.log("doc ready");
     $(".button-collapse").sideNav();
+    $('select').material_select();
 
 });
 
