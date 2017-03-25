@@ -89,4 +89,9 @@ class task_model extends CI_Model {
         return $tasks;
     }
 
+    public function getAllTasksCount(){
+        $sql = 'CALL allTasksAmount()';
+        $response = $this->db->query($sql);
+        return $response->row()->tasks;
+    }
 }
