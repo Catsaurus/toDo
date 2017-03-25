@@ -33,6 +33,7 @@ class task_model extends CI_Model {
             );
             array_push($result, $data);
         }
+        $query->next_result();
         return $result;
 
     }
@@ -51,6 +52,7 @@ class task_model extends CI_Model {
             );
             array_push($result, $data);
         }
+        $query->next_result();
         return $result;
     }
 
@@ -68,6 +70,7 @@ class task_model extends CI_Model {
             );
             array_push($result, $data);
         }
+        $query->next_result();
         return $result;
     }
 
@@ -77,10 +80,13 @@ class task_model extends CI_Model {
         $answer = $this->db->query($sql);
         return $answer;
     }
+
     public function getCount($id){
         $sql = 'CALL tasksOfUser("'.$id.'")';
         $response = $this->db->query($sql);
-        return $response->row()->tasks;
+        $tasks = $response->row()->tasks;
+        $response->next_result();
+        return $tasks;
     }
 
 }
