@@ -3,8 +3,7 @@
 class Login extends CI_Controller {
 
     public function index() {
-        $this->lang->load('general', 'english');
-        session_start();
+
         // Don't show this page when already logged in
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'tasks';
@@ -62,8 +61,6 @@ class Login extends CI_Controller {
 
     }
     public function fb(){
-        session_start();
-        $this->lang->load('general', 'english');
         $jsonString = file_get_contents('php://input');
         $obj = json_decode($jsonString);
         $accessToken = $obj->token;
@@ -80,7 +77,7 @@ class Login extends CI_Controller {
         $errorno = curl_errno($ch);
 
         if ($errorno) { // shortcut for "is not 0" or null or undefined etc
-            $this->output->set_output(json_encode(array('success' => false)));
+            $this->output->set_output(json_encode(array('success' => false, 'message' => lang('fb_login_fail'))));
         }
         else {
             $json = json_decode($response);
@@ -95,7 +92,7 @@ class Login extends CI_Controller {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['id'] = $user['id'];
             }
-	    else $this->output->set_output(json_encode(array('success' => false)));
+	    else $this->output->set_output(json_encode(array('success' => false, 'message' => lang('fb_login_fail'))));
 
         }
     }

@@ -150,4 +150,4 @@ BEGIN
 update users
 set email = emailIn
 where id = idIn;
-END
+END;

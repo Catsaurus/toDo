@@ -4,7 +4,6 @@ class Register extends CI_Controller {
 
     public function username_check($user_name){
         $user = $this->user_model->get_user($user_name);
-        //print_r($user);
         if ($user['username'] != null) {
             $this->form_validation->set_message('username_check', lang('account_exists'));
             return false;
@@ -13,8 +12,7 @@ class Register extends CI_Controller {
     }
     public function index()
     {
-        $this->lang->load('general', 'english');
-        session_start();
+
         $this->form_validation->set_rules('username', lang('username'), 'required|callback_username_check');
         $this->form_validation->set_rules('pswd', lang('password'), 'required');
         $this->form_validation->set_rules('pswd2', lang('password_again'), 'required');

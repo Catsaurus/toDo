@@ -19,6 +19,6 @@ function myMap() {
     marker.setMap(map);
 
     google.maps.event.addListener(marker,'click', function() {
-        var messageWindow = new google.maps.InfoWindow({content:"Tere!"});
+        var messageWindow = new google.maps.InfoWindow({content:window.lang.hello});
         messageWindow.open(map,marker);});
 }

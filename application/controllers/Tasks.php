@@ -4,8 +4,7 @@ class Tasks extends CI_Controller {
 
     public function index()
     {
-        $this->lang->load('general', 'english');
-        session_start();
+
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'tasks';
             $data['title'] = ucfirst($page);
@@ -20,7 +19,7 @@ class Tasks extends CI_Controller {
     }
     public function insert()
     {
-        session_start();
+
         $userId = $_SESSION['id'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $description = $_POST['description'];
@@ -32,6 +31,7 @@ class Tasks extends CI_Controller {
 
     public function show_tasks_today()
     {
+
         $user = $_SESSION['id'];
         $result = "";
         $tasks = $this->task_model->get_user_tasks_of_today($user);
@@ -46,6 +46,7 @@ class Tasks extends CI_Controller {
 
     public function show_tasks_week()
     {
+
         $userId = $_SESSION['id'];
         $result = "";
         $tasks = $this->task_model->get_user_tasks_week($userId);

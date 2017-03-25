@@ -1,6 +1,7 @@
 $( document ).ready(function(){
     console.log("doc ready");
     $(".button-collapse").sideNav();
+    $('select').material_select();
 
 });
 
@@ -17,7 +18,7 @@ function fblogin() {
                     window.location.href = '/index.php/tasks';
                 }
                 else {
-                    document.querySelector("#fb_login_error").textContent="Facebook authentication failed";
+                    document.querySelector("#fb_login_error").textContent=responseFromServer.message;
                 }
             });
 
@@ -36,18 +37,18 @@ function checkTask(task_id) {
     console.log(task_id);
     console.log('p');
 
-    var p = $('#'+task_id).closest('p');
-    p[0].innerHTML = "<span class = done>Task done</span>";
-    p.fadeOut(400, function () {
-        $(this).fadeOut();
-    });
 
     $.ajax({
-        url:'../Tasks/markTaskDone/'+task_id,
+        url:'/index.php/Tasks/markTaskDone/'+task_id,
         complete: function (response) {
             console.log(response.responseText);
+            var p = $('#'+task_id).closest('p');
+            p[0].innerHTML = "<span class = done>"+window.lang.done+"</span>";
+            p.fadeOut(400, function () {
+                $(this).fadeOut();
+            });
         },
-        error: function () {
+        error: function (response) {
             console.log(response.responseText);
         }
     });

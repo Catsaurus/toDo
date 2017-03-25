@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html> <!--HTML5 doctype declaration-->
 <!--<html lang="en">-->
 <head>
+    <meta charset="UTF-8">
     <title>toDo</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,30 +19,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/Stylesheet.css"); ?>"/>
     <!-- javascriptid peaks lõppu tõstma nagu ma aru saan, sest siis on lehe laadimine kiirem, MAP ei tööta, kui sees siit ära kustutada-->
     <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
-    <script src="<?php echo base_url("asset/javascript/callDatabaseOnPageLoad.js"); ?>"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="<?php echo base_url("asset/javascript/callDatabaseOnPageLoad.js"); ?>" type="text/javascript"></script>
+    <script src="<?php echo site_url("Javascript/lang"); ?>"type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"type="text/javascript"></script>
 
 </head>
 
 <header>
     <ul class="side-nav" id="mobile-demo">
-        <li><a href="<?php echo site_url('Tasks/index') ?>" >Tasks</a></li>
-        <li><a href="<?php echo site_url('Pets/index') ?>" >Pets</a></li>
+        <li><a href="<?php echo site_url('Tasks/index') ?>" ><?php echo lang('tasks') ?></a></li>
+        <li><a href="<?php echo site_url('Pets/index') ?>" ><?php echo lang('pets') ?></a></li>
         <!--<li><a href="<?php echo site_url('About/index') ?>" >About</a></li>-->
-        <li><a href="<?php echo site_url('Settings/index') ?>" >Settings</a></li>
-        <li><a href="<?php echo site_url('Logout/index')?>"  class="btn">LOG OUT</a></li>
+        <li><a href="<?php echo site_url('Settings/index') ?>" ><?php echo lang('settings') ?></a></li>
+        <li><a href="<?php echo site_url('Logout/index')?>"  class="btn"><?php echo lang('logout') ?></a></li>
     </ul>
 
     <nav>
         <div class="nav-wrapper">
             <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><em class="material-icons">menu</em></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><em class="material-icons"><?php echo lang('menu') ?></em></a>
             <ul class="right hide-on-med-and-down">
-                <li class="headerLink"><a href="<?php echo site_url('Tasks/index') ?>" >Tasks</a></li>
-                <li class="headerLink"><a href="<?php echo site_url('Pets/index') ?>" >Pets</a></li>
-                <li class="headerLink"><a href="<?php echo site_url('Settings/index') ?>" >Settings</a></li>
-                <li class="headerLink"><a href="<?php echo site_url('Logout/index')?>" >Log out</a></li>
+                <li class="headerLink"><a href="<?php echo site_url('Tasks/index') ?>" ><?php echo lang('tasks') ?></a></li>
+                <li class="headerLink"><a href="<?php echo site_url('Pets/index') ?>" ><?php echo lang('pets') ?></a></li>
+                <li class="headerLink"><a href="<?php echo site_url('Settings/index') ?>" ><?php echo lang('settings') ?></a></li>
+                <li class="headerLink"><a href="<?php echo site_url('Logout/index')?>" ><?php echo lang('logout') ?></a></li>
             </ul>
         </div>
     </nav>
