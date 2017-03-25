@@ -2,7 +2,7 @@
 
 if (!function_exists('view_loader'))
 {
-    function view_loader($view, $data=array())
+    function view_loader($view, $data = array())
     {
         $CI = &get_instance();
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){

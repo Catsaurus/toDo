@@ -46,19 +46,20 @@
             <div class="col s4">
                 <p><?php echo lang('due_today') ?></p>
                 <div id="tasksOfToday" >
-
+                    <?php echo $todaysTasks;?>
 
                 </div>
             </div>
             <div class="col s4">
                 <p><?php echo lang('due_week') ?></p>
                 <div id="tasksOfThisWeek">
-
+                    <?php echo $weekTasks;?>
                 </div>
             </div>
             <div class="col s4">
                 <p><?php echo lang('due_later') ?></p>
                 <div id="futureTasks">
+                    <?php echo $futureTasks;?>
 
                 </div>
             </div>

@@ -38,10 +38,15 @@ class Login extends CI_Controller {
                     if(isset($_SESSION['afterLogIn'])){
                         $page = $_SESSION['afterLogIn'];
                         $data['title'] = ucfirst($page);
-                        view_loader($page);
+                        if($page == 'tasks'){
+                            redirect(site_url() . "/Tasks/index");
+                        }
+                        else{
+                            view_loader($page);
+                        }
                     }
                     else{
-                        view_loader('tasks');
+                        redirect(site_url() . "/Tasks/index");
                     }
                 }
                 else{
