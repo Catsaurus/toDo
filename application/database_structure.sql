@@ -162,3 +162,9 @@ CREATE PROCEDURE `tasksOfUser` (IN `userId` INT)
 
 CREATE VIEW usersCount
 AS SELECT COUNT(*) FROM users;
+
+
+CREATE PROCEDURE `allTasksAmount`()
+BEGIN
+SELECT COUNT(id) as `tasks` FROM tasks;
+END

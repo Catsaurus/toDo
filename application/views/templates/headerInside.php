@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/Stylesheet.css"); ?>"/>
     <!-- javascriptid peaks lõppu tõstma nagu ma aru saan, sest siis on lehe laadimine kiirem, MAP ei tööta, kui sees siit ära kustutada-->
     <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
-    <script src="<?php echo base_url("asset/javascript/callDatabaseOnPageLoad.js"); ?>" type="text/javascript"></script>
+    <script src="<?php echo base_url("asset/javascript/longPolling.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo site_url("Javascript/lang"); ?>"type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"type="text/javascript"></script>
 

@@ -42,6 +42,7 @@ $lang['due_week'] = 'Due date is this week';
 $lang['due_later'] = 'Due date is later';
 $lang['done'] = 'Task done';
 $lang['user_tasks'] = 'Amount of tasks you have entered: ';
+$lang['long_polling'] = 'Total number of tasks in the community';
 
 // Errors?
 $lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';

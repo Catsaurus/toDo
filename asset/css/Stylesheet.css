@@ -95,3 +95,13 @@ html, body {
 #src3div, #src2div{
     float: right;
 }
+#src1div{
+    float: right;
+}
+#s1{
+    width: 200px;
+    bottom: 90%;
+    left: 50%;
+    margin-left: -600%;
+    font-size: smaller;
+}

@@ -32,7 +32,7 @@ class Tasks extends CI_Controller {
 
     public function show_tasks_today()
     {
-
+        $this->db->reconnect();
         $user = $_SESSION['id'];
         $result = "";
         $tasks = $this->task_model->get_user_tasks_of_today($user);
@@ -47,7 +47,7 @@ class Tasks extends CI_Controller {
 
     public function show_tasks_week()
     {
-
+        $this->db->reconnect();
         $userId = $_SESSION['id'];
         $result = "";
         $tasks = $this->task_model->get_user_tasks_week($userId);
@@ -80,10 +80,16 @@ class Tasks extends CI_Controller {
         $answer = $this->task_model->markDone($id);
         return $answer;
     }
+
     public function getTaskCount(){
         $userId = $_SESSION['id'];
         $count = $this->task_model->getCount($userId);
         return $count;
 
+    }
+    public function allTasksCount()
+    {
+        $recentResults = $this->task_model->getAllTasksCount();
+        echo json_encode($recentResults);
     }
 }
