@@ -7,7 +7,7 @@
  */
 if (!function_exists('view_loader'))
 {
-    function view_loader($view)
+    function view_loader($view, $data = array())
     {
         $CI = &get_instance();
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
@@ -16,7 +16,7 @@ if (!function_exists('view_loader'))
         else{
             $CI->load->view('../views/templates/header', array(), false);
         }
-        $CI->load->view('../views/pages/'.$view, array(), false);
+        $CI->load->view('../views/pages/'.$view, $data, false);
         $CI->load->view('../views/templates/footer', array(), false);
     }
 }

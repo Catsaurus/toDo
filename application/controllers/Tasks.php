@@ -9,7 +9,10 @@ class Tasks extends CI_Controller {
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'tasks';
             $data['title'] = ucfirst($page);
-            view_loader($page);
+            $tasks['todaysTasks'] = $this->show_tasks_today();
+            $tasks['weekTasks'] = $this->show_tasks_week();
+            $tasks['futureTasks'] = $this->show_tasks_future();
+            view_loader($page, $tasks);
         }
         else{
             view_loader('login');
@@ -29,50 +32,49 @@ class Tasks extends CI_Controller {
 
     public function show_tasks_today()
     {
-        session_start();
         $user = $_SESSION['id'];
+        $result = "";
         $tasks = $this->task_model->get_user_tasks_of_today($user);
         foreach ($tasks as $task) {
-
-            echo "<p>";
-            echo "<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
-            echo "<label for='".$task['id']."'>".$task['content']."</label>";
-            echo "</p>";
+            $result = $result."<p>";
+            $result = $result."<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            $result = $result."<label for='".$task['id']."'>".$task['content']."</label>";
+            $result = $result."</p>";
         }
+        return $result;
     }
 
     public function show_tasks_week()
     {
-        session_start();
         $userId = $_SESSION['id'];
-        echo"<script>console.log('DebugObjects:".$userId."');</script>";
+        $result = "";
         $tasks = $this->task_model->get_user_tasks_week($userId);
         foreach ($tasks as $task) {
             //lisab igale andmebaasist võetud taskile ette checkboxi andmebaasist võetud id järgi
-            echo "<p>";
-            echo "<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
-            echo "<label for='".$task['id']."'>".$task['content']."</label>";
-            echo "</p>";
-
-
+            $result = $result."<p>";
+            $result = $result."<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            $result = $result."<label for='".$task['id']."'>".$task['content']."</label>";
+            $result = $result."</p>";
         }
+        return $result;
     }
     public function show_tasks_future()
     {
-        session_start();
+        $this->db->reconnect();
         $userId = $_SESSION['id'];
+        $result = "";
         $tasks = $this->task_model->get_user_tasks_future($userId);
         foreach ($tasks as $task) {
             //lisab igale andmebaasist võetud taskile ette checkboxi andmebaasist võetud id järgi
-            echo "<p>";
-            echo "<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
-            echo "<label for='".$task['id']."'>".$task['content']."</label>";
-            echo "</p>";
+            $result = $result."<p>";
+            $result = $result."<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            $result = $result."<label for='".$task['id']."'>".$task['content']."</label>";
+            $result = $result."</p>";
         }
+        return $result;
     }
     public function markTaskDone($id)
     {
-        echo"<script>console.log('DebugMarkAsDoneId:".$id."');</script>";
         $answer = $this->task_model->markDone($id);
         return $answer;
     }

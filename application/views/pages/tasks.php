@@ -44,19 +44,20 @@
             <div class="col s4">
                 <p>Due date is today</p>
                 <div id="tasksOfToday" >
-
+                    <?php echo $todaysTasks;?>
 
                 </div>
             </div>
             <div class="col s4">
                 <p>Due date is this week</p>
                 <div id="tasksOfThisWeek">
-
+                    <?php echo $weekTasks;?>
                 </div>
             </div>
             <div class="col s4">
                 <p>Due date is later</p>
                 <div id="futureTasks">
+                    <?php echo $futureTasks;?>
 
                 </div>
             </div>
