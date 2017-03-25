@@ -15,7 +15,7 @@ class Tasks extends CI_Controller {
             view_loader($page, $data);
         }
         else{
-            view_loader('login');
+            redirect(site_url('login'));
         }
     }
     public function insert()
