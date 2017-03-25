@@ -47,7 +47,8 @@ class task_model extends CI_Model {
         {
             $data = array(
                 'content'  => $row->content,
-                 'id' => $row-> id
+                 'id' => $row->id,
+                'date' => $row->due_time
             );
             array_push($result, $data);
         }
@@ -64,7 +65,8 @@ class task_model extends CI_Model {
         {
             $data = array(
                 'content'  => $row->content,
-                'id' => $row-> id
+                'id' => $row-> id,
+                'date' => $row->due_time
             );
             array_push($result, $data);
         }
