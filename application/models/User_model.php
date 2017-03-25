@@ -33,4 +33,5 @@ class user_model extends CI_Model {
         $sql = 'CALL changeEmail(?,?)';
         $this->db->query($sql, array($id, $email));
     }
+    //TODO get user count from view
 }

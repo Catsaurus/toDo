@@ -151,3 +151,14 @@ update users
 set email = emailIn
 where id = idIn;
 END;
+
+
+DELIMITER //
+CREATE PROCEDURE `tasksOfUser` (IN `userId` INT)
+  BEGIN
+    SELECT COUNT(id) as `tasks` FROM tasks WHERE tasks.user_id = userId;
+  END //
+
+
+CREATE VIEW usersCount
+AS SELECT COUNT(*) FROM users;

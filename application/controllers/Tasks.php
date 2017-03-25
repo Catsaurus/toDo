@@ -8,7 +8,8 @@ class Tasks extends CI_Controller {
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'tasks';
             $data['title'] = ucfirst($page);
-            view_loader($page);
+            $data['taskCount'] = $this->getTaskCount();
+            view_loader($page, $data);
         }
         else{
             view_loader('login');
@@ -74,5 +75,11 @@ class Tasks extends CI_Controller {
         echo"<script>console.log('DebugMarkAsDoneId:".$id."');</script>";
         $answer = $this->task_model->markDone($id);
         return $answer;
+    }
+    public function getTaskCount(){
+        $userId = $_SESSION['id'];
+        $count = $this->task_model->getCount($userId);
+        return $count;
+
     }
 }

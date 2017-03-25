@@ -41,6 +41,7 @@ $lang['due_today'] = 'Tähtaeg on täna';
 $lang['due_week'] = 'Tähtaeg on sel nädalal';
 $lang['due_later'] = 'Tähtaeg on hiljem';
 $lang['done'] = 'Ülesanne täidetud';
+$lang['user_tasks'] = 'Sisestatud kohustuste arv: ';
 
 // Errors
 $lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';
