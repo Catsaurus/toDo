@@ -207,3 +207,13 @@ CREATE TABLE `pets` (
 INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'sheepy-sheepy', '0', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut lacus bibendum iaculis. Integer vel arcu id nunc pulvinar elementum. Vestibulum in neque viverra, ultrices velit in, iaculis erat. Curabitur ultricies lectus quis pulvinar lacinia. Cras mattis sapien justo, in porta lacus tincidunt eu. Donec non odio pharetra, mattis eros in, ultrices justo. Cras non tortor vitae neque consequat porta sit amet a libero. Aenean dignissim, massa a pellentesque ', 'pet1.png')
 
 INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'Dollar', '2', 'Sed nec feugiat metus. Proin mattis pellentesque ante sed rutrum. Suspendisse id velit malesuada, rutrum lorem eget, scelerisque odio. Fusce tincidunt eget sapien ornare blandit. Curabitur facilisis erat nec purus tincidunt, quis lacinia odio mollis. Proin faucibus odio eget arcu tincidunt convallis. Nulla nisl ante, tincidunt elementum nisl quis, consequat placerat metus.', 'pet2.png')
+
+
+DROP PROCEDURE tasksOfUser
+
+
+DELIMITER //
+CREATE PROCEDURE `tasksOfUser` (IN `userId` INT)
+  BEGIN
+    SELECT COUNT(id) as `tasks` FROM tasks WHERE tasks.user_id = userId;
+  END //

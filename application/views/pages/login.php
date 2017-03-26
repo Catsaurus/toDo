@@ -1,4 +1,3 @@
-
 <main>
     <div class="container">
         <div class=" row">
@@ -14,20 +13,17 @@
                     <div class="col s12 m6">
                     <!--Z-DEPTH on z telje sügavus, ehk mida suurem on see number, seda kaugemal on see nö taustast-->
                         <div class="z-depth-2 row">
-
-                            <form method="post" action="<?php echo site_url('Login/index'); ?>">
-
-                                <div class="row">
-                                    <div class="col s12"></div>
+			    <div class="row">
+                                <div class="col s12">
                                 </div>
-
+                            </div>
                                 <!--KASUTAJANIMI-->
-                                <div class="row">
-                                    <div class="col s2"></div>
-                                    <div class="col s8" >
-                                        <?php echo validation_errors(); ?>
-                                        <?php echo form_open('Login/index'); ?>
-
+                            <div class="row">
+                                <div class="col s2">
+                                </div>
+                                <div class="col s8" >
+                                    <?php echo validation_errors(); ?>
+                                    <?php echo form_open('Login/index'); ?>
                                         <div class="input-field">
                                             <input type="text" name="username" id="username"/>
                                             <label for="username"><?php echo lang('username')?></label>
@@ -36,14 +32,14 @@
                                             <input type="password" name="pswd" id="password"/>
                                             <label for="password"><?php echo lang('password')?></label>
                                         </div>
-                                            <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('login')?></button>
-
-                                        </div>
-                                    </div>
-                                    <div class="col s2"></div>
+                                        <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('login')?></button>
+				    </form>
                                 </div>
-                        </form>
-                                    <!--FORGOT PASSWORD link-->
+                            </div>
+                            <div class="col s2">
+                            </div>
+                        </div>                        
+                        <!--FORGOT PASSWORD link-->
 <!--                                    <div class="row">-->
 <!--                                        <div class="col s2"></div>-->
 <!--                                        <div class="row col s10">-->
@@ -53,11 +49,10 @@
 <!--                                        </div>-->
 <!--                                    </div>-->
 <!--                                </div>-->
-
-
-                        </div>
                     </div>
+                </div>
 
-            <div class="section"></div>
+                <div class="section"></div>
+            </div>        
 
 </main>

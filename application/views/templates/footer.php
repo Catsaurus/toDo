@@ -32,12 +32,12 @@
 
                                 if ($this->session->userdata('site_lang') == "estonian"){
                                     echo "<a href='$link3'>";
-                                    echo "<img src='$link2'>";
+                                    echo "<img src='$link2' alt='Change to English' />";
                                     echo "</a>";
                                     }
                                 else {
                                     echo "<a href='$link4'>";
-                                    echo "<img src='$link' >";
+                                    echo "<img src='$link' alt='Muuda eestikeelseks' />";
                                     echo "</a>";
                                 }?>
                     </div>
