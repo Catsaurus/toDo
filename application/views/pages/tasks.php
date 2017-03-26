@@ -46,7 +46,7 @@
         <p></p>
 
         <div class="row" id="taskid" >
-            <div class="col s4">
+            <div class="col s3">
                 <p><?php echo lang('due_today') ?></p>
                 <div id="tasksOfToday" >
                     <?php foreach ($todayTasks as $task): ?>
@@ -57,7 +57,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s3">
                 <p><?php echo lang('due_week') ?></p>
                 <div id="tasksOfThisWeek">
                     <?php foreach ($weekTasks as $task): ?>
@@ -68,7 +68,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s3">
                 <p><?php echo lang('due_later') ?></p>
                 <div id="futureTasks">
                     <?php foreach ($futureTasks as $task): ?>
@@ -77,6 +77,20 @@
                             <label for='<?php echo $task['id'];?>'><?php echo $task['content'] . ' ' .  $task['date'];?></label>
                         </p>
                     <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="col s3">
+                <div class="selectable">
+                    <div class="switch" onchange="loadSelectableTasks()">
+                        <label>
+                            <?php echo lang('done_tasks') ?>
+                            <input id="switch" type="checkbox">
+                            <span class="lever"></span>
+                            <?php echo lang('undone_tasks') ?>
+                        </label>
+                    </div>
+                </div>
+                <div id="showsSelectableTasks">
                 </div>
             </div>
         </div>

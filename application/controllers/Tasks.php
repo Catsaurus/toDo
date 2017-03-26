@@ -83,6 +83,11 @@ class Tasks extends CI_Controller {
         $answer = $this->task_model->markDone($id);
         return $answer;
     }
+    public function markTaskUndone($id)
+    {
+        $answer = $this->task_model->markUndone($id);
+        return $answer;
+    }
 
     public function getTaskCount(){
         $userId = $_SESSION['id'];
@@ -94,5 +99,29 @@ class Tasks extends CI_Controller {
     {
         $recentResults = $this->task_model->getAllTasksCount();
         echo json_encode($recentResults);
+    }
+    public function show_tasks_done()
+    {
+        $this->db->reconnect();
+        $userId = $_SESSION['id'];
+        $tasks = $this->task_model->get_user_tasks_done($userId);
+        foreach ($tasks as $task) {
+            echo "<p>";
+            echo "<input onclick=unCheckTask(".$task['id'].") type='checkbox' checked='checked' class='filled-in checkbox-red' id='".$task['id']."'>";
+            echo "<label for='".$task['id']."'>".$task['content']."</label>";
+            echo "</p>";
+        }
+    }
+    public function show_tasks_undone_and_past()
+    {
+        $this->db->reconnect();
+        $userId = $_SESSION['id'];
+        $tasks = $this->task_model->get_user_tasks_past_and_undone($userId);
+        foreach ($tasks as $task) {
+            echo "<p>";
+            echo "<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            echo "<label for='".$task['id']."'>".$task['content']." ".date_format(date_create($task['date']), 'd/m')."</label>";
+            echo "</p>";
+        }
     }
 }

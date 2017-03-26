@@ -82,6 +82,12 @@ class task_model extends CI_Model {
         $answer = $this->db->query($sql);
         return $answer;
     }
+    public function markUndone($id)
+    {
+        $sql = 'CALL markTaskUndone("'.$id.'")';
+        $answer = $this->db->query($sql);
+        return $answer;
+    }
 
     public function getCount($id){
         $sql = 'CALL tasksOfUser("'.$id.'")';
@@ -95,5 +101,41 @@ class task_model extends CI_Model {
         $sql = 'CALL allTasksAmount()';
         $response = $this->db->query($sql);
         return $response->row()->tasks;
+    }
+    public function get_user_tasks_done($id)
+    {
+        $sql = 'CALL getDoneTasks("'.$id.'")';
+        $result = array();
+        $query = $this->db->query($sql);
+
+        foreach ($query->result() as $row)
+        {
+            $data = array(
+                'content'  => $row->content,
+                'id' => $row-> id,
+                'date' => $row->due_time
+            );
+            array_push($result, $data);
+        }
+        $query->next_result();
+        return $result;
+    }
+    public function get_user_tasks_past_and_undone($id)
+    {
+        $sql = 'CALL getUndonePastTasks("'.$id.'")';
+        $result = array();
+        $query = $this->db->query($sql);
+
+        foreach ($query->result() as $row)
+        {
+            $data = array(
+                'content'  => $row->content,
+                'id' => $row-> id,
+                'date' => $row->due_time
+            );
+            array_push($result, $data);
+        }
+        $query->next_result();
+        return $result;
     }
 }
