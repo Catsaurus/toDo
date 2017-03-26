@@ -59,7 +59,7 @@ const checkPassword = function() {
     var pass1 = document.getElementById('password');
     var pass2 = document.getElementById('password2');
 
-    if (pass1.value == pass2.value) {
+    if (pass1.value == pass2.value) { //ideaalis võiks need olla css failis. olemas on ka correct_pswd ja wrong_pswd
         $(pass2).css("color", "#66cc66");
     } else {
         $(pass2).css("color", "#ff6666");
