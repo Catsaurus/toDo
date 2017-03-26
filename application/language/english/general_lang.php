@@ -25,6 +25,7 @@ $lang['settings'] = 'Settings';
 $lang['tasks'] = 'Tasks';
 
 // Settings
+$lang['settings'] = 'Settings';
 $lang['change_data'] = 'Change your email or password';
 $lang['change_password'] = 'Change password';
 $lang['change_email'] = 'Change email';

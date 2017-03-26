@@ -158,6 +158,3 @@ var checkPassword = function() {
         $(pass2).css("color", "#ff6666");
     }
 };
-
-
-

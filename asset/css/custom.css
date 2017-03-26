@@ -16,7 +16,7 @@ main {
 
 }
 nav {
-    background-color: #2E2633;
+    background-color: #ffffff;
 }
 a.brand-logo {
     margin-left: 2em;
@@ -32,8 +32,9 @@ nav ul li:hover a{
     padding-bottom: 0.0em;
 }
 
-nav ul a:hover {
-    color: #ffffff;
+.input-field label {
+    color: #000;
+
 }
 
 nav ul li.active a {
@@ -55,6 +56,7 @@ footer.page-footer {
 footer.page-footer .footer-copyright {
     min-height: 40px;
     background-color: #0F0A12;
+    color: #ffffff;
 
 }
 footer h5{

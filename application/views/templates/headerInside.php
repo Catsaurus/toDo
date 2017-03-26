@@ -1,7 +1,6 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html> <!--HTML5 doctype declaration-->
-<!--<html lang="en">-->
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html> <!--HTML5 doctype declaration-->
 <head>
     <meta charset="UTF-8">
     <title>toDo</title>
@@ -21,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo base_url("asset/javascript/longPolling.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo site_url("Javascript/lang"); ?>"type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
 
 </head>
 
@@ -29,7 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <ul class="side-nav" id="mobile-demo">
         <li><a href="<?php echo site_url('Tasks/index') ?>" ><?php echo lang('tasks') ?></a></li>
         <li><a href="<?php echo site_url('Pets/index') ?>" ><?php echo lang('pets') ?></a></li>
-        <!--<li><a href="<?php echo site_url('About/index') ?>" >About</a></li>-->
         <li><a href="<?php echo site_url('Settings/index') ?>" ><?php echo lang('settings') ?></a></li>
         <li><a href="<?php echo site_url('Logout/index')?>"  class="btn"><?php echo lang('logout') ?></a></li>
     </ul>
@@ -37,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <nav>
         <div class="nav-wrapper">
             <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><em class="material-icons"><?php echo lang('menu') ?></em></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><em class="material-icons"></em></a>
             <ul class="right hide-on-med-and-down">
                 <li class="headerLink"><a href="<?php echo site_url('Tasks/index') ?>" ><?php echo lang('tasks') ?></a></li>
                 <li class="headerLink"><a href="<?php echo site_url('Pets/index') ?>" ><?php echo lang('pets') ?></a></li>

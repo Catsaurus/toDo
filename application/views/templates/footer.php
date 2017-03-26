@@ -15,7 +15,7 @@
                 <div class="col s4">
                     <ul>
                         <li><a href="<?php echo site_url('About/index') ?>"><?php echo lang('about') ?></a></li>
-                        <li><a href="#"><?php echo lang('contact') ?></a></li>
+                        <!--<li><a href="#"><?php echo lang('contact') ?></a></li>
                     </ul>
                 </div>
 

@@ -25,6 +25,7 @@ $lang['settings'] = 'Seaded';
 $lang['tasks'] = 'Kohustused';
 
 // Settings
+$lang['settings'] = 'Seaded';
 $lang['change_data'] = 'Vaheta kasutajanime või parooli';
 $lang['change_password'] = 'Muuda salasõna';
 $lang['change_email'] = 'Muuda meiliaadressi';
