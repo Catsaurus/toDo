@@ -4,10 +4,9 @@ class Logout extends CI_Controller {
 
     public function index()
     {
+        $_SESSION = array('site_lang' => $_SESSION['site_lang']);
         unset($_SESSION);
-        session_destroy();
-
-        view_loader('home');
+        redirect(site_url('home'));
     }
 }
 ?>
