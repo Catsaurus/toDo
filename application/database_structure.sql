@@ -189,3 +189,15 @@ UPDATE tasks
 SET completed = 0
 where id = idIN;
 END;
+
+
+DELIMITER //
+CREATE TABLE `pets`(
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `score` INT NOT NULL DEFAULT 0,
+  `description` TEXT,
+  `imgpath` CHAR,
+  PRIMARY KEY (`id`)
+);
+//
