@@ -53,6 +53,7 @@ $lang['account_exists'] = 'An account with this username already exists. Log in 
 //Pets
 $lang['johnny'] = 'Johnny The Elephant';
 $lang['johnny_intro'] = 'Johnny is a jolly chap. He likes mangos and bananas and enjoys riding unicycles or playing with his friend Donkey The Donkey';
+$lang['see_more_pets'] = 'Want to see more?';
 
 // Menu
 $lang['menu_mainpage'] = 'Main page';

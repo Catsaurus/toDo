@@ -1,23 +1,37 @@
-
-<body>
-<!--    <div class="container">-->
-
-        <div id="parent">
-            <div id="petInfo">
-                <h4><?php echo lang('johnny') ?></h4>
-                <p><?php echo lang('johnny_intro') ?></p>
+<main>
+    <div class="container">
+<div class="row"></div>
+        <div class="row"></div>
+        <div class="row">
+            <div class="col s12">
+                <?php foreach ($pets as $pet): ?>
+                    <div class="row">
+                        <div class="col s4">
+                            <div> <?php echo $pet['name'];?></div>
+                        </div>
+                        <div class="col s4">
+                            <div><?php echo $pet['description'];?></div>
+                        </div>
+                        <div class="col s4">
+                            <div>
+                                <?php $img =$pet['imgname']; ?>
+                                <img src=<?php echo base_url("asset/img/".$img)?> >
+                               </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
-       <!-- <p id="googleMap">
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnbcCUfwLZEDJOeqGm9VRfJSKeqETl40I&callback=myMap"></script>
-        </p>
+        <div class="row">
+            <div class="col s4"></div>
+            <div class="col s3">
 
-    <p></p><p></p>
-
-    <p class="petData"></p>
-->
+                <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('see_more_pets')?></button>
 
 
-<!--    </div>-->
-</body>
+            </div>
+            <div class="col s4"></div>
+        </div>
+    </div>
+</main>

@@ -190,14 +190,20 @@ SET completed = 0
 where id = idIN;
 END;
 
-
-DELIMITER //
-CREATE TABLE `pets`(
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(50) NOT NULL,
-  `score` INT NOT NULL DEFAULT 0,
-  `description` TEXT,
-  `imgpath` CHAR,
+/*teeb tabeli pets*/
+CREATE TABLE `pets` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL COLLATE 'utf8_estonian_ci',
+  `score` INT(11) NOT NULL DEFAULT '0',
+  `description` TEXT NULL COLLATE 'utf8_estonian_ci',
+  `imgname` CHAR(60) NULL DEFAULT NULL COLLATE 'utf8_estonian_ci',
   PRIMARY KEY (`id`)
-);
-//
+)
+  COLLATE='utf8_estonian_ci'
+  ENGINE=InnoDB
+  AUTO_INCREMENT=3
+;
+/*lisab pets tabelisse 2 looma*/
+INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'sheepy-sheepy', '0', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut lacus bibendum iaculis. Integer vel arcu id nunc pulvinar elementum. Vestibulum in neque viverra, ultrices velit in, iaculis erat. Curabitur ultricies lectus quis pulvinar lacinia. Cras mattis sapien justo, in porta lacus tincidunt eu. Donec non odio pharetra, mattis eros in, ultrices justo. Cras non tortor vitae neque consequat porta sit amet a libero. Aenean dignissim, massa a pellentesque ', 'pet1.png')
+
+INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'Dollar', '2', 'Sed nec feugiat metus. Proin mattis pellentesque ante sed rutrum. Suspendisse id velit malesuada, rutrum lorem eget, scelerisque odio. Fusce tincidunt eget sapien ornare blandit. Curabitur facilisis erat nec purus tincidunt, quis lacinia odio mollis. Proin faucibus odio eget arcu tincidunt convallis. Nulla nisl ante, tincidunt elementum nisl quis, consequat placerat metus.', 'pet2.png')

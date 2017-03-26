@@ -53,6 +53,7 @@ $lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või val
 //Pets
 $lang['johnny'] = 'Elevant Johnny';
 $lang['johnny_intro'] = 'Johnny on lõbus vennas. Talle meeldivad mangod ja banaanid ning ta naudib üherattalisega sõitmist ja oma sõbra eesel Donkey\'ga mängimist';
+$lang['see_more_pets'] = "Tahad veel vaadata?";
 
 // Menu
 $lang['menu_mainpage'] = 'Avalehekülg';
