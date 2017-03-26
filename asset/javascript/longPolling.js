@@ -4,14 +4,13 @@ function recentFunction(container, lastDate){
 
     return $.ajax({
         type: "POST",
-        url: "../Tasks/allTasksCount",
+        url: "/index.php/Tasks/allTasksCount",
         cache: false,
         data: { 'request': 'recent',
             'param': lastDate },
         dataType: "json",
         success: function(data){
             if(data != null){
-                console.log("PollingData " + data);
                 document.getElementById("dataPush").innerHTML = data;
             }
         },

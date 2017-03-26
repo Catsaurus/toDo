@@ -1,5 +1,10 @@
+var queue = [];
+
+// Preload loading icon
+var loadImg = new Image();
+loadImg.src = window.assetPath +'img/loading.gif';
+
 $( document ).ready(function(){
-    console.log("doc ready");
     $(".button-collapse").sideNav();
     $('select').material_select();
 
@@ -34,28 +39,45 @@ function fblogin() {
 
 //eemaldab taskile klikkimisel selle taski
 function checkTask(task_id) {
-    console.log(task_id);
-    console.log('p');
-
-
-    $.ajax({
-        url:'/index.php/Tasks/markTaskDone/'+task_id,
-        complete: function (response) {
-            console.log(response.responseText);
-            var p = $('#'+task_id).closest('p');
+    var p = $('#'+task_id).closest('p');
+    p[0].innerHTML = '<img src="' + loadImg.src + '"/>';
+    queue.push({
+        'taskId':task_id,
+        'onSuccess': function () {
+            console.log('success');
             p[0].innerHTML = "<span class = done>"+window.lang.done+"</span>";
             p.fadeOut(400, function () {
                 $(this).fadeOut();
             });
-        },
-        error: function (response) {
-            console.log(response.responseText);
         }
     });
 
+    process_queue();
+
+
+}
+function process_queue() {
+    console.log('Processing', queue.length);    //TODO remove this line
+    if (queue.length===0){
+        return;
+    }
+    var firstTask = queue[0];
+    $.ajax({
+        url:'/index.php/Tasks/markTaskDone/'+firstTask.taskId,
+        success: function () {
+            queue.splice(0,1);
+            firstTask.onSuccess();
+            process_queue();
+        },
+        error: function (response) {
+            setTimeout(process_queue, 500);
+            console.error(response.responseText);
+        }
+    });
 }
 
-const checkPassword = function() {
+
+var checkPassword = function() {
     var pass1 = document.getElementById('password');
     var pass2 = document.getElementById('password2');
 

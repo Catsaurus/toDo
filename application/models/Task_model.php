@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Riana
- * Date: 09.03.17
- * Time: 19:14
- */
 class task_model extends CI_Model {
 
     public function __construct()
