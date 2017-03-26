@@ -105,3 +105,6 @@ html, body {
     margin-left: -600%;
     font-size: smaller;
 }
+#showsSelectableTasks{
+    padding-left: 20%;
+}

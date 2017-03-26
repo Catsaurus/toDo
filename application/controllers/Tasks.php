@@ -9,7 +9,7 @@ class Tasks extends CI_Controller {
             $page = 'tasks';
             $data['title'] = ucfirst($page);
             $data['taskCount'] = $this->getTaskCount();
-            $data['todaysTasks'] = $this->show_tasks_today();
+            $data['todayTasks'] = $this->show_tasks_today();
             $data['weekTasks'] = $this->show_tasks_week();
             $data['futureTasks'] = $this->show_tasks_future();
             view_loader($page, $data);
@@ -34,50 +34,58 @@ class Tasks extends CI_Controller {
     {
         $this->db->reconnect();
         $user = $_SESSION['id'];
-        $result = "";
         $tasks = $this->task_model->get_user_tasks_of_today($user);
+        $data = array();
         foreach ($tasks as $task) {
-            $result = $result."<p>";
-            $result = $result."<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
-            $result = $result."<label for='".$task['id']."'>".$task['content']."</label>";
-            $result = $result."</p>";
+            $one = array(
+                'content'  => $task['content'],
+                'id' => $task['id']
+            );
+            array_push($data, $one);
         }
-        return $result;
+        return $data;
     }
 
     public function show_tasks_week()
     {
         $this->db->reconnect();
         $userId = $_SESSION['id'];
-        $result = "";
         $tasks = $this->task_model->get_user_tasks_week($userId);
+        $data = array();
         foreach ($tasks as $task) {
-            //lisab igale andmebaasist võetud taskile ette checkboxi andmebaasist võetud id järgi
-            $result = $result."<p>";
-            $result = $result."<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
-            $result = $result."<label for='".$task['id']."'>".$task['content']."</label>";
-            $result = $result."</p>";
+            $one = array(
+                'content'  => $task['content'],
+                'id' => $task['id'],
+                'date' => date_format(date_create($task['date']), 'd/m')
+            );
+            array_push($data, $one);
         }
-        return $result;
+        return $data;
     }
     public function show_tasks_future()
     {
         $this->db->reconnect();
         $userId = $_SESSION['id'];
-        $result = "";
         $tasks = $this->task_model->get_user_tasks_future($userId);
+        $data = array();
         foreach ($tasks as $task) {
-            //lisab igale andmebaasist võetud taskile ette checkboxi andmebaasist võetud id järgi
-            $result = $result."<p>";
-            $result = $result."<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
-            $result = $result."<label for='".$task['id']."'>".$task['content']."</label>";
-            $result = $result."</p>";
+            $one = array(
+                'content'  => $task['content'],
+                'id' => $task['id'],
+                'date' => date_format(date_create($task['date']), 'd/m')
+            );
+            array_push($data, $one);
         }
-        return $result;
+        return $data;
     }
     public function markTaskDone($id)
     {
         $answer = $this->task_model->markDone($id);
+        return $answer;
+    }
+    public function markTaskUndone($id)
+    {
+        $answer = $this->task_model->markUndone($id);
         return $answer;
     }
 
@@ -91,5 +99,29 @@ class Tasks extends CI_Controller {
     {
         $recentResults = $this->task_model->getAllTasksCount();
         echo json_encode($recentResults);
+    }
+    public function show_tasks_done()
+    {
+        $this->db->reconnect();
+        $userId = $_SESSION['id'];
+        $tasks = $this->task_model->get_user_tasks_done($userId);
+        foreach ($tasks as $task) {
+            echo "<p>";
+            echo "<input onclick=unCheckTask(".$task['id'].") type='checkbox' checked='checked' class='filled-in checkbox-red' id='".$task['id']."'>";
+            echo "<label for='".$task['id']."'>".$task['content']."</label>";
+            echo "</p>";
+        }
+    }
+    public function show_tasks_undone_and_past()
+    {
+        $this->db->reconnect();
+        $userId = $_SESSION['id'];
+        $tasks = $this->task_model->get_user_tasks_past_and_undone($userId);
+        foreach ($tasks as $task) {
+            echo "<p>";
+            echo "<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            echo "<label for='".$task['id']."'>".$task['content']." ".date_format(date_create($task['date']), 'd/m')."</label>";
+            echo "</p>";
+        }
     }
 }

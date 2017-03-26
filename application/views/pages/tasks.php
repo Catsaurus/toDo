@@ -46,24 +46,51 @@
         <p></p>
 
         <div class="row" id="taskid" >
-            <div class="col s4">
+            <div class="col s3">
                 <p><?php echo lang('due_today') ?></p>
                 <div id="tasksOfToday" >
-                    <?php echo $todaysTasks;?>
-
+                    <?php foreach ($todayTasks as $task): ?>
+                        <p>
+                            <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
+                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'];?></label>
+                        </p>
+                    <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s3">
                 <p><?php echo lang('due_week') ?></p>
                 <div id="tasksOfThisWeek">
-                    <?php echo $weekTasks;?>
+                    <?php foreach ($weekTasks as $task): ?>
+                        <p>
+                            <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
+                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'] . ' ' .  $task['date'];?></label>
+                        </p>
+                    <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s3">
                 <p><?php echo lang('due_later') ?></p>
                 <div id="futureTasks">
-                    <?php echo $futureTasks;?>
-
+                    <?php foreach ($futureTasks as $task): ?>
+                        <p>
+                            <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
+                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'] . ' ' .  $task['date'];?></label>
+                        </p>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="col s3">
+                <div class="selectable">
+                    <div class="switch" onchange="loadSelectableTasks()">
+                        <label>
+                            <?php echo lang('done_tasks') ?>
+                            <input id="switch" type="checkbox">
+                            <span class="lever"></span>
+                            <?php echo lang('undone_tasks') ?>
+                        </label>
+                    </div>
+                </div>
+                <div id="showsSelectableTasks">
                 </div>
             </div>
         </div>

@@ -167,4 +167,25 @@ AS SELECT COUNT(*) FROM users;
 CREATE PROCEDURE `allTasksAmount`()
 BEGIN
 SELECT COUNT(id) as `tasks` FROM tasks;
-END
+END;
+
+CREATE PROCEDURE `getUndonePastTasks`(IN `userId` INT)
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE user_id = userId and completed=0 and WEEK(due_time) < WEEK(CURDATE())
+    LIMIT 7;
+  END;
+
+CREATE PROCEDURE `getDoneTasks`(IN `userId` INT)
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE user_id = userId and completed=1
+    LIMIT 7;
+  END;
+
+CREATE PROCEDURE `markTaskUndone`(IN `idIN` INT)
+BEGIN
+UPDATE tasks
+SET completed = 0
+where id = idIN;
+END;
