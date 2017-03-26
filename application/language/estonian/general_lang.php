@@ -43,8 +43,8 @@ $lang['due_later'] = 'Tähtaeg on hiljem';
 $lang['done'] = 'Ülesanne täidetud';
 $lang['user_tasks'] = 'Sisestatud kohustuste arv: ';
 $lang['long_polling'] = 'Ülesandeid süsteemis kokku';
-$lang['done_tasks'] = 'Tehtud ülesanded';
-$lang['undone_tasks'] = 'Tegemata ülesanded';
+$lang['done_tasks'] = 'Tehtud';
+$lang['undone_tasks'] = 'Tegemata';
 $lang['undone'] = 'Ülesanne tegemata';
 
 // Errors

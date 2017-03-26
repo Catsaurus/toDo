@@ -111,7 +111,6 @@ function checkTask(task_id) {
 
 }
 function process_queue() {
-    console.log('Processing', queue.length);    //TODO remove this line
     if (queue.length===0){
         return;
     }
@@ -137,7 +136,7 @@ function unCheckTask(task_id) {
         complete: function (response) {
             console.log(response.responseText);
             var p = $('#'+task_id).closest('p');
-            p[0].innerHTML = "<span class = done>"+window.lang.done+"</span>"; // TODO Correct text
+            p[0].innerHTML = "<span class = done>"+window.lang.undone+"</span>";
             p.fadeOut(400, function () {
                 $(this).fadeOut();
             });
