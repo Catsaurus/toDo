@@ -204,10 +204,16 @@ CREATE TABLE `pets` (
   AUTO_INCREMENT=3
 ;
 /*lisab pets tabelisse 2 looma*/
-INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'sheepy-sheepy', '0', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut lacus bibendum iaculis. Integer vel arcu id nunc pulvinar elementum. Vestibulum in neque viverra, ultrices velit in, iaculis erat. Curabitur ultricies lectus quis pulvinar lacinia. Cras mattis sapien justo, in porta lacus tincidunt eu. Donec non odio pharetra, mattis eros in, ultrices justo. Cras non tortor vitae neque consequat porta sit amet a libero. Aenean dignissim, massa a pellentesque ', 'pet1.png')
+INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'sheepy-sheepy', '0', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut lacus bibendum iaculis. Integer vel arcu id nunc pulvinar elementum. Vestibulum in neque viverra, ultrices velit in, iaculis erat. Curabitur ultricies lectus quis pulvinar lacinia. Cras mattis sapien justo, in porta lacus tincidunt eu. Donec non odio pharetra, mattis eros in, ultrices justo. Cras non tortor vitae neque consequat porta sit amet a libero. Aenean dignissim, massa a pellentesque ', 'pet1.png');
 
-INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'Dollar', '2', 'Sed nec feugiat metus. Proin mattis pellentesque ante sed rutrum. Suspendisse id velit malesuada, rutrum lorem eget, scelerisque odio. Fusce tincidunt eget sapien ornare blandit. Curabitur facilisis erat nec purus tincidunt, quis lacinia odio mollis. Proin faucibus odio eget arcu tincidunt convallis. Nulla nisl ante, tincidunt elementum nisl quis, consequat placerat metus.', 'pet2.png')
+INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'Dollar', '2', 'Sed nec feugiat metus. Proin mattis pellentesque ante sed rutrum. Suspendisse id velit malesuada, rutrum lorem eget, scelerisque odio. Fusce tincidunt eget sapien ornare blandit. Curabitur facilisis erat nec purus tincidunt, quis lacinia odio mollis. Proin faucibus odio eget arcu tincidunt convallis. Nulla nisl ante, tincidunt elementum nisl quis, consequat placerat metus.', 'pet2.png');
 
+CREATE PROCEDURE `getUsersTasksThisWeek`(IN `userId` INT) # I changed this procedure and the whole code is new
+NO SQL
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE user_id = userId and completed=0 and due_time > CURDATE() and due_time < CURDATE() + INTERVAL 7 DAY;
+  END
 
 DROP PROCEDURE tasksOfUser
 
