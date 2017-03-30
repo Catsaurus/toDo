@@ -41,7 +41,7 @@
                                     echo "</a>";
                                 }?>
                     </div>
-
+                </div>
                 </div>
 
             </div>

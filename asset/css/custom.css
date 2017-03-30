@@ -15,11 +15,12 @@ main {
     background-color: #eceff1;
 
 }
+/*headeri taustavärk*/
 nav {
-    background-color: #ffffff;
+    background-color: #2E2633;
 }
 a.brand-logo {
-    margin-left: 2em;
+    margin-left: 2%;
     color: #ffffff;
 }
 
@@ -28,8 +29,8 @@ nav ul li a {
     color: #FFFFFF;
 }
 nav ul li:hover a{
-    background-color: #514656;
-    padding-bottom: 0.0em;
+    background-color: #18070c;
+    padding-bottom: 0.3%;
 }
 
 .input-field label {
