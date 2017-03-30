@@ -52,7 +52,7 @@
                     <?php foreach ($todayTasks as $task): ?>
                         <p>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
-                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'];?></label>
+                            <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']);?></label>
                         </p>
                     <?php endforeach; ?>
                 </div>
@@ -63,7 +63,7 @@
                     <?php foreach ($weekTasks as $task): ?>
                         <p>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
-                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'] . ' ' .  $task['date'];?></label>
+                            <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']) . ' ' .  $task['date'];?></label>
                         </p>
                     <?php endforeach; ?>
                 </div>
@@ -74,7 +74,7 @@
                     <?php foreach ($futureTasks as $task): ?>
                         <p>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
-                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'] . ' ' .  $task['date'];?></label>
+                            <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']) . ' ' .  $task['date'];?></label>
                         </p>
                     <?php endforeach; ?>
                 </div>

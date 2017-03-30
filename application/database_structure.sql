@@ -94,9 +94,7 @@ CREATE PROCEDURE  `getUserTasksOfToday` ( IN  `iD` INT( 255 ) UNSIGNED ) NOT DET
       INNER JOIN users
         ON tasks.user_id = users.id
     WHERE users.id=iD and due_time=CURDATE() and completed = 0;
-  END
-
-END //
+  END//
 
 
 DROP PROCEDURE IF EXISTS `insertUser`;

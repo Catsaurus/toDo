@@ -22,7 +22,8 @@ class Pets_model extends CI_Model {
             );
             array_push($result, $data);
         }
-        //$query->next_result();
+        //$query->next_result();        Pole vaja alati kasutada, oluline tasks lehel, kuna see jooksutab mitut queryt korraga samal tabelil
+                                        // siis see meetod lõpetab eelmise ära, et saaks järgmist välja kutsuda.
        return $result;
    }
 }
