@@ -25,11 +25,11 @@ a.brand-logo {
 }
 
 nav ul li a {
-    transition: 1s;
+    transition: 0.3s;
     color: #FFFFFF;
 }
 nav ul li:hover a{
-    background-color: #18070c;
+    background-color: #0F0A12;
     padding-bottom: 0.3%;
 }
 
@@ -58,6 +58,7 @@ footer.page-footer .footer-copyright {
     min-height: 40px;
     background-color: #0F0A12;
     color: #ffffff;
+    text-align: center;
 
 }
 footer h5{
@@ -70,6 +71,9 @@ footer p {
     color: #eceff1;
 }
 .pealkiri {
+    text-align: center;
+}
+#center_objects {
     text-align: center;
 }
 

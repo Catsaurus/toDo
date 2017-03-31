@@ -24,6 +24,9 @@ $lang['about'] = 'About';
 $lang['settings'] = 'Settings';
 $lang['tasks'] = 'Tasks';
 
+//About
+$lang['support'] = 'Support us';
+
 // Settings
 $lang['settings'] = 'Settings';
 $lang['change_data'] = 'Change your email or password';

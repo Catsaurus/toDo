@@ -24,6 +24,9 @@ $lang['about'] = 'Meist';
 $lang['settings'] = 'Seaded';
 $lang['tasks'] = 'Kohustused';
 
+//About
+$lang['support'] = "Toetage";
+
 // Settings
 $lang['settings'] = 'Seaded';
 $lang['change_data'] = 'Vaheta kasutajanime või parooli';

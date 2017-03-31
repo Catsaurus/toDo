@@ -1,6 +1,6 @@
     <footer class="page-footer" id="upper-footer">
         <div class="container">
-            <div class="row" >
+            <div class="row"  id="center_objects">
 
                 <!--column 1-->
                 <div class="col s4">
@@ -15,7 +15,6 @@
                 <div class="col s4">
                     <ul>
                         <li><a href="<?php echo site_url('About/index') ?>"><?php echo lang('about') ?></a></li>
-                        <!--<li><a href="#"><?php echo lang('contact') ?></a></li>
                     </ul>
                 </div>
 
@@ -45,7 +44,6 @@
                 </div>
 
             </div>
-        </div>
 
         <div class="footer-copyright">
             <div class="container">
