@@ -213,4 +213,28 @@ NO SQL
   BEGIN
     SELECT id, due_time, completed, user_id, content FROM tasks
     WHERE user_id = userId and completed=0 and due_time > CURDATE() and due_time < CURDATE() + INTERVAL 7 DAY;
+  END;
+
+
+/*muutsin protseduuri getUsersTasksFuture, siin on uus kood
+*/
+CREATE PROCEDURE `getUsersTasksFuture`(IN `userId` INT)
+BEGIN
+SELECT id, due_time, completed, user_id, content FROM tasks
+WHERE user_id = userId and completed=0 and due_time > CURDATE() + INTERVAL 7 DAY;
+END;
+
+CREATE PROCEDURE `superUserTasks`()
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE user_id = 37 and completed=0;
+  END;
+
+/*modified getDoneTaks
+*/
+CREATE PROCEDURE `getDoneTasks`(IN `userId` INT)
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE (user_id = userId  OR user_id = 37) and completed=1
+    LIMIT 7;
   END

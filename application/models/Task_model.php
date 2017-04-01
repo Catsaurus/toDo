@@ -132,4 +132,22 @@ class task_model extends CI_Model {
         $query->next_result();
         return $result;
     }
+    public function getSuperUserTasks()
+    {
+        $sql = 'CALL superUserTasks()';
+        $result = array();
+        $query = $this->db->query($sql);
+
+        foreach ($query->result() as $row)
+        {
+            $data = array(
+                'content'  => $row->content,
+                'id' => $row-> id,
+                'date' => $row->due_time
+            );
+            array_push($result, $data);
+        }
+        $query->next_result();
+        return $result;
+    }
 }

@@ -124,4 +124,15 @@ class Tasks extends CI_Controller {
             echo "</p>";
         }
     }
+
+    public function superTasks(){
+        $result = "";
+        $this->db->reconnect();
+        $tasks = $this->task_model->getSuperUserTasks();
+        foreach ($tasks as $task) {
+            $result = $result."<p><input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            $result = $result."<label for='".$task['id']."'>".$task['content']." ".date_format(date_create($task['date']), 'd/m')."</label></p>";
+        }
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
+    }
 }

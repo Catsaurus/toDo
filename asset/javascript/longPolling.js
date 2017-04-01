@@ -4,7 +4,7 @@ function recentFunction(container, lastDate){
 
     return $.ajax({
         type: "POST",
-        url: "/index.php/Tasks/allTasksCount",
+        url: "/index.php/Tasks/superTasks",
         cache: false,
         data: { 'request': 'recent',
             'param': lastDate },

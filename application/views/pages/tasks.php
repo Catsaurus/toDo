@@ -95,10 +95,19 @@
             </div>
         </div>
 
-        <div class="tooltip" id="src1div">
-            <p id="dataPush"></p><script>recentFunction()</script>
-            <span class="tooltiptext" id="s1"><?php echo lang('long_polling') ?></span>
+        <div class="row" id="superUserTaskid">
+            <div class="col s3">
+                <p>Tasks added by SuperUser</p> <?php /*echo lang('tasks_by_superUser') */?>
+                <div>
+                    <p id="dataPush"></p><script>recentFunction()</script>
+                </div>
+            </div>
         </div>
+
+<!--        <div class="tooltip" id="src1div">-->
+<!--            <p id="dataPush"></p><script>recentFunction()</script>-->
+<!--            <span class="tooltiptext" id="s1">--><?php //echo lang('long_polling') ?><!--</span>-->
+<!--        </div>-->
     </div>
 
 </main>

@@ -31,6 +31,10 @@ html, body {
 #taskid{
     padding-left: 10%;
 }
+#superUserTaskid{
+    padding-left: 10%;
+    padding-top: 2%;
+}
 .petData{
     width: 30%;
     margin-left: 15%;
