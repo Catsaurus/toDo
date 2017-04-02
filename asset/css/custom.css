@@ -164,3 +164,20 @@ label {
     color: #99173C;
 
 }
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+    border: 2px solid #6f1634;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+    background-color: #99173C;
+}
+
+#donation {
+    display: none;
+}
+#post2{
+    display: none;
+}

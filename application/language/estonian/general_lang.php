@@ -26,6 +26,19 @@ $lang['tasks'] = 'Kohustused';
 
 //About
 $lang['support'] = "Toetage";
+$lang['payment_name'] = 'Maksja nimi';
+$lang['payment_nr'] = 'Konto number';
+$lang['amount1'] = 'Sokolaad';
+$lang['amount2'] = 'Spa päev';
+$lang['amount3'] = 'Nädalavahetus Madriidis';
+$lang['payment'] = 'Maksma';
+$lang['summa'] = 'Vali summa';
+
+//paymentReceived
+$lang['payment_completed_ok'] = 'Makse kinnitatud';
+
+//paymentNotReceived
+$lang['payment_completed_not'] = 'Makse ei kinnitatud';
 
 // Settings
 $lang['settings'] = 'Seaded';

@@ -26,6 +26,19 @@ $lang['tasks'] = 'Tasks';
 
 //About
 $lang['support'] = 'Support us';
+$lang['payment_name'] = 'Payer name';
+$lang['payment_nr'] = 'Account number';
+$lang['amount1'] = 'Chocolate';
+$lang['amount2'] = 'Spa day';
+$lang['amount3'] = 'Weekend in Madrid';
+$lang['payment'] = 'Next';
+$lang['summa'] = 'Choose amount';
+
+//paymentReceived
+$lang['payment_completed_ok'] = 'Payment completed';
+
+//paymentNotReceived
+$lang['payment_completed_not'] = 'Payment not completed';
 
 // Settings
 $lang['settings'] = 'Settings';
