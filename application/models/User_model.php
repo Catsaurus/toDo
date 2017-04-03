@@ -11,13 +11,11 @@ class user_model extends CI_Model {
     {
         $query = $this->db->get_where('users', array('username' => $username ));
         $user = $query->row_array();
-        $query->next_result();
         return $user;
     }
     public function get_user_fb($fb_id){
         $query = $this->db->get_where('users', array('fb_id' => $fb_id ));
         $user = $query->row_array();
-        $query->next_result();
         return $user;
     }
     public function insert_fbuser($fbid, $email)

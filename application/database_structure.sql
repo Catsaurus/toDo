@@ -94,9 +94,7 @@ CREATE PROCEDURE  `getUserTasksOfToday` ( IN  `iD` INT( 255 ) UNSIGNED ) NOT DET
       INNER JOIN users
         ON tasks.user_id = users.id
     WHERE users.id=iD and due_time=CURDATE() and completed = 0;
-  END
-
-END //
+  END//
 
 
 DROP PROCEDURE IF EXISTS `insertUser`;
@@ -237,4 +235,13 @@ CREATE PROCEDURE `getDoneTasks`(IN `userId` INT)
     SELECT id, due_time, completed, user_id, content FROM tasks
     WHERE (user_id = userId  OR user_id = 37) and completed=1
     LIMIT 7;
-  END
+  END;
+
+DROP PROCEDURE tasksOfUser
+
+
+DELIMITER //
+CREATE PROCEDURE `tasksOfUser` (IN `userId` INT)
+  BEGIN
+    SELECT COUNT(id) as `tasks` FROM tasks WHERE tasks.user_id = userId;
+  END //

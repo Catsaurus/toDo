@@ -11,6 +11,14 @@ $( document ).ready(function(){
         document.location.hash = 'done';
     }
     setInterval(checkHash, 1000);
+
+    $("#click").click(function () {
+        $("#donation").toggle();
+    });
+
+    $("#post2").click();
+
+      // jQuey's submit function applied on form.
 });
 
 function loadSelectableTasks(){
@@ -158,6 +166,3 @@ var checkPassword = function() {
         $(pass2).css("color", "#ff6666");
     }
 };
-
-
-

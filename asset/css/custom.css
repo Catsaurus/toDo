@@ -15,25 +15,27 @@ main {
     background-color: #eceff1;
 
 }
+/*headeri taustavärk*/
 nav {
     background-color: #2E2633;
 }
 a.brand-logo {
-    margin-left: 2em;
+    margin-left: 2%;
     color: #ffffff;
 }
 
 nav ul li a {
-    transition: 1s;
+    transition: 0.3s;
     color: #FFFFFF;
 }
 nav ul li:hover a{
-    background-color: #514656;
-    padding-bottom: 0.0em;
+    background-color: #0F0A12;
+    padding-bottom: 0.3%;
 }
 
-nav ul a:hover {
-    color: #ffffff;
+.input-field label {
+    color: #000;
+
 }
 
 nav ul li.active a {
@@ -55,6 +57,8 @@ footer.page-footer {
 footer.page-footer .footer-copyright {
     min-height: 40px;
     background-color: #0F0A12;
+    color: #ffffff;
+    text-align: center;
 
 }
 footer h5{
@@ -67,6 +71,9 @@ footer p {
     color: #eceff1;
 }
 .pealkiri {
+    text-align: center;
+}
+#center_objects {
     text-align: center;
 }
 
@@ -156,4 +163,21 @@ label {
 .done {
     color: #99173C;
 
+}
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+    border: 2px solid #6f1634;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+    background-color: #99173C;
+}
+
+#donation {
+    display: none;
+}
+#post2{
+    display: none;
 }

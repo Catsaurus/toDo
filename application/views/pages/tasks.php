@@ -8,7 +8,7 @@
                 <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')"><?php echo lang('add_new') ?></a>
 
         <div class="tooltip" id="src3div">
-            <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src">
+            <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src" alt="??">
             <span class="tooltiptext" id="s3"><?php echo lang('add_info') ?></span>
         </div>
 
@@ -26,15 +26,15 @@
                             </div>
                     </div>
 
-                <label for="datepicker"><?php lang('due') ?></label>
+                <label for="datepicker"><?php echo lang('due') ?></label>
                     <input name="date" width="50%" type="date" value="<?php echo date('Y-m-d');?>" id="datepicker" class="datepicker">
 
                         <fieldset class="radiogroup">
                             <legend><?php lang('repeat') ?></legend>
                             <ul class="radio">
-                                <li><input name="groupRepeat" type="radio" id="daily" value="daily"/><label for="daily"></label><?php echo lang('daily') ?></li>
-                                <li><input name="groupRepeat" type="radio" id="weekly" value="weekly"/><label for="weekly"></label><?php echo lang('weekly') ?></li>
-                                <li><input name="groupRepeat" type="radio" id="norepeat" value="norepeat" checked="checked"/><label for="norepeat"></label><?php echo lang('no_repeat') ?></li>
+                                <li><input name="groupRepeat" type="radio" id="daily" value="daily"/><label for="daily"><?php echo lang('daily') ?></label></li>
+                                <li><input name="groupRepeat" type="radio" id="weekly" value="weekly"/><label for="weekly"><?php echo lang('weekly') ?></label></li>
+                                <li><input name="groupRepeat" type="radio" id="norepeat" value="norepeat" checked="checked"/><label for="norepeat"><?php echo lang('no_repeat') ?></label></li>
                             </ul>
                         </fieldset>
 
@@ -52,7 +52,7 @@
                     <?php foreach ($todayTasks as $task): ?>
                         <p>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
-                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'];?></label>
+                            <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']);?></label>
                         </p>
                     <?php endforeach; ?>
                 </div>
@@ -63,7 +63,7 @@
                     <?php foreach ($weekTasks as $task): ?>
                         <p>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
-                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'] . ' ' .  $task['date'];?></label>
+                            <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']) . ' ' .  $task['date'];?></label>
                         </p>
                     <?php endforeach; ?>
                 </div>
@@ -74,7 +74,7 @@
                     <?php foreach ($futureTasks as $task): ?>
                         <p>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
-                            <label for='<?php echo $task['id'];?>'><?php echo $task['content'] . ' ' .  $task['date'];?></label>
+                            <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']) . ' ' .  $task['date'];?></label>
                         </p>
                     <?php endforeach; ?>
                 </div>

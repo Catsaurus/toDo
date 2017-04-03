@@ -15,7 +15,7 @@
                         <div class="col s4">
                             <div>
                                 <?php $img =$pet['imgname']; ?>
-                                <img src=<?php echo base_url("asset/img/".$img)?> >
+                                <img alt="sheep" src=<?php echo base_url("asset/img/".$img)?> >
                                </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
             <div class="col s4"></div>
             <div class="col s3">
 
-                <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('see_more_pets')?></button>
+                <!--<button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('see_more_pets')?></button>-->
 
 
             </div>

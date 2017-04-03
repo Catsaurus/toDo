@@ -108,7 +108,7 @@ class Tasks extends CI_Controller {
         foreach ($tasks as $task) {
             echo "<p>";
             echo "<input onclick=unCheckTask(".$task['id'].") type='checkbox' checked='checked' class='filled-in checkbox-red' id='".$task['id']."'>";
-            echo "<label for='".$task['id']."'>".$task['content']."</label>";
+            echo "<label for='".$task['id']."'>".htmlspecialchars($task['content'])."</label>";
             echo "</p>";
         }
     }
@@ -120,7 +120,7 @@ class Tasks extends CI_Controller {
         foreach ($tasks as $task) {
             echo "<p>";
             echo "<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
-            echo "<label for='".$task['id']."'>".$task['content']." ".date_format(date_create($task['date']), 'd/m')."</label>";
+            echo "<label for='".$task['id']."'>".htmlspecialchars($task['content'])." ".date_format(date_create($task['date']), 'd/m')."</label>";
             echo "</p>";
         }
     }
