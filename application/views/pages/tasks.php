@@ -97,7 +97,7 @@
 
         <div class="row" id="superUserTaskid">
             <div class="col s3">
-                <p>Tasks added by SuperUser</p> <?php /*echo lang('tasks_by_superUser') */?>
+                <p><?php echo lang('tasks_by_superUser') ?></p>
                 <div>
                     <p id="dataPush"></p><script>recentFunction()</script>
                 </div>
