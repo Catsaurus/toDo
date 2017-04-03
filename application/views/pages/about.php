@@ -7,7 +7,7 @@
          </div>
          <div class="row">
             <div class="col s6">
-                <a class="waves-effect btn" id = "click"><?php echo lang('support') ?></a>
+                <a class="waves-effect btn-flat" id = "click"><?php echo lang('support') ?></a>
                     <div id="donation">
                     <form method="post" action="<?php echo site_url('About/Payment') ?>">
                                         <!-- include all values as hidden form fields -->
@@ -41,7 +41,7 @@
                                     <label for="test3"><?php echo lang('amount3') ?></label>
                                 </p>
                             </div>
-                            <div class="col s2 l2 offset-10">
+                            <div class="col s12 offset-l9">
                                 <input type="submit" name="submit" value=<?php echo lang('payment')?> class="waves-effect btn"/>
                             </div>
 

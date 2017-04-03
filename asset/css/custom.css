@@ -109,6 +109,15 @@ footer p {
     background-color: #99173C;
     border-radius: 4px;
 }
+
+.btn-flat{
+    background: #b6b6b6;
+    border-radius: 4px;
+    margin-top: 1em;
+    color:hsl(79, 0%, 10%);
+    font-size: 1.2rem;
+
+}
 .button:hover {
     background-color: #2E2633;
 }
