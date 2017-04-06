@@ -112,3 +112,11 @@ html, body {
 #showsSelectableTasks{
     padding-left: 20%;
 }
+#sitemaplinks li a{
+    line-height: 200%;
+    font-size: 150%;
+    color: #2E2633;
+}
+#sitemaplinks li a:hover {
+    color: #8d9391;
+}

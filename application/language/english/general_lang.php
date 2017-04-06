@@ -23,6 +23,7 @@ $lang['hello'] = 'Hello';
 $lang['about'] = 'About';
 $lang['settings'] = 'Settings';
 $lang['tasks'] = 'Tasks';
+$lang['sitemap'] = 'Sitemap';
 
 //About
 $lang['support'] = 'Support us';
