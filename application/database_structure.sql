@@ -99,7 +99,7 @@ CREATE PROCEDURE  `getUserTasksOfToday` ( IN  `iD` INT( 255 ) UNSIGNED ) NOT DET
 
 DROP PROCEDURE IF EXISTS `insertUser`;
 
-
+DELIMITER //
 CREATE PROCEDURE `insertFbUser`(
   IN `fb_id` VARCHAR(255),
   IN `email` VARCHAR(100)
@@ -111,7 +111,7 @@ NO SQL
   COMMENT ''
   BEGIN
     INSERT INTO users (fb_id, email) VALUES (fb_id, email);
-  END;
+  END //
 
 DELIMITER //
 CREATE PROCEDURE `insertUser`(IN `username` VARCHAR(50), IN `email` VARCHAR(100), IN `password_hash` VARCHAR(255))
@@ -120,6 +120,7 @@ NO SQL
     INSERT INTO users (username, email, password_hash) VALUES (username, email, password_hash);
   END //
 
+DELIMITER //
 CREATE PROCEDURE `markTaskDone`(
   IN `idIN` INT)
 LANGUAGE SQL
@@ -130,9 +131,9 @@ CONTAINS SQL
   BEGIN
     UPDATE tasks
     SET completed = 1
-    where id = idIN;
-  END;
+  END //
 
+DELIMITER /
 CREATE PROCEDURE  `changePassword`
     ( IN  `idIn` INT, IN  `pass` INT( 255 ) )
     NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
@@ -140,15 +141,16 @@ BEGIN
   UPDATE users
   SET password_hash = pass
   WHERE id = idIn;
-END;
+END//
 
+DELIMITER /
   CREATE PROCEDURE `changeEmail`(IN `idIn` INT, IN `emailIn` VARCHAR(255))
   NO SQL
 BEGIN
 update users
 set email = emailIn
 where id = idIn;
-END;
+END //
 
 
 DELIMITER //
@@ -161,32 +163,35 @@ CREATE PROCEDURE `tasksOfUser` (IN `userId` INT)
 CREATE VIEW usersCount
 AS SELECT COUNT(*) FROM users;
 
-
+DELIMITER //
 CREATE PROCEDURE `allTasksAmount`()
 BEGIN
 SELECT COUNT(id) as `tasks` FROM tasks;
-END;
+END //
 
+DELIMITER //
 CREATE PROCEDURE `getUndonePastTasks`(IN `userId` INT)
   BEGIN
     SELECT id, due_time, completed, user_id, content FROM tasks
     WHERE user_id = userId and completed=0 and WEEK(due_time) < WEEK(CURDATE())
     LIMIT 7;
-  END;
+  END//
 
+DELIMITER //
 CREATE PROCEDURE `getDoneTasks`(IN `userId` INT)
   BEGIN
     SELECT id, due_time, completed, user_id, content FROM tasks
     WHERE user_id = userId and completed=1
     LIMIT 7;
-  END;
+  END//
 
+DELIMITER //
 CREATE PROCEDURE `markTaskUndone`(IN `idIN` INT)
 BEGIN
 UPDATE tasks
 SET completed = 0
 where id = idIN;
-END;
+END //
 
 /*teeb tabeli pets*/
 CREATE TABLE `pets` (
@@ -206,36 +211,44 @@ INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NUL
 
 INSERT INTO `pets` (`id`, `name`, `score`, `description`, `imgname`) VALUES (NULL, 'Dollar', '2', 'Sed nec feugiat metus. Proin mattis pellentesque ante sed rutrum. Suspendisse id velit malesuada, rutrum lorem eget, scelerisque odio. Fusce tincidunt eget sapien ornare blandit. Curabitur facilisis erat nec purus tincidunt, quis lacinia odio mollis. Proin faucibus odio eget arcu tincidunt convallis. Nulla nisl ante, tincidunt elementum nisl quis, consequat placerat metus.', 'pet2.png');
 
+DROP PROCEDURE getUsersTasksThisWeek
+
+DELIMITER //
 CREATE PROCEDURE `getUsersTasksThisWeek`(IN `userId` INT) # I changed this procedure and the whole code is new
 NO SQL
   BEGIN
     SELECT id, due_time, completed, user_id, content FROM tasks
     WHERE user_id = userId and completed=0 and due_time > CURDATE() and due_time < CURDATE() + INTERVAL 7 DAY;
-  END;
+  END//
 
-
+DROP PROCEDURE getUsersTasksFuture
 /*muutsin protseduuri getUsersTasksFuture, siin on uus kood
 */
+DELIMITER //
 CREATE PROCEDURE `getUsersTasksFuture`(IN `userId` INT)
 BEGIN
 SELECT id, due_time, completed, user_id, content FROM tasks
 WHERE user_id = userId and completed=0 and due_time > CURDATE() + INTERVAL 7 DAY;
-END;
+END //
 
+DELIMITER //
 CREATE PROCEDURE `superUserTasks`()
   BEGIN
     SELECT id, due_time, completed, user_id, content FROM tasks
     WHERE user_id = 37 and completed=0;
-  END;
+  END //
 
+
+DROP PROCEDURE getDoneTasks
 /*modified getDoneTaks
 */
+DELIMITER //
 CREATE PROCEDURE `getDoneTasks`(IN `userId` INT)
   BEGIN
     SELECT id, due_time, completed, user_id, content FROM tasks
     WHERE (user_id = userId  OR user_id = 37) and completed=1
     LIMIT 7;
-  END;
+  END //
 
 DROP PROCEDURE tasksOfUser
 
