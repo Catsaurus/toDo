@@ -46,6 +46,7 @@ $lang['settings'] = 'Settings';
 $lang['change_data'] = 'Change your email or password';
 $lang['change_password'] = 'Change password';
 $lang['change_email'] = 'Change email';
+$lang['deleteAccount'] = 'Delete Account';
 
 // Tasks
 $lang['add_new'] = 'Add new task';

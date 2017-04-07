@@ -35,5 +35,9 @@ class user_model extends CI_Model {
         $sql = 'CALL changeEmail(?,?)';
         $this->db->query($sql, array($id, $email));
     }
+    public function delete_user($id){
+        $sql = 'CALL deleteUser(?)';
+        $this->db->query($sql, array($id));
+    }
     //TODO get user count from view
 }

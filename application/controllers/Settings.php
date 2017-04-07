@@ -32,4 +32,12 @@ class Settings extends CI_Controller {
         header("location:index");
     }
 
+    public function deleteAccount()
+    {
+        $id = $_SESSION['id'];
+        $this->user_model->delete_user($id);
+        redirect(site_url() . "/Logout/index");
+    }
+
+
 }

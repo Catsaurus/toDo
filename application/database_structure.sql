@@ -258,3 +258,17 @@ CREATE PROCEDURE `tasksOfUser` (IN `userId` INT)
   BEGIN
     SELECT COUNT(id) as `tasks` FROM tasks WHERE tasks.user_id = userId;
   END //
+
+CREATE PROCEDURE `showPets`(
+  IN `start` INT,
+  IN `presented` INT)
+  BEGIN
+    SELECT * FROM pets  ORDER BY id ASC LIMIT start, presented;
+  END;
+
+CREATE PROCEDURE `deleteUser`(
+  IN `userId` INT)
+  BEGIN
+    DELETE FROM users where id = userId;
+    DELETE FROM tasks where user_id = userId;
+  END

@@ -5,13 +5,11 @@
             <h3><?php echo lang('settings')?></h3>
         </div>
 
-<!--        <div class="tooltip" id="src2div">-->
-<!--            <img src="--><?php //echo base_url("asset/img/lightbulb_on.png"); ?><!--" id="s2src">-->
-<!--            <span class="tooltiptext" id="s2">--><?php //echo lang('change_data') ?><!--</span>-->
-<!--        </div>-->
+
         <div class="row">
             <div class="col s4">
                 <form id = "changePass" method="post" action="<?php echo site_url('Settings/changePassword') ?>">
+                    <?php echo validation_errors(); ?>
                     <div class="input-field">
                         <input type="password" name="pswd" id="password">
                         <label for="password"><?php echo lang('password')?></label>
@@ -34,7 +32,23 @@
                 </form>
             </div>
             <div class="col s8">
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col s4">
+            </div>
+            <div class="col s8">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s4">
+                <form id = "deleteAccount" method="post" action="<?php echo site_url('Settings/deleteAccount') ?>">
+                    <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('deleteAccount')?></button>
+                </form>
+            </div>
+            <div class="col s8">
             </div>
         </div>
 
