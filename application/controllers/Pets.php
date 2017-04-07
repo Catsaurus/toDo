@@ -8,28 +8,25 @@ class Pets extends CI_Controller {
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'pets';
             $data['title'] = ucfirst($page);
-            $data['pets']=$this->show_pets();
+            //$data['pets']=$this->show_pets();
             view_loader($page,$data);
         }
         else{
             view_loader('login');
         }
     }
-    public function show_pets() {
+    public function show_pets($start=0) {
+        $result = array();
         $this->db->reconnect();
-        $this->load->model('Pets_model');
-
-        $pets = $this->pets_model->get_pet();
-        $data = array();
-
+        $pets = $this->pets_model->get_pets($start, 3);
         foreach ($pets as $pet) {
             $one = array(
                 'name' => $pet['name'],
                 'description' => $pet['description'],
                 'imgname' => $pet['imgname']
             );
-            array_push($data, $one);
+            array_push($result, $one);
         }
-        return $data;
+        $this->output->set_content_type('application/json')->set_output(json_encode($result));
     }
 }

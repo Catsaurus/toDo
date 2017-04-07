@@ -1,5 +1,5 @@
 <?php
-//paneb veebilehel kuvama pildi, kirjelduse ja nime or sth
+
 class Pets_model extends CI_Model {
 
     public function __construct()
@@ -7,14 +7,14 @@ class Pets_model extends CI_Model {
         parent::__construct();
         $this->load->database();
     }
-   public function get_pet() {
-       $query = $this->db->get('pets');
-       $this->db->select('name', 'description', 'imgname');
 
+    public function get_pets($start, $alreadyPresented)
+    {
+        $sql = 'CALL showPets(?, ?);';
+        $result = array();
+        $query = $this->db->query($sql, array($start, $alreadyPresented));
 
-       $result = array();
-
-        foreach ($query->result() as $row){
+        foreach ($query->result() as $row) {
             $data = array(
                 'name' =>$row->name,
                 'description'=>$row->description,
@@ -22,8 +22,8 @@ class Pets_model extends CI_Model {
             );
             array_push($result, $data);
         }
-        //$query->next_result();        Pole vaja alati kasutada, oluline tasks lehel, kuna see jooksutab mitut queryt korraga samal tabelil
-                                        // siis see meetod lõpetab eelmise ära, et saaks järgmist välja kutsuda.
-       return $result;
-   }
+        $query->next_result();
+        return $result;
+    }
+
 }
