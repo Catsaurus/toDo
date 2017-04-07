@@ -34,7 +34,8 @@ class Register extends CI_Controller {
             $password_hash = password_hash($password,PASSWORD_DEFAULT);
 
             $reg = $this->user_model->insert_user($username, $email, $password_hash);
-            $_SESSION['id'] = $this->db->insert_id();
+            $user = $this->user_model->get_user($username);
+            $_SESSION['id'] = $user['id'];
             $_SESSION['logged_in'] = true;
             redirect(site_url() . "/Tasks/index");
         }
