@@ -14,6 +14,8 @@
                         <li><a href="<?php echo site_url('Pets/index') ?>"><?php echo lang('pets') ?></a></li>
                         <li><a href="<?php echo site_url('Settings/index') ?>"><?php echo lang('settings') ?></a></li>
                         <li><a href="<?php echo site_url('About/index') ?>"><?php echo lang('about') ?></a></li>
+                        <li><a href="<?php echo site_url('Sitemap/index') ?>"><?php echo lang('sitemap') ?></a></li>
+                        <li><a href="<?php echo site_url('Logout/index') ?>"><?php echo lang('logout') ?></a></li>
                     </ul>
                 </div>
             </div>
