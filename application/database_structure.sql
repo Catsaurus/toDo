@@ -284,3 +284,18 @@ CREATE PROCEDURE `insertIdUser` (IN `email` VARCHAR (100), IN `idCode` VARCHAR (
 
 /* Kõik users table read peale id peavad lubama null ja olema default väärtusena null  !!!! */
 
+DELIMITER //
+CREATE TABLE `user_pets` (
+  `user_id` INT(10) UNSIGNED NOT NULL,
+  `pet_id` INT(10) UNSIGNED NULL DEFAULT NULL
+)
+  COLLATE='utf8_estonian_ci'
+  ENGINE=InnoDB;
+//
+
+DELIMITER //
+CREATE PROCEDURE `insertPet`(IN `user_id` INT(10), IN `pet_id` INT(10))
+NO SQL
+  BEGIN
+    INSERT INTO user_pets (user_id, pet_id) VALUES (user_id, pet_id);
+  END //

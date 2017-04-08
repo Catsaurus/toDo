@@ -25,5 +25,22 @@ class Pets_model extends CI_Model {
         $query->next_result();
         return $result;
     }
+    //delete after
+    public function get_pet() {
+        $query = $this->db->get('pets');
+        $this->db->select('name', 'description', 'imgname');
+        $result = array();
+        foreach ($query->result() as $row){
+            $data = array(
+                'id' =>$row->id,
+                'name' =>$row->name,
+                'description'=>$row->description,
+                'imgname' =>$row->imgname
+            );
+            array_push($result, $data);
+        }
+        //$query->next_result();
+        return $result;
+    }
 
 }
