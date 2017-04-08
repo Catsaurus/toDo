@@ -66,6 +66,7 @@ $lang['undone'] = 'Ülesanne tegemata';
 
 // Errors
 $lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';
+$lang['id_fail'] = 'Ei saa ID kaardiga sisse logida';
 
 //Pets
 $lang['johnny'] = 'Elevant Johnny';

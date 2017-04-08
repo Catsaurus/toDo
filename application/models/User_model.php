@@ -18,10 +18,20 @@ class user_model extends CI_Model {
         $user = $query->row_array();
         return $user;
     }
+    public function get_user_id($id_code){
+        $query = $this->db->get_where('users', array('id_code' => $id_code));
+        $user = $query->row_array();
+        return $user;
+    }
     public function insert_fbuser($fbid, $email)
     {
         $sql = 'CALL insertFbUser(?,?)';
         $this->db->query($sql, array($fbid, $email));
+    }
+    public function insert_IDuser($email, $IdCode)
+    {
+        $sql = 'CALL insertIdUser(?,?)';
+        $this->db->query($sql, array($email, $IdCode));
     }
     public function insert_user($username, $email, $pswd_hash){
         $sql = 'CALL insertUser(?,?,?)';

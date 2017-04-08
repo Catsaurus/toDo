@@ -40,7 +40,7 @@ END //
 
 
 ALTER TABLE `users`
-  ADD COLUMN `fb_id` VARCHAR(255) NOT NULL AFTER `password_hash`;
+  ADD COLUMN `fb_id` VARCHAR(255) NULL AFTER `password_hash`;
 
 ALTER TABLE `users`
   ALTER `username` DROP DEFAULT,
@@ -259,16 +259,28 @@ CREATE PROCEDURE `tasksOfUser` (IN `userId` INT)
     SELECT COUNT(id) as `tasks` FROM tasks WHERE tasks.user_id = userId;
   END //
 
+DELIMITER //
 CREATE PROCEDURE `showPets`(
   IN `start` INT,
   IN `presented` INT)
   BEGIN
     SELECT * FROM pets  ORDER BY id ASC LIMIT start, presented;
-  END;
+  END//
 
+DELIMITER //
 CREATE PROCEDURE `deleteUser`(
   IN `userId` INT)
   BEGIN
     DELETE FROM users where id = userId;
     DELETE FROM tasks where user_id = userId;
-  END
+  END //
+
+DELIMITER //
+CREATE PROCEDURE `insertIdUser` (IN `email` VARCHAR (100), IN `idCode` VARCHAR (11))
+  BEGIN
+    INSERT INTO users (email, idCode) VALUES (email, idCode);
+  END //
+
+
+/* Kõik users table read peale id peavad lubama null ja olema default väärtusena null  !!!! */
+

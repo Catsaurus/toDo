@@ -69,6 +69,7 @@ $lang['tasks_by_superUser'] = 'Tasks added by SuperUser';
 
 // Errors?
 $lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';
+$lang['id_fail'] = 'Unable to log in with ID card';
 
 //Pets
 $lang['johnny'] = 'Johnny The Elephant';
