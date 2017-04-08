@@ -1,0 +1,25 @@
+https://localhost lehel saab kasutada 
+http://localhost lehel on error
+
+Mida teha:
+võta lahti xampp, apache, conf kaust
+lisa sinna kaus CA ja sinna sisse pane
+id.crt failiks kokku 4 .pem.crt faili juhendist teise lehe algusest
+http://www.id.ee/public/Configuring_Apache_web_server_to_support_ID.pdf
+
+võta lahti 
+httpd_ssl.conf:
+kommenteeri sisse:
+SSLCACertificateFile
+
+Lisa lõppu (enne virtualhost rida):
+
+<Directory C:/xampp/htdocs/idlogin>
+	SSLVerifyClient require
+	SSLVerifyDepth  10
+</Directory>
+
+Repos on nupp eraldi branchis, kuna seda ei esitle ei webhosti ega localis ja see ei tööta, kui kõik eelnev pole tehtud
+kui teha branch aktiivseks hetkemasteriks, siis saab katsetada.
+vastasel juhul on võimalik katsetada minnes kohe lehele 
+https://localhost/idlogin (mis on leht, kuhu nupp suunab, mis tegel ei olegi leht vaid vahekontroller :D)
