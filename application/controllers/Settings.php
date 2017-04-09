@@ -15,7 +15,7 @@ class Settings extends CI_Controller {
         }
     }
     public function password_check($oldpassword){
-        $user = $this->user_model->get_user($_SESSION['id']);
+        $user = $this->user_model->get_user_from_id($_SESSION['id']);
         if (!password_verify($oldpassword, $user['password_hash'])) {
             $this->form_validation->set_message('password_check', lang('wrong_password'));
             return false;
