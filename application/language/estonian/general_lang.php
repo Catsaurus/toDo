@@ -23,6 +23,7 @@ $lang['hello'] = 'Tere"';
 $lang['about'] = 'Meist';
 $lang['settings'] = 'Seaded';
 $lang['tasks'] = 'Kohustused';
+$lang['sitemap'] = 'Sisukaart';
 
 //About
 $lang['support'] = "Toetage";

@@ -18,7 +18,7 @@
                         <div class="col s4">
                             <div>
                                 <?php $img =$pet['imgname']; ?>
-                                <img src=<?php echo base_url("asset/img/".$img)?> >
+                                <img alt="pet" src=<?php echo base_url("asset/img/".$img)?> >
                             </div>
                         </div>
                     </div>
