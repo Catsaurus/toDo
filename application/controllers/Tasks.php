@@ -7,26 +7,34 @@ class Tasks extends CI_Controller {
 
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
             $page = 'tasks';
-            $data['title'] = ucfirst($page);
-            $data['taskCount'] = $this->getTaskCount();
-            $data['todayTasks'] = $this->show_tasks_today();
-            $data['weekTasks'] = $this->show_tasks_week();
-            $data['futureTasks'] = $this->show_tasks_future();
-            view_loader($page, $data);
+            view_loader($page, $this->getData($page));
         }
         else{
             redirect(site_url('login'));
         }
     }
+
+    public function getData($page){
+        $data['title'] = ucfirst($page);
+        $data['taskCount'] = $this->getTaskCount();
+        $data['todayTasks'] = $this->show_tasks_today();
+        $data['weekTasks'] = $this->show_tasks_week();
+        $data['futureTasks'] = $this->show_tasks_future();
+        return $data;
+    }
     public function insert()
     {
 
+        $this->form_validation->set_rules('description', lang('description'), 'required');
         $userId = $_SESSION['id'];
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if ($this->form_validation->run() === TRUE) {
             $description = $_POST['description'];
             $date = $_POST['date'];
             $task = $this->task_model->inser_task($description, $date, $userId);
             header("location:index");
+        }
+        else{
+            view_loader('tasks', $this->getData('tasks'));
         }
     }
 
