@@ -10,10 +10,15 @@ class ChoosePet extends CI_Controller
 {
     public function index()
     {
-        $page = 'choosePet';
-        $data['title'] = ucfirst($page);
-        $data['pets']=$this->show_pets();
-        view_loader($page, $data);
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+            $page = 'choosePet';
+            $data['title'] = ucfirst($page);
+            $data['pets'] = $this->show_pets();
+            //$data['user_pets'] = $this->getUserPets();
+            view_loader($page, $data);
+        }else{
+            view_loader('login');
+        }
     }
 
     public function insertPet()
@@ -26,6 +31,24 @@ class ChoosePet extends CI_Controller
             redirect(site_url() . "/Tasks/index");
         }
     }
+
+    /*public function getUserPets(){
+        $this->db->reconnect();
+        $user_id = $_SESSION['id'];
+        $users = $this->usertopets_model->get_user_pets($user_id);
+        $data = array();
+        foreach ($users as $user) {
+            $one = array(
+                'pet_id'  => $user['pet_id'],
+            );
+            array_push($data, $one);
+        }
+        return $data;
+    }*/
+
+
+
+    //ajutine
     public function show_pets() {
         $this->db->reconnect();
         $this->load->model('Pets_model');

@@ -80,7 +80,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col s3">
+            <div class="col s3 hide-on-small-only">
                 <div class="selectable">
                     <div class="switch" onchange="loadSelectableTasks()">
                         <label>

@@ -301,6 +301,53 @@ NO SQL
   END //
 DROP PROCEDURE IF EXISTS `changePassword`;
 
+
+CREATE PROCEDURE `getUserPets`(
+  IN `userId` INT
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    SELECT pet_id FROM user_pets
+    WHERE userId = user_id;
+  END
+//
+
+DELIMITER //
+CREATE  PROCEDURE `showUserPets`(
+  IN `petId` INT
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    SELECT name, score, description, imgname FROM pets
+    WHERE petId = id;
+  END
+//
+
+
+DELIMITER //
+CREATE PROCEDURE `showUsersPets`(
+  IN `userId` INT
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    SELECT id, name, score, description, imgname, user_id, pet_id FROM pets, user_pets
+    WHERE id=pet_id AND user_id = userId;
+  END
+//
+
+
 DELIMITER //
 CREATE PROCEDURE `changePassword`(
   IN `idIn` INT,

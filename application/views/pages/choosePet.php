@@ -2,32 +2,34 @@
 
     <div class="container">
 
-        <div class="col s12">
-            <h3>Choose your creature</h3>
+        <div class="col s12 center-align">
+            <h3><?php echo lang('choose_pet') ?></h3>
+            <br>
         </div>
             <div class="col s12">
-                <form method="post" action="<?php echo site_url('ChoosePet/insertPet/') ?>">
+
+
                     <ul class="collapsible" data-collapsible="accordion">
                     <?php foreach ($pets as $pet): ?>
-
-                        <input type="hidden" name="pet" value="<?php echo $pet['id'] ?>" />
                         <li>
-                                <div class="col s6 collapsible-header">
-                                    <?php $img =$pet['imgname']; ?>
-                                    <img src=<?php echo base_url("asset/img/".$img)?> >
-                                </div>
+                            <div class="col s12 m6 offset-6 collapsible-header">
+                                <?php $img =$pet['imgname']; ?>
+                                <img style='height: 20%; width: 20%; object-fit: contain;display: block;
+                                         margin: 0 auto;' src=<?php echo base_url("asset/img/".$img)?> >
+                            </div>
 
-                            <div class="col s6 collapsible-body">
+                            <div class="col s12 m6 l6 offset-20 collapsible-body right-align">
+                                <form method="post" action="<?php echo site_url('ChoosePet/insertPet/') ?>">
                                 <?php echo $pet['name'];?>
-
-                                <div class="col s12 offset-2">
-                                    <input type="submit" name="submit" value="Next" class="waves-effect waves-light btn"/>
-                                </div>
+                                <input type="hidden" name="pet" value="<?php echo $pet['id'] ?>" />
+                                <input type="submit" name="submit" value=<?php echo lang('edasi') ?> class="waves-effect waves-light btn"/>
+                                </form>
                             </div>
                         </li>
                     <?php endforeach; ?>
                     </ul>
-                </form>
+
+
             </div>
     </div>
 </main>
