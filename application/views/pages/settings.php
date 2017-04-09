@@ -14,6 +14,10 @@
                         <input type="password" name="pswd" id="password">
                         <label for="password"><?php echo lang('password')?></label>
                     </div>
+                    <div class="input-field">
+                        <input type="password" name="pswd2" id="password2" onkeyup="checkPassword()">
+                        <label for="password2"><?php echo lang('password_again')?></label>
+                    </div>
                     <button type="submit" name="submit" class="col s12 btn btn-large waves-effect"><?php echo lang('change_password')?></button>
                 </form>
             </div>

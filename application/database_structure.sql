@@ -284,3 +284,20 @@ CREATE PROCEDURE `insertIdUser` (IN `email` VARCHAR (100), IN `idCode` VARCHAR (
 
 /* Kõik users table read peale id peavad lubama null ja olema default väärtusena null  !!!! */
 
+DROP PROCEDURE IF EXISTS `changePassword`;
+
+DELIMITER //
+CREATE PROCEDURE `changePassword`(
+  IN `idIn` INT,
+  IN `pass` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+NO SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    UPDATE users
+    SET password_hash = pass
+    WHERE id = idIn;
+  END//
