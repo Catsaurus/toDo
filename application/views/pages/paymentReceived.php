@@ -1,7 +1,6 @@
 <?php
 // STEP 1. Setup bank certificate
 // ==============================
-//muuta vastavalt oma sätetele
     $public_key = openssl_pkey_get_public(
             ""
     );
@@ -49,9 +48,23 @@ if (openssl_verify ($data, base64_decode($fields["VK_MAC"]), $public_key) !== 1)
 ?>
 <main>
     <div class="container">
-        <div class="col s12">
-            <p><?php echo lang('payment_completed_ok') ?> </p>
+        <div class="col s12 m6 l3">
+            <h3><?php echo lang('payment_completed_ok') ?></h3>
+            <div class="row">
+                <div class= "col s12 m6 l3">
+                    <?php if($fields["VK_SERVICE"] == "1111" and $signatureVerified):?>
 
+                        <p><?php echo lang('maksja') ?>  <?php echo $fields["VK_SND_NAME"]?></p>
+                        <p><?php echo lang('maksja_konto') ?>  <?php echo $fields["VK_SND_ACC"]?></p>
+                        <p><?php echo lang('maksekorraldus') ?>  <?php echo $fields["VK_T_NO"]?></p>
+                        <p><?php echo lang('sum') ?>  <?php echo $fields["VK_AMOUNT"]." ".$fields["VK_CURR"]?></p>
+                    <?php endif; ?>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col s12 m6 l3">
+            <a href="<?php echo site_url('Home/index') ?>" class="waves-effect waves-light btn"><?php echo lang('back') ?></a>
         </div>
     </div>
 </main>
