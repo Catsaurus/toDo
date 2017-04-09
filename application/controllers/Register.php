@@ -37,7 +37,7 @@ class Register extends CI_Controller {
             $user = $this->user_model->get_user($username);
             $_SESSION['id'] = $user['id'];
             $_SESSION['logged_in'] = true;
-            redirect(site_url() . "/Tasks/index");
+            redirect(site_url() . "/ChoosePet/index");
         }
         else {
             view_loader('signup');

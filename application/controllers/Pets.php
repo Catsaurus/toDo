@@ -9,6 +9,7 @@ class Pets extends CI_Controller {
             $page = 'pets';
             $data['title'] = ucfirst($page);
             //$data['pets']=$this->show_pets();
+            $data['user_pets']=$this->showUsersPets();
             view_loader($page,$data);
         }
         else{
@@ -28,5 +29,25 @@ class Pets extends CI_Controller {
             array_push($result, $one);
         }
         $this->output->set_content_type('application/json')->set_output(json_encode($result));
+    }
+
+
+    public function showUsersPets()
+    {
+        $this->db->reconnect();
+        $user_id = $_SESSION['id'];
+
+        $pets = $this->pets_model->show_users_pets($user_id);
+        $data = array();
+        foreach ($pets as $pet) {
+            $one = array(
+                'name' => $pet['name'],
+                'score' => $pet['score'],
+                'description' => $pet['description'],
+                'imgname' => $pet['imgname']
+            );
+            array_push($data, $one);
+        }
+        return $data;
     }
 }

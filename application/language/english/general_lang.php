@@ -20,14 +20,14 @@ $lang['error'] = 'Error';
 $lang['hello'] = 'Hello';
 
 // Titles
-$lang['about'] = 'About';
+$lang['about'] = 'About us';
 $lang['settings'] = 'Settings';
 $lang['tasks'] = 'Tasks';
 $lang['sitemap'] = 'Sitemap';
 
 //About
-$lang['support'] = 'Support us';
-$lang['payment_name'] = 'Payer name';
+$lang['support'] = 'Support';
+$lang['payment_name'] = 'Account owner name';
 $lang['payment_nr'] = 'Account number';
 $lang['amount1'] = 'Chocolate';
 $lang['amount2'] = 'Spa day';
@@ -35,8 +35,16 @@ $lang['amount3'] = 'Weekend in Madrid';
 $lang['payment'] = 'Next';
 $lang['summa'] = 'Choose amount';
 
+//paymentLoading
+$lang['submit'] = "Summary";
+
 //paymentReceived
-$lang['payment_completed_ok'] = 'Payment completed';
+$lang['payment_completed_ok'] = 'Payment completed: ';
+$lang['maksja'] = "Name: ";
+$lang['maksja_konto'] = "IBAN: ";
+$lang['maksekorraldus'] = "Payment order: ";
+$lang['sum'] = "Amount: ";
+$lang['back'] = "Homepage";
 
 //paymentNotReceived
 $lang['payment_completed_not'] = 'Payment not completed';
@@ -74,10 +82,16 @@ $lang['tasks_by_superUser'] = 'Tasks added by SuperUser';
 $lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';
 $lang['id_fail'] = 'Unable to log in with ID card';
 
+//ChoosePet
+$lang['choose_pet'] = "Choose your creature";
+$lang['edasi'] = "Next";
+
 //Pets
 $lang['johnny'] = 'Johnny The Elephant';
 $lang['johnny_intro'] = 'Johnny is a jolly chap. He likes mangos and bananas and enjoys riding unicycles or playing with his friend Donkey The Donkey';
 $lang['see_more_pets'] = 'Want to see more?';
+$lang['your_pets'] = 'Your pets';
+$lang['other_pets'] = 'More pets';
 
 // Menu
 $lang['menu_mainpage'] = 'Main page';

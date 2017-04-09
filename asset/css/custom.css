@@ -30,7 +30,7 @@ nav ul li a {
 }
 nav ul li:hover a{
     background-color: #0F0A12;
-    padding-bottom: 0.3%;
+    padding-bottom: 0.0%;
 }
 
 .input-field label {
@@ -189,4 +189,30 @@ label {
 }
 #post2{
     display: none;
+}
+
+.collapsible-header {
+    display: block;
+    cursor: pointer;
+    min-height: 3rem;
+    line-height: 3rem;
+    padding: 0 0rem;
+    background-color: #eceff1;
+    border-bottom: 0px solid #ddd;
+}
+.collapsible-header i {
+    width: 2rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.collapsible-body {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 2rem;
 }
