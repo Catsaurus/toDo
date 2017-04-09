@@ -5,11 +5,14 @@
             <h3><?php echo lang('settings')?></h3>
         </div>
 
-
         <div class="row">
             <div class="col s4">
                 <form id = "changePass" method="post" action="<?php echo site_url('Settings/changePassword') ?>">
                     <?php echo validation_errors(); ?>
+                    <div class="input-field">
+                        <input type="password" name="oldpswd" id="oldpassword">
+                        <label for="oldpassword"><?php echo lang('old_password')?></label>
+                    </div>
                     <div class="input-field">
                         <input type="password" name="pswd" id="password">
                         <label for="password"><?php echo lang('password')?></label>
