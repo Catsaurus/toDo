@@ -61,7 +61,6 @@
     <script type="text/javascript" src="<?php echo base_url("asset/javascript/custom.js"); ?>"></script>
 
     <script type="text/javascript" src="<?php echo base_url("asset/javascript/NewTask.js"); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url("asset/javascript/Map.js"); ?>"></script>
 
     </body>
 </html>

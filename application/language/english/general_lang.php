@@ -45,8 +45,11 @@ $lang['payment_completed_not'] = 'Payment not completed';
 $lang['settings'] = 'Settings';
 $lang['change_data'] = 'Change your email or password';
 $lang['change_password'] = 'Change password';
+$lang['old_password'] = 'Your current password';
 $lang['change_email'] = 'Change email';
 $lang['deleteAccount'] = 'Delete Account';
+$lang['wrong_password'] = 'That is not your current password';
+
 
 // Tasks
 $lang['add_new'] = 'Add new task';

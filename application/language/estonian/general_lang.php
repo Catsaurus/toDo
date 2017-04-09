@@ -44,7 +44,10 @@ $lang['payment_completed_not'] = 'Makse ei kinnitatud';
 $lang['settings'] = 'Seaded';
 $lang['change_data'] = 'Vaheta kasutajanime või parooli';
 $lang['change_password'] = 'Muuda salasõna';
+$lang['old_password'] = 'Praegune salasõna';
 $lang['change_email'] = 'Muuda meiliaadressi';
+$lang['deleteAccount'] = 'Kustuta kasutaja';
+$lang['wrong_password'] = 'See ei ole praegune salasõna';
 
 // Tasks
 $lang['add_new'] = 'Lisa uus kohustus';
