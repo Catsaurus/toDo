@@ -5,6 +5,15 @@
                  <h3><?php echo lang('about') ?> </h3>
              </div>
          </div>
+         <div class="col s12 m6 l3">
+             <p><?php echo lang('info') ?> </p>
+             <?php
+             $feed2=simplexml_load_file(base_url('xml/info.xml'));
+             echo $feed2->TÄNAV. "<br>";
+             echo $feed2->LINN. "<br>";
+             echo $feed2->RIIK. "<br>";
+             ?>
+         </div>
          <div class="row">
             <div class="col s6 m6 l6">
                 <a class="waves-effect btn-flat " id = "click"><?php echo lang('support') ?></a>

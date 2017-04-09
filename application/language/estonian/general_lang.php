@@ -33,6 +33,7 @@ $lang['amount2'] = 'Spa päev';
 $lang['amount3'] = 'Nädalavahetus Madriidis';
 $lang['payment'] = 'Maksma';
 $lang['summa'] = 'Vali summa';
+$lang['info'] = 'Siin me teeme veebilehti:';
 
 //paymentLoading
 $lang['submit'] = "Kokkuvõte";

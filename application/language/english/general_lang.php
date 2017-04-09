@@ -34,6 +34,7 @@ $lang['amount2'] = 'Spa day';
 $lang['amount3'] = 'Weekend in Madrid';
 $lang['payment'] = 'Next';
 $lang['summa'] = 'Choose amount';
+$lang['info'] = 'Here we do our websites:';
 
 //paymentLoading
 $lang['submit'] = "Summary";
