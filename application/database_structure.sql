@@ -299,3 +299,20 @@ NO SQL
   BEGIN
     INSERT INTO user_pets (user_id, pet_id) VALUES (user_id, pet_id);
   END //
+DROP PROCEDURE IF EXISTS `changePassword`;
+
+DELIMITER //
+CREATE PROCEDURE `changePassword`(
+  IN `idIn` INT,
+  IN `pass` VARCHAR(255)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+NO SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    UPDATE users
+    SET password_hash = pass
+    WHERE id = idIn;
+  END//

@@ -7,6 +7,11 @@ class user_model extends CI_Model {
         $this->load->database();
 
     }
+    public function get_user_from_id($id){
+        $query = $this->db->get_where('users', array('id' => $id ));
+        $user = $query->row_array();
+        return $user;
+    }
     public function get_user($username)
     {
         $query = $this->db->get_where('users', array('username' => $username ));

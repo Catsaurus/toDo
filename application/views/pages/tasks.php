@@ -12,22 +12,23 @@
             <span class="tooltiptext" id="s3"><?php echo lang('add_info') ?></span>
         </div>
 
+        <?php echo validation_errors(); ?>
+
                 <div>
                 <p> <?php echo lang('user_tasks'), $taskCount?> </p>
                 </div>
 
                     <div class="row" id="newTask">
                     <form id="newTaskForm" class="col s12" method="post" action="<?php echo site_url('Tasks/insert') ?>">
-
                         <div class="row">
                             <div class="input-field col s6">
                                 <input name="description" id="description" type="text">
                                 <label for="description"><?php echo lang('description') ?></label>
                             </div>
-                    </div>
+                        </div>
 
-                <label for="datepicker"><?php echo lang('due') ?></label>
-                    <input name="date" width="50%" type="date" value="<?php echo date('Y-m-d');?>" id="datepicker" class="datepicker">
+                        <label for="datepicker"><?php echo lang('due') ?></label>
+                        <input name="date" width="50%" type="date" value="<?php echo date('Y-m-d');?>" id="datepicker" class="datepicker">
 
                         <fieldset class="radiogroup">
                             <legend><?php lang('repeat') ?></legend>
@@ -38,10 +39,10 @@
                             </ul>
                         </fieldset>
 
-                <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')"><?php echo lang('cancel') ?></a>
-                <input type="submit" name="submit" value="Add" onclick="hideNewTask('newTask')" class="waves-effect waves-teal btn-flat"/>
-            </form>
-        </div>
+                        <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')"><?php echo lang('cancel') ?></a>
+                        <input type="submit" name="submit" value="Add" onclick="hideNewTask('newTask')" class="waves-effect waves-teal btn-flat"/>
+                    </form>
+                 </div>
 
         <p></p>
 
