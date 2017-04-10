@@ -6,7 +6,7 @@
             <h3><?php echo lang('sitemap')?></h3>
         </div>
 
-        <div class="row" id="center_objects">
+        <div class="row center_objects">
             <div class="row">
                 <div class="col s3">
                     <ul id="sitemaplinks">

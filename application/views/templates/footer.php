@@ -1,6 +1,6 @@
     <footer class="page-footer" id="upper-footer">
         <div class="container">
-            <div class="row"  id="center_objects">
+            <div class="row center_objects">
 
                 <!--column 1-->
                 <div class="col s4">
