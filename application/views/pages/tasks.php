@@ -18,10 +18,10 @@
                 <p> <?php echo lang('user_tasks'), $taskCount?> </p>
                 </div>
 
-                    <div id="newTask">
-                    <form id="newTaskForm" class="col s12 m12 l12" method="post" action="<?php echo site_url('Tasks/insert') ?>">
+                    <div id="newTask" class="col s12 m6 l6">
+                    <form id="newTaskForm" method="post" action="<?php echo site_url('Tasks/insert') ?>">
                         <div class="row">
-                            <div class="input-field col s12 m12 l12">
+                            <div class="input-field col s6 m6 l6">
                                 <input name="description" id="description" type="text">
                                 <label for="description"><?php echo lang('description') ?></label>
                             </div>

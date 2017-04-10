@@ -20,12 +20,12 @@
                     <div id="donation">
                         <form method="post" action="<?php echo site_url('About/Payment') ?>">
                                 <div class="input-field">
-                                    <input name="payment_name" id="payment_name" type="text">
+                                    <input name="payment_name" id="payment_name" type="text" required>
                                     <label for="payment_name"><?php echo lang('payment_name') ?></label>
                                 </div>
 
                                 <div class="input-field">
-                                    <input name="payment_nr" id="payment_nr" type="text">
+                                    <input name="payment_nr" id="payment_nr" type="text" required>
                                     <label for="payment_nr"><?php echo lang('payment_nr') ?></label>
                                 </div>
 
