@@ -76,6 +76,9 @@ footer p {
 .center_objects {
     text-align: center;
 }
+#center_objects1 {
+    text-align: center;
+}
 
 .btn {
     margin-top: 1em;
@@ -215,4 +218,14 @@ label {
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
     padding: 2rem;
+}
+#img-suurus {
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+#taustavärv {
+    color: #eceff1;
 }

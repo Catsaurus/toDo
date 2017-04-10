@@ -23,6 +23,7 @@ $lang['hello'] = 'Tere"';
 $lang['about'] = 'Meist';
 $lang['settings'] = 'Seaded';
 $lang['tasks'] = 'Kohustused';
+$lang['sitemap'] = 'Sisukaart';
 
 //About
 $lang['support'] = "Toetage";
@@ -33,6 +34,7 @@ $lang['amount2'] = 'Spa päev';
 $lang['amount3'] = 'Nädalavahetus Madriidis';
 $lang['payment'] = 'Maksma';
 $lang['summa'] = 'Vali summa';
+$lang['info'] = 'Siin me teeme veebilehti:';
 
 //paymentLoading
 $lang['submit'] = "Kokkuvõte";

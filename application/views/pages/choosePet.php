@@ -12,17 +12,17 @@
                     <ul class="collapsible" data-collapsible="accordion">
                     <?php foreach ($pets as $pet): ?>
                         <li>
-                            <div class="col s12 m6 offset-6 collapsible-header">
+                            <div class="col s12 m6 offset-6 collapsible-header blue-grey lighten-5">
                                 <?php $img =$pet['imgname']; ?>
                                 <img style='height: 20%; width: 20%; object-fit: contain;display: block;
-                                         margin: 0 auto;' src=<?php echo base_url("asset/img/".$img)?> >
+                                         margin: 0 auto;' alt="pet" src=<?php echo base_url("asset/img/".$img)?> >
                             </div>
 
                             <div class="col s12 m6 l6 offset-20 collapsible-body right-align">
                                 <form method="post" action="<?php echo site_url('ChoosePet/insertPet/') ?>">
                                 <?php echo $pet['name'];?>
                                 <input type="hidden" name="pet" value="<?php echo $pet['id'] ?>" />
-                                <input type="submit" name="submit" value=<?php echo lang('edasi') ?> class="waves-effect waves-light btn"/>
+                                <input type="submit" name="submit" value="<?php echo lang('edasi') ?>" class="waves-effect waves-light btn"/>
                                 </form>
                             </div>
                         </li>
