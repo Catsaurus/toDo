@@ -20,6 +20,7 @@ class Tasks extends CI_Controller {
         $data['todayTasks'] = $this->show_tasks_today();
         $data['weekTasks'] = $this->show_tasks_week();
         $data['futureTasks'] = $this->show_tasks_future();
+        $data['points'] = $this->getUserPoints();
         return $data;
     }
     public function insert()
@@ -30,7 +31,8 @@ class Tasks extends CI_Controller {
         if ($this->form_validation->run() === TRUE) {
             $description = $_POST['description'];
             $date = $_POST['date'];
-            $task = $this->task_model->inser_task($description, $date, $userId);
+            $repeat = $_POST['groupRepeat'];
+            $task = $this->task_model->inser_task($description, $date, $userId, $repeat);
             header("location:index");
         }
         else{
@@ -40,8 +42,11 @@ class Tasks extends CI_Controller {
 
     public function show_tasks_today()
     {
-        $this->db->reconnect();
         $user = $_SESSION['id'];
+        $this->db->reconnect();
+        $this->task_model->updateRepeatedTasks($user);
+
+        $this->db->reconnect();
         $tasks = $this->task_model->get_user_tasks_of_today($user);
         $data = array();
         foreach ($tasks as $task) {
@@ -88,12 +93,36 @@ class Tasks extends CI_Controller {
     }
     public function markTaskDone($id)
     {
+        $now = $this->getUserPoints();
+
+        $this->db->reconnect();
         $answer = $this->task_model->markDone($id);
+
+        $toBe = $this->calculatePoints($now, 'done');
+        $this->setUserPoints($toBe);
+
         return $answer;
+    }
+
+    public function calculatePoints($now, $doneOrUndone){
+        // TODO
+        if($doneOrUndone == 'done'){
+            return $now + 10;
+        }
+        else{
+            return $now - 10;
+        }
     }
     public function markTaskUndone($id)
     {
+        $now = $this->getUserPoints();
+
+        $this->db->reconnect();
         $answer = $this->task_model->markUndone($id);
+
+        $toBe = $this->calculatePoints($now,'undone');
+        $this->setUserPoints($toBe);
+
         return $answer;
     }
 
@@ -143,4 +172,26 @@ class Tasks extends CI_Controller {
         }
         echo json_encode($result, JSON_UNESCAPED_UNICODE);
     }
+
+    public function getUserPoints(){
+        $this->db->reconnect();
+        $id = $_SESSION['id'];
+        $answer = $this->user_model->getPoints($id);
+        return $answer['points'];
+    }
+
+    public function userPoints(){
+        $this->db->reconnect();
+        $id = $_SESSION['id'];
+        $answer = $this->user_model->getPoints($id);
+        echo json_encode($answer['points'], JSON_UNESCAPED_UNICODE);
+    }
+
+    public function setUserPoints($amount){
+        $this->db->reconnect();
+        $id = $_SESSION['id'];
+        $answer = $this->user_model->setPoints($id, $amount);
+        return $answer;
+    }
+
 }

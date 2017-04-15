@@ -11,8 +11,11 @@
             <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src" alt="??">
             <span class="tooltiptext" id="s3"><?php echo lang('add_info') ?></span>
         </div>
+        <p></p>
 
         <?php echo validation_errors(); ?>
+
+        <div id="userPoints"><p></p><script>setPoints()</script><div id="points"></div></div>
 
                 <div>
                 <p> <?php echo lang('user_tasks'), $taskCount?> </p>
@@ -33,9 +36,9 @@
                         <fieldset class="radiogroup">
                             <legend><?php lang('repeat') ?></legend>
                             <ul class="radio">
-                                <li><input name="groupRepeat" type="radio" id="daily" value="daily"/><label for="daily"><?php echo lang('daily') ?></label></li>
-                                <li><input name="groupRepeat" type="radio" id="weekly" value="weekly"/><label for="weekly"><?php echo lang('weekly') ?></label></li>
-                                <li><input name="groupRepeat" type="radio" id="norepeat" value="norepeat" checked="checked"/><label for="norepeat"><?php echo lang('no_repeat') ?></label></li>
+                                <li><input name="groupRepeat" type="radio" id="daily" value="1"/><label for="daily"><?php echo lang('daily') ?></label></li>
+                                <li><input name="groupRepeat" type="radio" id="weekly" value="7"/><label for="weekly"><?php echo lang('weekly') ?></label></li>
+                                <li><input name="groupRepeat" type="radio" id="norepeat" value="0" checked="checked"/><label for="norepeat"><?php echo lang('no_repeat') ?></label></li>
                             </ul>
                         </fieldset>
 

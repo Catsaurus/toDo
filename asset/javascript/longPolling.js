@@ -19,3 +19,24 @@ function recentFunction(container, lastDate){
         }
     });
 }
+
+function setPoints(container, lastDate){
+    var lastDate = "";
+
+    return $.ajax({
+        type: "POST",
+        url: "/index.php/Tasks/userPoints",
+        cache: false,
+        data: { 'request': 'recent',
+            'param': lastDate },
+        dataType: "json",
+        success: function(data){
+            if(data != null){
+                document.getElementById("points").innerHTML = data;
+            }
+        },
+        complete: function(){
+            setTimeout(function(){setPoints(container, lastDate)}, 7000);
+        }
+    });
+}

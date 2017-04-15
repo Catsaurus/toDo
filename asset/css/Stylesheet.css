@@ -120,3 +120,6 @@ html, body {
 #sitemaplinks li a:hover {
     color: #8d9391;
 }
+#userPoints{
+    float: right;
+}

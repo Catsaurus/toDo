@@ -55,4 +55,16 @@ class user_model extends CI_Model {
         $this->db->query($sql, array($id));
     }
     //TODO get user count from view
+
+    public function getPoints($id){
+        $sql = 'CALL getUserPoints(?)';
+        $query = $this->db->query($sql, array($id));
+        $points = $query->row_array();
+        return $points;
+    }
+    public function setPoints($id, $amount){
+        $sql = 'CALL setUserPoints(?,?)';
+        $this->db->query($sql, array($id, $amount));
+    }
+
 }
