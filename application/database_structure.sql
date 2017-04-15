@@ -363,3 +363,49 @@ NO SQL
     SET password_hash = pass
     WHERE id = idIn;
   END//
+
+# 5. etapp --------------------------------------------------------------------
+ALTER TABLE `users` ADD COLUMN `points` INT NULL AFTER `fb_id`;
+
+
+CREATE PROCEDURE `getUserPoints`(IN `userId` INT)
+  BEGIN
+    SELECT points from users WHERE id = userId;
+  END;
+
+
+CREATE PROCEDURE `setUserPoints`(IN `userId` INT, IN `amount` INT)
+BEGIN
+  UPDATE users
+  SET points = amount
+  WHERE id = userId;
+END;
+
+
+ALTER TABLE `tasks` ADD COLUMN `repeat_interval` INT NULL AFTER `content`;
+
+
+CREATE PROCEDURE `updateRepeatTasks`(IN `idIn` INT)
+  BEGIN
+    UPDATE tasks
+    SET completed = 0, due_time = CURDATE()
+    WHERE user_id = idIn AND CURDATE() != due_time AND (DATEDIFF(CURDATE(), due_time) % repeat_interval = 0);
+  END;
+
+#altered
+CREATE PROCEDURE `getDoneTasks`(IN `userId` INT)
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE (user_id = userId  OR user_id = 37) and completed=1
+    ORDER BY due_time DESC
+    LIMIT 7;
+  END;
+
+#altered
+CREATE PROCEDURE `getUndonePastTasks`(IN `userId` INT)
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM tasks
+    WHERE user_id = userId and completed=0 and WEEK(due_time) < WEEK(CURDATE())
+    ORDER BY due_time DESC
+    LIMIT 7;
+  END

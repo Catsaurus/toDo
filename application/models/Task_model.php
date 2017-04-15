@@ -8,10 +8,10 @@ class task_model extends CI_Model {
         $this->load->database();
     }
 
-    public function inser_task($description, $date, $id)
+    public function inser_task($description, $date, $id, $repeat)
     {
-        $sql = 'CALL insertTask(?,?,?)';
-        $this->db->query($sql, array($description, $date, $id));
+        $sql = 'CALL insertTask(?,?,?,?)';
+        $this->db->query($sql, array($description, $date, $id, $repeat));
     }
 
     public function get_user_tasks_of_today($username)
@@ -30,6 +30,11 @@ class task_model extends CI_Model {
         $query->next_result();
         return $result;
 
+    }
+
+    public function updateRepeatedTasks($id){
+        $update = 'CALL updateRepeatTasks(?)';
+        $this->db->query($update, array($id));
     }
 
     public function get_user_tasks_week($id)
