@@ -1,9 +1,11 @@
 <?php
 ?>
 <main>
-<div class="container">
-    <div class="col s12">
-        <p><?php echo lang('payment_completed_not') ?> </p>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3><?php echo lang('payment_completed_not') ?> </h3>
+            </div>
+        </div>
     </div>
-</div>
 </main>

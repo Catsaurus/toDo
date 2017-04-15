@@ -21,17 +21,17 @@
                 <p> <?php echo lang('user_tasks'), $taskCount?> </p>
                 </div>
 
-                    <div class="row" id="newTask">
-                    <form id="newTaskForm" class="col s12" method="post" action="<?php echo site_url('Tasks/insert') ?>">
+                    <div id="newTask" class="col s12 m6 l6">
+                    <form id="newTaskForm" method="post" action="<?php echo site_url('Tasks/insert') ?>">
                         <div class="row">
-                            <div class="input-field col s6">
+                            <div class="input-field col s6 m6 l6">
                                 <input name="description" id="description" type="text">
                                 <label for="description"><?php echo lang('description') ?></label>
                             </div>
                         </div>
 
                         <label for="datepicker"><?php echo lang('due') ?></label>
-                        <input name="date" width="50%" type="date" value="<?php echo date('Y-m-d');?>" id="datepicker" class="datepicker">
+                        <input name="date" type="date" value="<?php echo date('Y-m-d');?>" id="datepicker" class="datepicker">
 
                         <fieldset class="radiogroup">
                             <legend><?php lang('repeat') ?></legend>
@@ -50,7 +50,7 @@
         <p></p>
 
         <div class="row" id="taskid" >
-            <div class="col s3">
+            <div class="col s12 m3 l3">
                 <p><?php echo lang('due_today') ?></p>
                 <div id="tasksOfToday" >
                     <?php foreach ($todayTasks as $task): ?>
@@ -61,7 +61,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col s3">
+            <div class="col s12 m3 l3">
                 <p><?php echo lang('due_week') ?></p>
                 <div id="tasksOfThisWeek">
                     <?php foreach ($weekTasks as $task): ?>
@@ -72,7 +72,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="col s3">
+            <div class="col s12 m3 l3">
                 <p><?php echo lang('due_later') ?></p>
                 <div id="futureTasks">
                     <?php foreach ($futureTasks as $task): ?>

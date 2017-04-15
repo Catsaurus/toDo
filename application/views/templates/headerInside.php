@@ -7,7 +7,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/materialize.css"); ?>"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/materialize.css"); ?>"  media="screen"/>
 
     <!-- custom.css on eraldi css fail, kus on meie lehe värvid and stuff, cause vist nagu ei sobi muuta materialize faile, liiga suur ka selle muutmiseks-->
     <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/custom.css"); ?>" />
@@ -48,7 +48,6 @@
 
 </header>
 
-<body>
 <!--    TODO create method so this code is not repeated-->
 <script>
     window.fbAsyncInit = function() {

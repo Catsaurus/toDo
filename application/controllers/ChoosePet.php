@@ -27,7 +27,7 @@ class ChoosePet extends CI_Controller
         $pet_id = $_POST['pet'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            $this->usertopets_model->insert_user_pets($userId, $pet_id);
+            $this->UserToPets_model->insert_user_pets($userId, $pet_id);
             redirect(site_url() . "/Tasks/index");
         }
     }
