@@ -232,6 +232,5 @@ label {
 .deleteX {
     cursor: pointer;
     color: #99173C;
-    margin-left: 15px;
     float: right;
 }

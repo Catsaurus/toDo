@@ -11,7 +11,6 @@
             <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src" alt="??">
             <span class="tooltiptext" id="s3"><?php echo lang('add_info') ?></span>
         </div>
-        <p></p>
 
         <?php echo validation_errors(); ?>
 
@@ -67,6 +66,7 @@
                 <div id="tasksOfThisWeek">
                     <?php foreach ($weekTasks as $task): ?>
                         <p>
+                            <span onclick=deleteTask(<?php echo $task['id'];?>) class='deleteX'>x</span>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
                             <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']) . ' ' .  $task['date'];?></label>
                         </p>
@@ -78,6 +78,7 @@
                 <div id="futureTasks">
                     <?php foreach ($futureTasks as $task): ?>
                         <p>
+                            <span onclick=deleteTask(<?php echo $task['id'];?>) class='deleteX'>x</span>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
                             <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']) . ' ' .  $task['date'];?></label>
                         </p>

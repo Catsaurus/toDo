@@ -443,6 +443,7 @@ CONTAINS SQL
     WHERE tasks.id = idIN AND tasks.user_id = userID;
   END //
 
+#Altered code
 DELIMITER //
 CREATE PROCEDURE `insertTask`(
   IN `content` VARCHAR(255),

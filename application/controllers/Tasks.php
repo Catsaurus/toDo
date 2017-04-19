@@ -187,6 +187,7 @@ class Tasks extends CI_Controller {
         $tasks = $this->task_model->get_user_tasks_past_and_undone($userId);
         foreach ($tasks as $task) {
             echo "<p>";
+            echo "<span onclick=deleteTask(".$task['id'].") class='deleteX'>x</span>";
             echo "<input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
             echo "<label for='".$task['id']."'>".htmlspecialchars($task['content'])." ".date_format(date_create($task['date']), 'd/m')."</label>";
             echo "</p>";
@@ -198,7 +199,7 @@ class Tasks extends CI_Controller {
         $this->db->reconnect();
         $tasks = $this->task_model->getSuperUserTasks();
         foreach ($tasks as $task) {
-            $result = $result."<p><input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
+            $result = $result."<p><span onclick=deleteTask(".$task['id'].") class='deleteX'>x</span><input onclick=checkTask(".$task['id'].") type='checkbox' class='filled-in checkbox-red' id='".$task['id']."'>";
             $result = $result."<label for='".$task['id']."'>".$task['content']." ".date_format(date_create($task['date']), 'd/m')."</label></p>";
         }
         echo json_encode($result, JSON_UNESCAPED_UNICODE);
