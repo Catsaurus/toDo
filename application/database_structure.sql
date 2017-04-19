@@ -469,3 +469,26 @@ CREATE VIEW `taskDateType` as
                  )
              )
     as `time` from tasks;
+
+
+CREATE VIEW `allUndonePastTasks` as
+  SELECT id, due_time, completed, user_id, content FROM tasks
+  WHERE completed=0 and due_time < CURDATE()
+  ORDER BY due_time DESC;
+
+
+#altered code
+CREATE PROCEDURE `getUndonePastTasks`(
+  IN `userId` INT
+
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    SELECT id, due_time, completed, user_id, content FROM allUndonePastTasks
+    WHERE user_id = userId
+    LIMIT 7;
+  END
