@@ -461,7 +461,7 @@ NO SQL
     INSERT INTO tasks (content, due_time, user_id, repeat_interval, completed) VALUES (content, due_time, user_id, repeat_interval, 0);
   END //
 
-CREATE VIEW `taskDateType` as
+CREATE VIEW `taskdatetype` as
   SELECT id, if(
                  due_time=CURDATE(),'TODAY', if(
                      due_time > CURDATE() and due_time < CURDATE() + INTERVAL 7 DAY, 'WEEK', if(
