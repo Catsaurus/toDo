@@ -52,9 +52,10 @@
         <div class="row" id="taskid" >
             <div class="col s12 m3 l3">
                 <p><?php echo lang('due_today') ?></p>
-                <div id="tasksOfToday" >
+                <span id="tasksOfToday" >
                     <?php foreach ($todayTasks as $task): ?>
                         <p>
+                            <span onclick=deleteTask(<?php echo $task['id'];?>) class='deleteX'>x</span>
                             <input onclick=checkTask(<?php echo $task['id'];?>) type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
                             <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']);?></label>
                         </p>

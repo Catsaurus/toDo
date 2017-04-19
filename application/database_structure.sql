@@ -299,6 +299,7 @@ NO SQL
   BEGIN
     INSERT INTO user_pets (user_id, pet_id) VALUES (user_id, pet_id);
   END //
+
 DROP PROCEDURE IF EXISTS `changePassword`;
 
 
@@ -409,3 +410,52 @@ CREATE PROCEDURE `getUndonePastTasks`(IN `userId` INT)
     ORDER BY due_time DESC
     LIMIT 7;
   END
+
+#altered
+    DELIMITER //
+CREATE PROCEDURE `markTaskDone`(
+  IN `idIN` INT
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    UPDATE tasks
+    SET completed = 1
+    WHERE tasks.id = idIN;
+  END //
+
+
+DELIMITER //
+CREATE PROCEDURE `deleteTask`(
+  IN `idIN` INT,
+  IN `userID` INT
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    DELETE FROM tasks
+    WHERE tasks.id = idIN AND tasks.user_id = userID;
+  END //
+
+DELIMITER //
+CREATE PROCEDURE `insertTask`(
+  IN `content` VARCHAR(255),
+  IN `due_time` DATE,
+  IN `user_id` INT(10),
+  IN `repeat_interval` INT(11)
+
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+NO SQL
+  SQL SECURITY DEFINER
+  COMMENT ''
+  BEGIN
+    INSERT INTO tasks (content, due_time, user_id, repeat_interval, completed) VALUES (content, due_time, user_id, repeat_interval, 0);
+  END //

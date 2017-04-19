@@ -40,6 +40,13 @@ class Tasks extends CI_Controller {
         }
     }
 
+    public function delete($id){
+        $sessionUser = $_SESSION['id'];
+        $this->db->reconnect();
+        $user = $this->user_model->get_user_from_id($sessionUser);
+        $taskDeleted = $this->task_model->delete_task($id, $user['id']);
+    }
+
     public function show_tasks_today()
     {
         $user = $_SESSION['id'];
@@ -58,6 +65,8 @@ class Tasks extends CI_Controller {
         }
         return $data;
     }
+
+
 
     public function show_tasks_week()
     {

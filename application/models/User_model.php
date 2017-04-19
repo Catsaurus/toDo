@@ -54,8 +54,6 @@ class user_model extends CI_Model {
         $sql = 'CALL deleteUser(?)';
         $this->db->query($sql, array($id));
     }
-    //TODO get user count from view
-
     public function getPoints($id){
         $sql = 'CALL getUserPoints(?)';
         $query = $this->db->query($sql, array($id));

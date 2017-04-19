@@ -14,6 +14,11 @@ class task_model extends CI_Model {
         $this->db->query($sql, array($description, $date, $id, $repeat));
     }
 
+    public function delete_task($id, $userID){
+        $sql = 'CALL deleteTask(?,?)';
+        $this->db->query($sql, array($id, $userID));
+    }
+
     public function get_user_tasks_of_today($username)
     {
         $sql = 'CALL getUserTasksOfToday("'.$username.'")';

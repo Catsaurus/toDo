@@ -156,6 +156,22 @@ function unCheckTask(task_id) {
 
 }
 
+function deleteTask(task_id) {
+    $.ajax({
+        url:'/index.php/Tasks/delete/'+task_id,
+        complete: function (response) {
+            var p = $('#'+task_id).closest('p');
+            p.fadeOut(400, function () {
+                $(this).fadeOut();
+            });
+        },
+        error: function (response) {
+            console.log(response.responseText);
+        }
+    });
+
+}
+
 var checkPassword = function() {
     var pass1 = document.getElementById('password');
     var pass2 = document.getElementById('password2');
