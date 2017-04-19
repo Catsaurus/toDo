@@ -52,7 +52,7 @@
         <div class="row" id="taskid" >
             <div class="col s12 m3 l3">
                 <p><?php echo lang('due_today') ?></p>
-                <span id="tasksOfToday" >
+                <div id="tasksOfToday" >
                     <?php foreach ($todayTasks as $task): ?>
                         <p>
                             <span onclick=deleteTask(<?php echo $task['id'];?>) class='deleteX'>x</span>

@@ -41,10 +41,8 @@ class Tasks extends CI_Controller {
     }
 
     public function delete($id){
-        $sessionUser = $_SESSION['id'];
         $this->db->reconnect();
-        $user = $this->user_model->get_user_from_id($sessionUser);
-        $taskDeleted = $this->task_model->delete_task($id, $user['id']);
+        $taskDeleted = $this->task_model->delete_task($id, $_SESSION['id']);
     }
 
     public function show_tasks_today()
@@ -65,8 +63,6 @@ class Tasks extends CI_Controller {
         }
         return $data;
     }
-
-
 
     public function show_tasks_week()
     {
@@ -107,19 +103,42 @@ class Tasks extends CI_Controller {
         $this->db->reconnect();
         $answer = $this->task_model->markDone($id);
 
-        $toBe = $this->calculatePoints($now, 'done');
+        $task = $this->task_model->get_task_type($id);
+        $dateType = $task->time;
+
+        $toBe = $this->calculatePoints($now, 'done', $dateType);
         $this->setUserPoints($toBe);
 
         return $answer;
     }
 
-    public function calculatePoints($now, $doneOrUndone){
-        // TODO
+    public function calculatePoints($now, $doneOrUndone, $dateType){
+        /* TODO overdue tasks give minus 5 per day
+        */
         if($doneOrUndone == 'done'){
-            return $now + 10;
+
+            if ($dateType=='TODAY') {
+                return $now + 2;
+            }
+            else if ($dateType=='WEEK'){
+                return $now + 3;
+            }
+            else if ($dateType=='LATER'){
+                return $now + 4;
+            }
+            else return $now + 1;
         }
         else{
-            return $now - 10;
+            if ($dateType=='TODAY') {
+                return $now - 2;
+            }
+            else if ($dateType=='WEEK'){
+                return $now - 3;
+            }
+            else if ($dateType=='LATER'){
+                return $now - 4;
+            }
+            else return $now - 1;
         }
     }
     public function markTaskUndone($id)
@@ -129,7 +148,10 @@ class Tasks extends CI_Controller {
         $this->db->reconnect();
         $answer = $this->task_model->markUndone($id);
 
-        $toBe = $this->calculatePoints($now,'undone');
+        $task = $this->task_model->get_task_type($id);
+        $dateType = $task->time;
+
+        $toBe = $this->calculatePoints($now,'undone', $dateType);
         $this->setUserPoints($toBe);
 
         return $answer;

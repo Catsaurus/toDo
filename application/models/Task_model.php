@@ -19,6 +19,11 @@ class task_model extends CI_Model {
         $this->db->query($sql, array($id, $userID));
     }
 
+    public function get_task_type($id){
+        $query = $this->db->get_where('taskdatetype', array('id' => $id));
+        return $query->row();
+    }
+
     public function get_user_tasks_of_today($username)
     {
         $sql = 'CALL getUserTasksOfToday("'.$username.'")';
