@@ -101,15 +101,19 @@ class Tasks extends CI_Controller {
         $now = $this->getUserPoints();
 
         $this->db->reconnect();
-        $answer = $this->task_model->markDone($id);
+        $user = $this->task_model->getTask($id)->user_id;
 
-        $task = $this->task_model->get_task_type($id);
-        $dateType = $task->time;
+        if($user == $_SESSION['id']){
+            $answer = $this->task_model->markDone($id);
 
-        $toBe = $this->calculatePoints($now, 'done', $dateType);
-        $this->setUserPoints($toBe);
+            $task = $this->task_model->get_task_type($id);
+            $dateType = $task->time;
 
-        return $answer;
+            $toBe = $this->calculatePoints($now, 'done', $dateType);
+            $this->setUserPoints($toBe);
+
+            return $answer;
+        }
     }
 
     public function calculatePoints($now, $doneOrUndone, $dateType){
@@ -146,15 +150,19 @@ class Tasks extends CI_Controller {
         $now = $this->getUserPoints();
 
         $this->db->reconnect();
-        $answer = $this->task_model->markUndone($id);
+        $user = $this->task_model->getTask($id)->user_id;
 
-        $task = $this->task_model->get_task_type($id);
-        $dateType = $task->time;
+        if($user == $_SESSION['id']){
+            $answer = $this->task_model->markUndone($id);
 
-        $toBe = $this->calculatePoints($now,'undone', $dateType);
-        $this->setUserPoints($toBe);
+            $task = $this->task_model->get_task_type($id);
+            $dateType = $task->time;
 
-        return $answer;
+            $toBe = $this->calculatePoints($now,'undone', $dateType);
+            $this->setUserPoints($toBe);
+
+            return $answer;
+        }
     }
 
     public function getTaskCount(){
