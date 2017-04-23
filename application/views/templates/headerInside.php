@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>toDo</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -20,6 +26,7 @@
     <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo base_url("asset/javascript/longPolling.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo site_url("Javascript/lang"); ?>" type="text/javascript"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="<?php echo base_url("asset/javascript/PetLoader.js"); ?>"></script>
 
@@ -27,16 +34,16 @@
 
 <header>
     <ul class="side-nav" id="mobile-demo">
-        <li><a href="<?php echo site_url('Tasks/index') ?>" ><?php echo lang('tasks') ?></a></li>
-        <li><a href="<?php echo site_url('Pets/index') ?>" ><?php echo lang('pets') ?></a></li>
-        <li><a href="<?php echo site_url('Settings/index') ?>" ><?php echo lang('settings') ?></a></li>
-        <li><a href="<?php echo site_url('Logout/index')?>"  class="btn"><?php echo lang('logout') ?></a></li>
+        <li><a href="<?php echo site_url('Tasks/index') ?>" class="waves-effect btn-flat " ><?php echo lang('tasks') ?></a></li>
+        <li><a href="<?php echo site_url('Pets/index') ?>" class="waves-effect btn-flat " ><?php echo lang('pets') ?></a></li>
+        <li><a href="<?php echo site_url('Settings/index') ?>" class="waves-effect btn-flat " ><?php echo lang('settings') ?></a></li>
+        <li><a href="<?php echo site_url('Logout/index')?>"><?php echo lang('logout') ?></a></li>
     </ul>
 
     <nav>
         <div class="nav-wrapper">
             <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><em class="material-icons"></em></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"><?php echo lang('menu') ?></i></a>
             <ul class="right hide-on-med-and-down">
                 <li class="headerLink"><a href="<?php echo site_url('Tasks/index') ?>" ><?php echo lang('tasks') ?></a></li>
                 <li class="headerLink"><a href="<?php echo site_url('Pets/index') ?>" ><?php echo lang('pets') ?></a></li>

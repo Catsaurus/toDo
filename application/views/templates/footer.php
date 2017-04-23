@@ -56,6 +56,8 @@
 
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php echo base_url("assets/javascript/jquery-3.1.1.js"); ?>"><\/script>')</script>
     <script type="text/javascript" src="<?php echo base_url("asset/javascript/materialize.js"); ?>"></script>
     <!-- custom skriptis on need js asjad, mis on seotud meie lehekülgedega-->
     <script type="text/javascript" src="<?php echo base_url("asset/javascript/custom.js"); ?>"></script>
