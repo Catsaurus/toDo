@@ -113,8 +113,6 @@ class Tasks extends CI_Controller {
     }
 
     public function calculatePoints($now, $doneOrUndone, $dateType){
-        /* TODO overdue tasks give minus 5 per day
-        */
         if($doneOrUndone == 'done'){
 
             if ($dateType=='TODAY') {

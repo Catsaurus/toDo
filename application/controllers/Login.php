@@ -19,7 +19,7 @@ class Login extends CI_Controller {
 
                 $username = $this->input->post('username');
                 $password = $this->input->post('pswd');
-
+                // TODO kontrollida, kas paroolid on ühesugused
                 #Get the equivalent data from database
                 $user = $this->user_model->get_user($username);
 
