@@ -165,4 +165,12 @@ class task_model extends CI_Model {
         $query->next_result();
         return $result;
     }
+    public function getTask($id)
+    {
+        $sql = 'CALL getTask("'.$id.'")';
+        $query = $this->db->query($sql);
+        $result = $query->row();
+        $query->next_result();
+        return $result;
+    }
 }

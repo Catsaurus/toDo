@@ -492,4 +492,10 @@ CONTAINS SQL
     SELECT id, due_time, completed, user_id, content FROM allUndonePastTasks
     WHERE user_id = userId
     LIMIT 7;
-  END
+  END;
+
+CREATE PROCEDURE `getTask`(IN `idIN` INT)
+  BEGIN
+    SELECT id, due_time, completed, user_id, content, repeat_interval FROM tasks WHERE id = idIN;
+  END;
+
