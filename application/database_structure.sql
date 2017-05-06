@@ -492,10 +492,44 @@ CONTAINS SQL
     SELECT id, due_time, completed, user_id, content FROM allUndonePastTasks
     WHERE user_id = userId
     LIMIT 7;
-  END;
+END;
 
 CREATE PROCEDURE `getTask`(IN `idIN` INT)
   BEGIN
     SELECT id, due_time, completed, user_id, content, repeat_interval FROM tasks WHERE id = idIN;
   END;
+
+#6.etapp --------------------------------------------------------------------------------------------------
+
+ALTER TABLE `users` ADD `main_pet` INT(10) NULL DEFAULT NULL AFTER `points`;
+
+#--
+
+CREATE PROCEDURE `setMainPet`(
+  IN `pet_id` INT(10),
+  IN `userId` INT(10)
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+NO SQL
+  SQL SECURITY DEFINER
+  BEGIN
+    UPDATE users
+    SET main_pet = pet_id
+    WHERE id = userId;
+  END
+
+#--
+    CREATE PROCEDURE `getMainPet2`(
+    IN `user_id` INT(10)
+    )
+    LANGUAGE SQL
+    NOT DETERMINISTIC
+    NO SQL
+    SQL SECURITY DEFINER
+BEGIN
+SELECT pets.id, pets.name, pets.description, pets.imgname, users.id, user.main_pet FROM pets, users
+WHERE users.id=user_id AND pets.id = users.main_pet;
+END
+
 
