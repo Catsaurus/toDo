@@ -17,6 +17,8 @@ $( document ).ready(function(){
     });
 
     $("#post2").click();
+    arvutaPäev();
+
 
       // jQuey's submit function applied on form.
 });
@@ -66,7 +68,8 @@ function loadPage(hash) {
                 $("#switch").prop('checked', true);
             },
             error: function (response) {
-                console.log(response.responseText);
+                //console.log(response.responseText);
+                console.log("error")
             }
         });
     }
@@ -113,11 +116,10 @@ function checkTask(task_id) {
             });
         }
     });
-
     process_queue();
-
-
 }
+
+
 function process_queue() {
     if (queue.length===0){
         return;
@@ -158,7 +160,7 @@ function unCheckTask(task_id) {
 
 function deleteTask(task_id) {
     $.ajax({
-        url:'/index.php/Tasks/delete/'+task_id,
+        url:'/todo/index.php/Tasks/delete/'+task_id,
         complete: function (response) {
             var p = $('#'+task_id).closest('p');
             p.fadeOut(400, function () {
@@ -169,16 +171,31 @@ function deleteTask(task_id) {
             console.log(response.responseText);
         }
     });
-
 }
 
 var checkPassword = function() {
     var pass1 = document.getElementById('password');
     var pass2 = document.getElementById('password2');
 
-    if (pass1.value == pass2.value) { // TODO ideaalis võiks need olla css failis. olemas on ka correct_pswd ja wrong_pswd
+    if (pass1.value == pass2.value) {
         $(pass2).css("color", "#66cc66");
     } else {
         $(pass2).css("color", "#ff6666");
     }
 };
+
+
+//arvutab progress bari väärtused ja lisab need vaatesse
+function arvutaPäev() {
+    console.log(document.getElementById("points"));
+    var x = $('#points').text();
+    console.log(x);
+    var progress_x =  x * 0.25 + 50;
+    console.log(progress_x);
+    $('#progressiriba').css({'width': progress_x+'%'});
+}
+
+//kui kasutajal on rohkem punkte kui 200
+function award() {
+    alert("Yo");
+}
