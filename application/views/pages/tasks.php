@@ -150,14 +150,14 @@
                     </div>
         </div>
 
-        <div class="row" id="superUserTaskid">
+        <!--<div class="row" id="superUserTaskid">
             <div class="col s12">
-                <p><?php echo lang('tasks_by_superUser') ?></p>
+                <p><?php /*echo lang('tasks_by_superUser') */?></p>
                 <div>
                     <p id="dataPush"></p><script>recentFunction()</script>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 <!--        <div class="tooltip" id="src1div">-->
 <!--            <p id="dataPush"></p><script>recentFunction()</script>-->
