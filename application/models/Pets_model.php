@@ -34,6 +34,7 @@ class Pets_model extends CI_Model {
 
         foreach ($query->result() as $row) {
             $data = array(
+                'id' =>$row->id,
                 'name' =>$row->name,
                 'score' =>$row->score,
                 'description'=>$row->description,
@@ -46,7 +47,6 @@ class Pets_model extends CI_Model {
     }
 
 
-    //delete after, see hetkel kuvab ChoosePet lehele kõik loomad
     public function get_pet() {
         $query = $this->db->get('pets');
         $this->db->select('id','name', 'description', 'imgname');

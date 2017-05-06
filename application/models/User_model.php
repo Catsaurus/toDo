@@ -64,5 +64,25 @@ class user_model extends CI_Model {
         $sql = 'CALL setUserPoints(?,?)';
         $this->db->query($sql, array($id, $amount));
     }
+    public function setMainPet ($pet_id, $id){
+        $sql = 'CALL setMainPet(?,?)';
+        $this->db->query($sql, array($pet_id, $id));
+    }
+    public function getMainPet($id){
+        $sql = 'CALL getMainPet2("'.$id.'")';
+        $result = array();
+        $query = $this->db->query($sql);
 
+        foreach ($query->result() as $row) {
+            $data = array(
+                'id' =>$row->id,
+                'name' =>$row->name,
+                'description'=>$row->description,
+                'imgname' =>$row->imgname
+            );
+            array_push($result, $data);
+        }
+        $query->next_result();
+        return $result;
+    }
 }

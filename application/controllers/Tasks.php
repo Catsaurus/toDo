@@ -21,6 +21,9 @@ class Tasks extends CI_Controller {
         $data['weekTasks'] = $this->show_tasks_week();
         $data['futureTasks'] = $this->show_tasks_future();
         $data['points'] = $this->getUserPoints();
+        $data['pet1'] = $this->getMainPet();
+        //$data['game'] = $this-> checkUserPoint();
+
         return $data;
     }
     public function insert()
@@ -143,6 +146,27 @@ class Tasks extends CI_Controller {
             else return $now - 1;
         }
     }
+    public function checkUserPoint(){
+        $points = $this->getUserPoints();
+        if ($points >= 200) {
+            //todo: do sth
+        }
+        else if ($points >= 0 &&  $points <= 199){
+            //todo: happy pet
+        }
+        else if ($points >= -199 && $points <= -1) {
+            //todo: sad pet
+        }
+        else if ($points <= -200) {
+            //todo: donate to wake up your pet
+        }
+        else {
+            //todo something
+        }
+    }
+
+
+
     public function markTaskUndone($id)
     {
         $now = $this->getUserPoints();
@@ -232,4 +256,20 @@ class Tasks extends CI_Controller {
         return $answer;
     }
 
+    public function getMainPet()
+    {
+        $this->db->reconnect();
+        $userId = $_SESSION['id'];
+        $pet = $this->user_model->getMainPet($userId);
+        $data = array();
+        foreach ($pet as $pet1) {
+            $one = array(
+                'name' => $pet1['name'],
+                'description' => $pet1['description'],
+                'imgname' => $pet1['imgname']
+            );
+            array_push($data, $one);
+        }
+        return $data;
+    }
 }

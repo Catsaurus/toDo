@@ -10,14 +10,22 @@ class ChoosePet extends CI_Controller
 {
     public function index()
     {
-        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
-            $page = 'choosePet';
-            $data['title'] = ucfirst($page);
-            $data['pets'] = $this->show_pets();
-            //$data['user_pets'] = $this->getUserPets();
-            view_loader($page, $data);
-        }else{
-            view_loader('login');
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true ) {
+            //$points = $this->getUserPoints();
+            //$mainpet = $this->getMainPet();
+            if ($this->showUsersPets() != NULL){
+                redirect("Tasks/index");
+            }
+            else{
+                $page = 'choosePet';
+                $data['title'] = ucfirst($page);
+                $data['pets'] = $this->show_pets();
+                //$data['user_pets'] = $this->getUserPets();
+                view_loader($page, $data);
+                }
+            }
+            else{
+                view_loader('login');
         }
     }
 
@@ -27,28 +35,19 @@ class ChoosePet extends CI_Controller
         $pet_id = $_POST['pet'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            $this->usertopets_model->insert_user_pets($userId, $pet_id);
+            $this->UserToPets_model->insert_user_pets($userId, $pet_id);
+            $this->setMainPet($pet_id);
             redirect(site_url() . "/Tasks/index");
         }
     }
-
-    /*public function getUserPets(){
-        $this->db->reconnect();
-        $user_id = $_SESSION['id'];
-        $users = $this->usertopets_model->get_user_pets($user_id);
-        $data = array();
-        foreach ($users as $user) {
-            $one = array(
-                'pet_id'  => $user['pet_id'],
-            );
-            array_push($data, $one);
+    public function setMainPet($pet_id){
+        $userId = $_SESSION['id'];
+        //$pet_id = $_POST['pet'];
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $this->user_model->setMainPet($pet_id, $userId);
         }
-        return $data;
-    }*/
+    }
 
-
-
-    //ajutine
     public function show_pets() {
         $this->db->reconnect();
         $this->load->model('Pets_model');
@@ -58,6 +57,31 @@ class ChoosePet extends CI_Controller
             $one = array(
                 'id' =>$pet['id'],
                 'name' => $pet['name'],
+                'description' => $pet['description'],
+                'imgname' => $pet['imgname']
+            );
+            array_push($data, $one);
+        }
+        return $data;
+    }
+    public function getUserPoints(){
+        $this->db->reconnect();
+        $id = $_SESSION['id'];
+        $answer = $this->user_model->getPoints($id);
+        return $answer['points'];
+    }
+
+    public function showUsersPets()
+    {
+        $this->db->reconnect();
+        $user_id = $_SESSION['id'];
+
+        $pets = $this->pets_model->show_users_pets($user_id);
+        $data = array();
+        foreach ($pets as $pet) {
+            $one = array(
+                'name' => $pet['name'],
+                'score' => $pet['score'],
                 'description' => $pet['description'],
                 'imgname' => $pet['imgname']
             );

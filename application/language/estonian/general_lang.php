@@ -13,7 +13,7 @@ $lang['email'] = 'Meiliaadress';
 $lang['description'] = 'Kirjeldus';
 $lang['cancel'] = 'Tühista';
 $lang['contact'] = 'Kontakt';
-$lang['menu'] = 'Menüü';
+$lang['menu'] = 'menu';
 $lang['pets'] = 'Loomad';
 $lang['fb_login_fail'] = 'Facebooki autoriseerimine ebaõnnestus';
 $lang['error'] = 'Viga';
@@ -45,7 +45,7 @@ $lang['maksja'] = "Nimi: ";
 $lang['maksja_konto'] = "IBAN: ";
 $lang['maksekorraldus'] = "Maksekorralduse number: ";
 $lang['sum'] = "Summa: ";
-$lang['back'] = "Kogulehele";
+$lang['back'] = "Kodulehele";
 
 
 //paymentNotReceived

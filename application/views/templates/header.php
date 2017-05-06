@@ -11,14 +11,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
 
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/materialize.css"); ?>" />
+
 
         <!-- custom.css on eraldi css fail, kus on meie lehe värvid and stuff, cause vist nagu ei sobi muuta materialize faile, liiga suur ka selle muutmiseks-->
         <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/custom.css"); ?>" />
@@ -37,6 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </head>
 <body>
+
 <header>
     <div class="navbar-fixed z-depth-4">
         <nav>

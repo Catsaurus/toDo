@@ -1,5 +1,5 @@
 
-    <main>
+    <main id="grad1">
         <div class="container">
             <div class="row">
                 <div class="col s12 pealkiri">
@@ -12,7 +12,18 @@
                 </div>
 
                 <div class="col s12">
+                    <div>
 
+                        <figure>
+                            <object type="image/svg+xml"
+
+                                    data = "<?php echo base_url("asset/pets/oc.svg")?>">
+                                Your browser does not support SVG
+                            </object>
+                        </figure>
+
+
+                    </div>
                 </div>
             </div>
         </div>
