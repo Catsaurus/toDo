@@ -52,15 +52,6 @@
             </div>
         </div>
     </footer>
-    <!--Import jQuery before materialize.js-->
-
-    <!-- Compiled and minified JavaScript -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-    <script>window.jQuery || document.write('<script src="<?php echo base_url("assets/javascript/jquery-3.1.1.js"); ?>"><\/script>')</script>
-
-    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script>window.Materialize || document.write('<script src="<?php echo base_url("asset/javascript/materialize.js"); ?>"><\/script>')</script>
 
     </body>
 </html>

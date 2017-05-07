@@ -109,7 +109,6 @@ function checkTask(task_id) {
     queue.push({
         'taskId':task_id,
         'onSuccess': function () {
-            console.log('success');
             p[0].innerHTML = "<span class = done>"+window.lang.done+"</span>";
             p.fadeOut(400, function () {
                 $(this).fadeOut();
@@ -140,11 +139,9 @@ function process_queue() {
 }
 
 function unCheckTask(task_id) {
-    console.log('Uncheck');
     $.ajax({
         url:'/index.php/Tasks/markTaskUndone/'+task_id,
         complete: function (response) {
-            console.log(response.responseText);
             var p = $('#'+task_id).closest('p');
             p[0].innerHTML = "<span class = done>"+window.lang.undone+"</span>";
             p.fadeOut(400, function () {
@@ -160,7 +157,7 @@ function unCheckTask(task_id) {
 
 function deleteTask(task_id) {
     $.ajax({
-        url:'/todo/index.php/Tasks/delete/'+task_id,
+        url:'/index.php/Tasks/delete/'+task_id,
         complete: function (response) {
             var p = $('#'+task_id).closest('p');
             p.fadeOut(400, function () {
@@ -187,11 +184,8 @@ var checkPassword = function() {
 
 //arvutab progress bari väärtused ja lisab need vaatesse
 function arvutaPäev() {
-    console.log(document.getElementById("points"));
     var x = $('#points').text();
-    console.log(x);
     var progress_x =  x * 0.25 + 50;
-    console.log(progress_x);
     $('#progressiriba').css({'width': progress_x+'%'});
 }
 
@@ -253,7 +247,6 @@ var offset = 900;
 
 function loadMore() {
     s = start;
-    console.log("loadmore Start");
     $.ajax({
         type: "POST",
         dataType: "json",

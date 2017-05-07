@@ -28,7 +28,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link type="text/css" rel="stylesheet" href="<?php echo base_url("asset/css/Stylesheet.css"); ?>"/>
         <!--ikoonid-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- javascriptid peaks lõppu tõstma nagu ma aru saan, sest siis on lehe laadimine kiirem, MAP ei tööta, kui sees siit ära kustutada-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
         <script src="<?php echo site_url("Javascript/lang"); ?>" type="text/javascript"></script>
         <script src="<?php echo base_url("asset/javascript/custom.js"); ?>" type="text/javascript"></script>
 
