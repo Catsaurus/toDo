@@ -13,7 +13,7 @@ class Tasks extends CI_Controller {
             redirect(site_url('login'));
         }
     }
-
+    // TODO kõik public meetodid, mida vähegi võimalik, muuta private'iks JA/VÕI viia teise klassi, kui siis lihtsam
     public function getData($page){
         $data['title'] = ucfirst($page);
         $data['taskCount'] = $this->getTaskCount();
