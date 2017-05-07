@@ -78,6 +78,10 @@ $lang['done_tasks'] = 'Done tasks';
 $lang['undone_tasks'] = 'Undone tasks';
 $lang['undone'] = 'Task undone';
 $lang['tasks_by_superUser'] = 'Tasks added by SuperUser';
+$lang['pointsMin'] = 'You have fallen into minus, keep working hard!';
+$lang['points1'] = 'You have no points, start making tasks done to get them!';
+$lang['points1-49'] = 'Doing great, at 50 points you will get a new pet! :)';
+$lang['points50+'] = 'You have now enough points to get new pet!';
 
 // Errors?
 $lang['account_exists'] = 'An account with this username already exists. Log in or pick a new username.';

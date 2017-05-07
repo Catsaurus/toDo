@@ -23,6 +23,7 @@ class Tasks extends CI_Controller {
         $data['points'] = $this->getUserPoints();
         $data['pet1'] = $this->getMainPet();
         //$data['game'] = $this-> checkUserPoint();
+        $data['userPointsInformation'] = $this->getPointsInfoText();
 
         return $data;
     }
@@ -271,5 +272,19 @@ class Tasks extends CI_Controller {
             array_push($data, $one);
         }
         return $data;
+    }
+
+    private function getPointsInfoText()
+    {
+        $points = $this->getUserPoints();
+        if($points < 0){
+            return 'pointsMin';
+        } elseif ($points == 0){
+            return 'points1';
+        } elseif ($points < 50){
+            return 'points1-49';
+        } else{
+            return 'points50+';
+        }
     }
 }

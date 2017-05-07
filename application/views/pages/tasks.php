@@ -132,6 +132,11 @@
                                 <div class="determinate" id="progressiriba"></div>
                             </div>
                         </div>
+
+                        <div>
+                            <p> <?php echo lang($userPointsInformation)?> </p>
+                        </div>
+
                         <div class="row">
                             <div class="col s12 hide-on-small-only">
                                 <div class="selectable">

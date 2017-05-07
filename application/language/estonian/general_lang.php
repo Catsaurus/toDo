@@ -78,6 +78,10 @@ $lang['done_tasks'] = 'Tehtud';
 $lang['undone_tasks'] = 'Tegemata';
 $lang['undone'] = 'Ülesanne tegemata';
 $lang['tasks_by_superUser'] = 'SuperUseri lisatud ülesanded';
+$lang['pointsMin'] = 'Oled kukkunud miinustesse, tööta usinalt edasi!';
+$lang['points1'] = 'Sul ei ole punkte, tee ära mõned ülesanded, et neid teenida!';
+$lang['points1-49'] = 'Väga hästi! 50 punktiga saad uue looma valida! :)';
+$lang['points50+'] = 'Sul on nüüd piisavalt punkte, et uus loom saada';
 
 // Errors
 $lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';
