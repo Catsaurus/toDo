@@ -10,3 +10,9 @@
     ExpiresByType text/css "now plus 1 days"
     ExpiresDefault "access plus 1 days"
 </IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch ".(js|css)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>

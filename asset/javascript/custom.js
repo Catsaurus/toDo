@@ -199,3 +199,123 @@ function arvutaPäev() {
 function award() {
     alert("Yo");
 }
+
+
+function myMap() {
+
+    /*
+     adds google map in to the pets tab with a marker and info button
+     */
+
+    var myCenter = new google.maps.LatLng(58.378991, 26.714598);
+    var elephantLoc = new google.maps.LatLng(58.378189, 26.714668);
+
+    var mapProp = {center:myCenter, zoom:16};
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+    var marker = new google.maps.Marker({
+        position: elephantLoc,
+        animation: google.maps.Animation.BOUNCE,
+        icon: "../../../asset/img/elephant.png"
+    });
+    marker.setMap(map);
+
+    google.maps.event.addListener(marker,'click', function() {
+        var messageWindow = new google.maps.InfoWindow({content:window.lang.hello});
+        messageWindow.open(map,marker);});
+}
+
+/*
+ shows and hides the form for inserting new task
+ */
+function showNewTask(newTask) {
+    document.getElementById(newTask).style.display = "block";
+}
+
+function hideNewTask(newTask) {
+    document.getElementById(newTask).style.display = "none";
+}
+function addTask() {
+    hideNewTask('newTask');
+}
+
+
+$(window).scroll(function() {
+    //console.log($(window).scrollTop() + ' ' + $(window).height() + ' ' + $(document).height());
+    if($(window).scrollTop() + $(window).height() >= $(document).height()){
+        //if($(document).height() - $(window).scrollTop() <= 900){
+        loadMore();
+    }
+});
+
+var start = 0;
+var offset = 900;
+
+function loadMore() {
+    s = start;
+    console.log("loadmore Start");
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url:'/index.php/Pets/show_pets/'+s,
+        success: function (response) {
+            $.each(response, function(index, el) {
+                $('#petDiv').append(
+                    '<div class="row">'+
+                    '<div class="col s4"><div>' + el.name + '</div></div>'+
+                    '<div class="col s4"><div>' + el.description + '</div></div>'+
+                    '<div class="col s4"><div><img alt="sheep" src="' + window.location.origin + '/asset/img/' + el.imgname + '"></div></div>'+
+                    '</div>'
+                )
+            });
+        },
+        error: function () {
+            console.log("error");
+        }
+    }).done();{
+        start += 3;
+    }
+}
+
+// got help from https://github.com/panique/php-long-polling
+function recentFunction(container, lastDate){
+    var lastDate = "";
+
+    return $.ajax({
+        type: "POST",
+        url: "/index.php/Tasks/superTasks",
+        cache: false,
+        data: { 'request': 'recent',
+            'param': lastDate },
+        dataType: "json",
+        success: function(data){
+            if(data != null){
+                document.getElementById("dataPush").innerHTML = data;
+            }
+        },
+        complete: function(){
+            setTimeout(function(){recentFunction(container, lastDate)}, 7000);
+        }
+    });
+}
+
+function setPoints(container, lastDate){
+    var lastDate = "";
+
+    return $.ajax({
+        type: "POST",
+        url: "/index.php/Tasks/userPoints",
+        cache: false,
+        data: { 'request': 'recent',
+            'param': lastDate },
+        dataType: "json",
+        success: function(data){
+            if(data != null){
+                document.getElementById("points").innerHTML = data;
+            }
+        },
+        complete: function(){
+            setTimeout(function(){setPoints(container, lastDate)}, 7000);
+        }
+    });
+}

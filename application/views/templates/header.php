@@ -29,8 +29,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!--ikoonid-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- javascriptid peaks lõppu tõstma nagu ma aru saan, sest siis on lehe laadimine kiirem, MAP ei tööta, kui sees siit ära kustutada-->
-        <script src="<?php echo base_url("asset/javascript/Map.js"); ?>" type="text/javascript"></script>
         <script src="<?php echo site_url("Javascript/lang"); ?>" type="text/javascript"></script>
+        <script src="<?php echo base_url("asset/javascript/custom.js"); ?>" type="text/javascript"></script>
 
 
 

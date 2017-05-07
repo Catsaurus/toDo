@@ -62,10 +62,5 @@
     <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script>window.Materialize || document.write('<script src="<?php echo base_url("asset/javascript/materialize.js"); ?>"><\/script>')</script>
 
-    <!-- custom skriptis on need js asjad, mis on seotud meie lehekülgedega-->
-    <script type="text/javascript" src="<?php echo base_url("asset/javascript/custom.js"); ?>"></script>
-
-    <script type="text/javascript" src="<?php echo base_url("asset/javascript/NewTask.js"); ?>"></script>
-
     </body>
 </html>
