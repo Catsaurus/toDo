@@ -528,8 +528,7 @@ NO SQL
     NO SQL
     SQL SECURITY DEFINER
 BEGIN
-SELECT pets.id, pets.name, pets.description, pets.imgname, users.id, user.main_pet FROM pets, users
-WHERE users.id=user_id AND pets.id = users.main_pet;
+SELECT pets.id, pets.name, pets.description, pets.imgname, users.id, users.main_pet FROM pets, users
+WHERE user_id = users.id AND pets.id = users.main_pet;
 END
-
 
