@@ -22,6 +22,7 @@
                             <div class="col s2"></div>
                             <div class="col s8" >
                                 <?php echo validation_errors(); ?>
+                                <?php if (isset($password_error)) echo $password_error; ?>
 
                                 <!--KASUTAJANIMI-->
                                 <div class="input-field">
@@ -37,8 +38,8 @@
 
                                 <!--PAROOL UUESTI-->
                                 <div class="input-field">
-                                <input type="password" name="pswd2" id="password2" onkeyup="checkPassword()">
-                                <label for="password2"><?php echo lang('password_again')?></label>
+                                    <input type="password" name="pswd2" id="password2" onkeyup="checkPassword()">
+                                    <label for="password2"><?php echo lang('password_again')?></label>
                                 </div>
 
                                 <!--EMAIL-->

@@ -18,6 +18,7 @@ $lang['pets'] = 'Loomad';
 $lang['fb_login_fail'] = 'Facebooki autoriseerimine ebaõnnestus';
 $lang['error'] = 'Viga';
 $lang['hello'] = 'Tere"';
+$lang['password_match'] = 'Paroolid ei olnud ühesugused';
 
 // Titles
 $lang['about'] = 'Meist';
@@ -46,7 +47,6 @@ $lang['maksja_konto'] = "IBAN: ";
 $lang['maksekorraldus'] = "Maksekorralduse number: ";
 $lang['sum'] = "Summa: ";
 $lang['back'] = "Kodulehele";
-
 
 //paymentNotReceived
 $lang['payment_completed_not'] = 'Makse ei kinnitatud';
@@ -77,10 +77,15 @@ $lang['long_polling'] = 'Ülesandeid süsteemis kokku';
 $lang['done_tasks'] = 'Tehtud';
 $lang['undone_tasks'] = 'Tegemata';
 $lang['undone'] = 'Ülesanne tegemata';
+$lang['tasks_by_superUser'] = 'SuperUseri lisatud ülesanded';
 
 // Errors
 $lang['account_exists'] = 'See kasutajanimi on juba võetud. Logi sisse või vali uus kasutajanimi';
 $lang['id_fail'] = 'Ei saa ID kaardiga sisse logida';
+
+//ChoosePet
+$lang['choose_pet'] = "Vali elukas";
+$lang['edasi'] = "Edasi";
 
 //Pets
 $lang['johnny'] = 'Elevant Johnny';
@@ -88,11 +93,6 @@ $lang['johnny_intro'] = 'Johnny on lõbus vennas. Talle meeldivad mangod ja bana
 $lang['see_more_pets'] = "Tahad veel vaadata?";
 $lang['your_pets'] = 'Sinu loomad';
 $lang['other_pets'] = 'Veel loomi';
-
-//ChoosePet
-$lang['choose_pet'] = "Vali elukas";
-$lang['edasi'] = "Edasi";
-
 // Menu
 $lang['menu_mainpage'] = 'Avalehekülg';
 $lang['menu_faq'] = 'KKK';

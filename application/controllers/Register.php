@@ -10,6 +10,7 @@ class Register extends CI_Controller {
         }
         else return true;
     }
+
     public function index()
     {
 
@@ -26,18 +27,24 @@ class Register extends CI_Controller {
         }
 
         else if ($this->form_validation->run()== true){
-            // TODO kontrollida, kas paroolid on ühesugused
+
             $username = $this->input->post('username');
             $password = $this->input->post('pswd');
             $password2 = $this->input->post('pswd2');
             $email = $this->input->post('email');
-            $password_hash = password_hash($password,PASSWORD_DEFAULT);
+            if ($password != $password2){
+                $data['password_error'] = lang('password_match');
+                view_loader('signup', $data);
+            }
+            else {
+                $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $reg = $this->user_model->insert_user($username, $email, $password_hash);
-            $user = $this->user_model->get_user($username);
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['logged_in'] = true;
-            redirect(site_url() . "/ChoosePet/index");
+                $reg = $this->user_model->insert_user($username, $email, $password_hash);
+                $user = $this->user_model->get_user($username);
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['logged_in'] = true;
+                redirect(site_url() . "/ChoosePet/index");
+            }
         }
         else {
             view_loader('signup');

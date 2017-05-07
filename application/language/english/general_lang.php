@@ -18,6 +18,7 @@ $lang['pets'] = 'Pets';
 $lang['fb_login_fail'] = 'Facebook authentication failed';
 $lang['error'] = 'Error';
 $lang['hello'] = 'Hello';
+$lang['password_match'] = 'The passwords were not the same';
 
 // Titles
 $lang['about'] = 'About us';
@@ -58,7 +59,6 @@ $lang['old_password'] = 'Your current password';
 $lang['change_email'] = 'Change email';
 $lang['deleteAccount'] = 'Delete Account';
 $lang['wrong_password'] = 'That is not your current password';
-
 
 // Tasks
 $lang['add_new'] = 'Add new task';
