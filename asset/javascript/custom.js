@@ -17,7 +17,7 @@ $( document ).ready(function(){
     });
 
     $("#post2").click();
-    arvutaPäev();
+    calculateDay();
 
 
       // jQuey's submit function applied on form.
@@ -183,7 +183,7 @@ var checkPassword = function() {
 
 
 //arvutab progress bari väärtused ja lisab need vaatesse
-function arvutaPäev() {
+function calculateDay() {
     var x = $('#points').text();
     var progress_x =  x * 0.25 + 50;
     $('#progressiriba').css({'width': progress_x+'%'});
