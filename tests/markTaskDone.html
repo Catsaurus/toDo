@@ -4,22 +4,42 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://todo.cs.ut.ee/" />
-<title>countPoints</title>
+<title>markTaskDone</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">countPoints</td></tr>
+<tr><td rowspan="1" colspan="3">markTaskDone</td></tr>
 </thead><tbody>
 <tr>
-	<td>pause</td>
-	<td>7000</td>
+	<td>clickAt</td>
+	<td>css=p &gt; label</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>id=points</td>
-	<td>9</td>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotText</td>
+	<td>css=p &gt; label</td>
+	<td>Keeda putru</td>
 </tr>
 
 </tbody></table>

@@ -4,22 +4,32 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://todo.cs.ut.ee/" />
-<title>markTaskDone</title>
+<title>deleteTask</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">markTaskDone</td></tr>
+<tr><td rowspan="1" colspan="3">deleteTask</td></tr>
 </thead><tbody>
 <tr>
-	<td>clickAt</td>
-	<td>css=p &gt; label</td>
+	<td>click</td>
+	<td>css=span.deleteX</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertNotText</td>
-	<td>css=p &gt; label</td>
-	<td>Keeda putru</td>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Settings')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.headerLink &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>Amount of tasks you have entered: 3</td>
 </tr>
 </tbody></table>
 </body>

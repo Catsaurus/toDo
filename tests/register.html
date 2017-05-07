@@ -4,47 +4,62 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://todo.cs.ut.ee/" />
-<title>markTaskUndone</title>
+<title>register</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">markTaskUndone</td></tr>
+<tr><td rowspan="1" colspan="3">register</td></tr>
 </thead><tbody>
 <tr>
-	<td>click</td>
-	<td>id=switch</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=switch</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAt</td>
-	<td>css=p &gt; label</td>
+	<td>clickAndWait</td>
+	<td>link=ToDo</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Pets')])[2]</td>
+	<td>xpath=(//a[contains(text(),'Sign up')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>selenium</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>selenium</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password2</td>
+	<td>selenium</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>selenium@selenium.ee</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[@alt='pet'])[5]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=li.headerLink &gt; a</td>
+	<td>xpath=(//input[@name='submit'])[5]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=p &gt; label</td>
-	<td>javascript{'FutureSomethingTask 08/0'+(new Date().getMonth()+2)}</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>id=points</td>
-	<td>5</td>
+	<td>css=h3</td>
+	<td>Tasks</td>
 </tr>
 </tbody></table>
 </body>

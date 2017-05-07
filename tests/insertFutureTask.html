@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://todo.cs.ut.ee/" />
-<title>insertNextWeekTask</title>
+<title>insertFutureTask</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">insertNextWeekTask</td></tr>
+<tr><td rowspan="1" colspan="3">insertFutureTask</td></tr>
 </thead><tbody>
 <tr>
 	<td>click</td>
@@ -19,12 +19,12 @@
 <tr>
 	<td>type</td>
 	<td>id=description</td>
-	<td>Jump</td>
+	<td>FutureSomethingTask</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=datepicker</td>
-	<td>javascript{(new Date().getFullYear())+'-'+(new Date().getMonth()+1)+'-'+(new Date().getDate()+2)}</td>
+	<td>javascript{(new Date().getFullYear())+'-'+(new Date().getMonth()+2)+'-08'}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -33,12 +33,27 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=#tasksOfThisWeek &gt; p &gt; label</td>
-	<td>javascript{'Jump 0'+(new Date().getDate()+2)+'/0'+(new Date().getMonth()+1)}</td>
+	<td>css=#futureTasks &gt; p &gt; label</td>
+	<td>javascript{'FutureSomethingTask 08/0'+(new Date().getMonth()+2)}</td>
 </tr>
 <tr>
-	<td>clickAt</td>
-	<td>css=p &gt; label</td>
+	<td>click</td>
+	<td>link=Add new task</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=description</td>
+	<td>NextFuture</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=datepicker</td>
+	<td>javascript{(new Date().getFullYear())+'-'+(new Date().getMonth()+3)+'-08'}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
 	<td></td>
 </tr>
 </tbody></table>

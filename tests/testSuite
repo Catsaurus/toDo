@@ -14,12 +14,16 @@
 <tr><td><a href="loginFalsePass.html">loginFalsePass</a></td></tr>
 <tr><td><a href="loginSuccess.html">loginSuccess</a></td></tr>
 <tr><td><a href="addTaskFailWIthoutDescription.html">addTaskFailWIthoutDescription</a></td></tr>
-<tr><td><a href="deleteAccount.html">deleteAccount</a></td></tr>
 <tr><td><a href="addTaskSuccess.html">addTaskSuccess</a></td></tr>
-<tr><td><a href="markTaskDone.html">markTaskDone</a></td></tr>
-<tr><td><a href="markTaskUndone.html">markTaskUndone</a></td></tr>
-<tr><td><a href="insertFutureTask.html">insertFutureTask</a></td></tr>
 <tr><td><a href="insertNextWeekTask.html">insertNextWeekTask</a></td></tr>
+<tr><td><a href="insertFutureTask.html">insertFutureTask</a></td></tr>
+<tr><td><a href="markTaskDone.html">markTaskDone</a></td></tr>
+<tr><td><a href="countPoints.html">countPoints</a></td></tr>
+<tr><td><a href="markTaskUndone.html">markTaskUndone</a></td></tr>
+<tr><td><a href="deleteTask.html">deleteTask</a></td></tr>
+<tr><td><a href="changePassword.html">changePassword</a></td></tr>
+<tr><td><a href="changePasswordFail.html">changePasswordFail</a></td></tr>
+<tr><td><a href="deleteAccount.html">deleteAccount</a></td></tr>
 </tbody></table>
 </body>
 </html>
