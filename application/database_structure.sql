@@ -532,3 +532,33 @@ SELECT pets.id, pets.name, pets.description, pets.imgname, users.id, users.main_
 WHERE user_id = users.id AND pets.id = users.main_pet;
 END
 
+
+#7. etapp-----------------------------------------------------------------------------------------------------
+
+#Altered code
+CREATE PROCEDURE `deleteUser` (IN `userId` INT)
+BEGIN
+DELETE FROM users where id = userId;
+DELETE FROM tasks where user_id = userId;
+DELETE FROM user_pets WHERE user_id = userId;
+END
+
+
+# SEDA EI PEA ENDAL JOOKSUTAMA --------------------------------------------------------------------
+
+INSERT INTO user_pets (user_id, pet_id)
+SELECT users.id, users.main_pet
+FROM `users` LEFT JOIN user_pets ON users.id = user_pets.user_id and users.main_pet = user_pets.pet_id
+WHERE user_pets.user_id IS NULL
+
+
+SELECT user_pets.user_id
+FROM user_pets
+  LEFT JOIN users
+    ON user_pets.user_id = users.id
+WHERE users.id IS NULL
+
+DELETE FROM user_pets WHERE user_id IN (64, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, )
+
+
+# LÕppes see mis jooksutama ei pea -------------------------------------------------------
