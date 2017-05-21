@@ -55,7 +55,7 @@
                 <div id="googleMap">
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnbcCUfwLZEDJOeqGm9VRfJSKeqETl40I&callback=myMap"></script>
                 </div>
-                <p class="petData"></p>
+
 
             </div>
         </div>
