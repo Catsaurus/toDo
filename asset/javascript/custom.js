@@ -305,6 +305,13 @@ function setPoints(container, lastDate){
         success: function(data){
             if(data != null){
                 document.getElementById("points").innerHTML = data;
+                var progress_x =  data * 0.5 + 50;
+                console.log(progress_x);
+                if (progress_x > 100){
+                    progress_x = 100;
+                }
+                var color = data > 0 ? '#66cc66' : '#ff6666';
+                $('#progressiriba').css({'width': progress_x+'%','background-color': color});
             }
         },
         complete: function(){
