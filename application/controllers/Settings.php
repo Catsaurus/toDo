@@ -6,9 +6,14 @@ class Settings extends CI_Controller {
     {
         $_SESSION['afterLogIn'] = 'settings';
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
-            $page = 'settings';
-            $data['title'] = ucfirst($page);
-            view_loader($page);
+            if ($this->getMainPet() != NULL) {
+                $page = 'settings';
+                $data['title'] = ucfirst($page);
+                view_loader($page);
+            }
+            else {
+                redirect(site_url()."/ChoosePet/index");
+            }
         }
         else{
             view_loader('login');
@@ -69,6 +74,11 @@ class Settings extends CI_Controller {
         $this->user_model->delete_user($id);
         redirect(site_url() . "/Logout/index");
     }
-
-
+    private function getMainPet()
+    {
+        $this->db->reconnect();
+        $userId = $_SESSION['id'];
+        $pet = $this->user_model->getMainPetId($userId);
+        return $pet;
+    }
 }

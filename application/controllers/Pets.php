@@ -6,11 +6,16 @@ class Pets extends CI_Controller {
     {
         $_SESSION['afterLogIn'] = 'pets';
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
-            $page = 'pets';
-            $data['title'] = ucfirst($page);
-            //$data['pets']=$this->show_pets();
-            $data['user_pets']=$this->showUsersPets();
-            view_loader($page,$data);
+            if ($this->getMainPet() != NULL) {
+                $page = 'pets';
+                $data['title'] = ucfirst($page);
+                //$data['pets']=$this->show_pets();
+                $data['user_pets']=$this->showUsersPets();
+                view_loader($page,$data);
+            }
+            else {
+                redirect(site_url()."/ChoosePet/index");
+            }
         }
         else{
             view_loader('login');
@@ -49,5 +54,12 @@ class Pets extends CI_Controller {
             array_push($data, $one);
         }
         return $data;
+    }
+    private function getMainPet()
+    {
+        $this->db->reconnect();
+        $userId = $_SESSION['id'];
+        $pet = $this->user_model->getMainPetId($userId);
+        return $pet;
     }
 }

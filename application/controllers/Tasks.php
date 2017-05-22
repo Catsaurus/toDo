@@ -6,8 +6,13 @@ class Tasks extends CI_Controller {
     {
 
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
-            $page = 'tasks';
-            view_loader($page, $this->getData($page));
+            if ($this->getMainPet() != NULL) {
+                $page = 'tasks';
+                view_loader($page, $this->getData($page));
+            }
+            else {
+                redirect(site_url()."/ChoosePet/index");
+            }
         }
         else{
             redirect(site_url('login'));
@@ -27,6 +32,7 @@ class Tasks extends CI_Controller {
 
         return $data;
     }
+
     public function insert()
     {
 

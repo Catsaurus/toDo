@@ -85,4 +85,9 @@ class user_model extends CI_Model {
         $query->next_result();
         return $result;
     }
+    public function getMainPetId($id){
+        $query = $this->db->get_where('users', array('id'=> $id));
+        $user = $query->row_array();
+        return $user['main_pet'];
+    }
 }
