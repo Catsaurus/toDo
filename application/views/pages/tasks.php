@@ -6,7 +6,7 @@
                 <h3><?php echo lang('tasks') ?></h3>
 
 
-                <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask'); calculateDay()"><?php echo lang('add_new') ?></a>
+                <a class="waves-effect waves-teal btn-flat" onclick="showNewTask('newTask')"><?php echo lang('add_new') ?></a>
 
         <div class="tooltip" id="src3div">
             <img src="<?php echo base_url("asset/img/lightbulb_on.png"); ?>" id="s3src" alt="??">
@@ -40,8 +40,8 @@
                             </ul>
                         </fieldset>
 
-                        <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask'); calculateDay();"><?php echo lang('cancel') ?></a>
-                        <input type="submit" name="submit" value="Add" onclick="hideNewTask('newTask'); calculateDay();" class="waves-effect waves-teal btn-flat"/>
+                        <a class="waves-effect waves-teal btn-flat" onclick="hideNewTask('newTask')"><?php echo lang('cancel') ?></a>
+                        <input type="submit" name="submit" value="Add" onclick="hideNewTask('newTask')" class="waves-effect waves-teal btn-flat"/>
                     </form>
                  </div>
 
@@ -63,7 +63,7 @@
                     <?php foreach ($todayTasks as $task): ?>
                         <p>
                             <span onclick=deleteTask(<?php echo $task['id'];?>) class='deleteX'>x</span>
-                            <input onclick="checkTask(<?php echo $task['id'];?>); calculateDay(); "type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
+                            <input onclick="checkTask(<?php echo $task['id'];?>)" type='checkbox' class='filled-in checkbox-red' id='<?php echo $task['id'];?>'>
                             <label for='<?php echo $task['id'];?>'><?php echo htmlspecialchars($task['content']);?></label>
                         </p>
                     <?php endforeach; ?>
@@ -135,6 +135,7 @@
 
                         <div>
                             <p> <?php echo lang($userPointsInformation)?> </p>
+                            <p id="newpetbutton"></p>
                         </div>
 
                         <div class="row">

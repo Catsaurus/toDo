@@ -11,32 +11,47 @@ class ChoosePet extends CI_Controller
     public function index()
     {
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true ) {
-            //$points = $this->getUserPoints();
+            $points = $this->getUserPoints();
             //$mainpet = $this->getMainPet();
-            if ($this->showUsersPets() != NULL){
+
+            if ($this->showUsersPets() != NULL && $points <= 50) {
                 redirect("Tasks/index");
-            }
-            else{
+            } else {
                 $page = 'choosePet';
                 $data['title'] = ucfirst($page);
                 $data['pets'] = $this->show_pets();
                 //$data['user_pets'] = $this->getUserPets();
                 view_loader($page, $data);
-                }
             }
+        }
+
             else{
                 view_loader('login');
         }
     }
 
+    public function points50()
+    {
+
+        $userPoints = $this->getUserPoints();
+        if ($userPoints >= 50) {
+            $userPoints = $userPoints - 50;
+            //$this->db->reconnect();
+            $this->db->close();
+            $this->db->initialize();
+            $this->setUserPoints($userPoints);
+        }
+    }
     public function insertPet()
     {
+
         $userId = $_SESSION['id'];
         $pet_id = $_POST['pet'];
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $this->UserToPets_model->insert_user_pets($userId, $pet_id);
             $this->setMainPet($pet_id);
+            $this->points50();
             redirect(site_url() . "/Tasks/index");
         }
     }
@@ -89,4 +104,11 @@ class ChoosePet extends CI_Controller
         }
         return $data;
     }
+    public function setUserPoints($amount){
+        $this->db->reconnect();
+        $id = $_SESSION['id'];
+        $answer = $this->user_model->setPoints($id, $amount);
+        return $answer;
+    }
+
 }

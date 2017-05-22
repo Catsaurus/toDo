@@ -17,7 +17,7 @@ $( document ).ready(function(){
     });
 
     $("#post2").click();
-    calculateDay();
+    //setPoints();
 
 
       // jQuey's submit function applied on form.
@@ -116,6 +116,7 @@ function checkTask(task_id) {
         }
     });
     process_queue();
+    setPoints();
 }
 
 
@@ -146,12 +147,14 @@ function unCheckTask(task_id) {
             p[0].innerHTML = "<span class = done>"+window.lang.undone+"</span>";
             p.fadeOut(400, function () {
                 $(this).fadeOut();
+                setPoints();
             });
         },
         error: function (response) {
             console.log(response.responseText);
         }
     });
+
 
 }
 
@@ -187,11 +190,6 @@ function calculateDay() {
     var x = $('#points').text();
     var progress_x =  x * 0.25 + 50;
     $('#progressiriba').css({'width': progress_x+'%'});
-}
-
-//kui kasutajal on rohkem punkte kui 200
-function award() {
-    alert("Yo");
 }
 
 
@@ -306,7 +304,7 @@ function setPoints(container, lastDate){
             if(data != null){
                 document.getElementById("points").innerHTML = data;
                 var progress_x =  data * 0.5 + 50;
-                console.log(progress_x);
+                moreThan50points(data);
                 if (progress_x > 100){
                     progress_x = 100;
                 }
@@ -318,4 +316,27 @@ function setPoints(container, lastDate){
             setTimeout(function(){setPoints(container, lastDate)}, 7000);
         }
     });
+
+    function moreThan50points(points) {
+
+        if (points >= 50){
+            var language = document.getElementById("est");
+            console.log(language);
+            var buttonId = document.getElementById("addbutton");
+
+            if (buttonId == null){
+                if (language != null){
+                    var $input = $('<a id="addbutton" href="' + window.location.origin + '/todo/index.php/choosePet' + '" class="waves-effect waves-light btn">UUS LOOM</a> ');
+                }
+
+                else {
+                    var $input = $('<a id="addbutton" href="' + window.location.origin + '/todo/index.php/choosePet' + '" class="waves-effect waves-light btn">NEW PET<a/> ');
+                }
+            }
+
+
+            $input.appendTo($("#newpetbutton"))
+        }
+    }
+
 }

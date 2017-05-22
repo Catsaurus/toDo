@@ -153,26 +153,6 @@ class Tasks extends CI_Controller {
             else return $now - 1;
         }
     }
-    public function checkUserPoint(){
-        $points = $this->getUserPoints();
-        if ($points >= 200) {
-            //todo: do sth
-        }
-        else if ($points >= 0 &&  $points <= 199){
-            //todo: happy pet
-        }
-        else if ($points >= -199 && $points <= -1) {
-            //todo: sad pet
-        }
-        else if ($points <= -200) {
-            //todo: donate to wake up your pet
-        }
-        else {
-            //todo something
-        }
-    }
-
-
 
     public function markTaskUndone($id)
     {
@@ -278,6 +258,9 @@ class Tasks extends CI_Controller {
             array_push($data, $one);
         }
         return $data;
+    }
+    private function MoreThan50Points(){
+
     }
 
     private function getPointsInfoText()
