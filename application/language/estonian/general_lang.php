@@ -62,7 +62,7 @@ $lang['wrong_password'] = 'See ei ole praegune salasõna';
 
 // Tasks
 $lang['add_new'] = 'Lisa uus kohustus';
-$lang['add_info'] = 'Vajuta \'Lisa uus kohustus\' nupule, et lisada uusi ülesandeid :)';
+$lang['add_info'] = 'Vajuta \'+\' nupule, et lisada uusi ülesandeid :)';
 $lang['repeat'] = 'Vali kordus';
 $lang['daily'] = 'Igapäevane';
 $lang['weekly'] = 'Iganädalane';

@@ -61,8 +61,8 @@ $lang['deleteAccount'] = 'Delete Account';
 $lang['wrong_password'] = 'That is not your current password';
 
 // Tasks
-$lang['add_new'] = 'Add new task';
-$lang['add_info'] = 'Click on "ADD NEW TASK" button to add new tasks :)';
+$lang['add_new'] = '+';
+$lang['add_info'] = 'Click on "+" button to add new tasks :)';
 $lang['repeat'] = 'Select repeat';
 $lang['daily'] = 'Daily';
 $lang['weekly'] = 'Weekly';

@@ -156,7 +156,11 @@ footer p {
     font-size: medium;
 }
 #facebook_button {
+    margin-top: 1em;
+    color:hsl(79, 100%, 100%);
     background-color: #0D47A1;
+    border-radius: 4px;
+    font-size: 1.5rem;
 }
 strong {
     font-weight: 500;
@@ -253,26 +257,14 @@ nav .button-collapse i {
     background: linear-gradient(#fff, #d8dbdd); /* Standard syntax (must be last) */
 }
 
-/*figure {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    padding: 40px;
-
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #dfdfdf;
+    left: 24px;
+}
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #a32750;
 }
 
-#animation {
-    animation: bobble 5s ease-in-out infinite;
-}
-
-@keyframes bobble {
-    33% {
-        transform: rotate(5deg);
-    }
-    66% {
-        transform: rotate(-5deg);
-    }
-}*/
 figure {
     display: inline-block;
     width: 200px;

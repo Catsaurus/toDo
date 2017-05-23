@@ -38,7 +38,7 @@
     </ul>
 
     <nav>
-        <div class="nav-wrapper">
+        <div  class="navbar-fixed z-depth-1">
             <a href="<?php echo site_url('Home/index') ?>" class="brand-logo">ToDo</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"><?php echo lang('menu') ?></i></a>
             <ul class="right hide-on-med-and-down">
